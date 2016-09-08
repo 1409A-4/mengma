@@ -9,8 +9,8 @@
                 <li><a href="about.html">机票</a></li>
                 <li><a href="{{url('hotel')}}">酒店</a></li>
                 <li><a href="plans.html">景区</a></li>
-                <li><a href="plans.html">注册</a></li>
-                <li><a href="plans.html">登录</a></li>
+                <li><a href="{{url('login/register')}}">注册</a></li>
+                <li><a href="{{url('login/login')}}">登录</a></li>
             </ul>
         </div>
         <div class="clear"> </div>
