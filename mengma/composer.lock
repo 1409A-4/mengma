@@ -4,8 +4,10 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+
     "hash": "abd848103b75e43a27b07c646e0961bc",
     "content-hash": "cf3788840370d68d94d159c7a300352e",
+
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -249,6 +251,7 @@
             "time": "2015-04-20 18:58:01"
         },
         {
+<<<<<<< HEAD
             "name": "jenssegers/date",
             "version": "v3.2.4",
             "source": {
@@ -306,6 +309,8 @@
             "time": "2016-08-31 07:50:37"
         },
         {
+=======
+>>>>>>> 576be326aabe5884ccee8513e152b0a68b29ecae
             "name": "jeremeamia/SuperClosure",
             "version": "2.2.0",
             "source": {

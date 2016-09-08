@@ -40,6 +40,7 @@ class RouteServiceProvider extends ServiceProvider
         $this->mapAdminRoutes();
         $this->mapBusinessRoutes();
         $this->mapIndexRoutes();
+
         $this->mapWebRoutes();
 
         //
@@ -80,6 +81,7 @@ class RouteServiceProvider extends ServiceProvider
         });
     }
 
+
     /*
      * 路由分割
      */
@@ -112,5 +114,6 @@ class RouteServiceProvider extends ServiceProvider
             require base_path('routes/index.php');
         });
     }
+
 
 }

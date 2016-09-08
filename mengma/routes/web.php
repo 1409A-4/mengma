@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('', function () {
+
+Route::get('/', function () {
     return view('welcome');
 });
+Route::get('scenicSpot','Index\IndexController@scenicSpot');//景区详情
+Route::get('hotel','Index\IndexController@hotel');//酒店
+

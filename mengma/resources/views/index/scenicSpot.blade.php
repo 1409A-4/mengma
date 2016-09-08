@@ -1,7 +1,6 @@
-
 <!DOCTYPE HTML>
 <head>
-    <title>首页</title>
+    <title>景区详情</title>
     <base href="{{URL::asset('index\/')}}"/>
     @include('.index.public.style')
 </head>
@@ -25,42 +24,21 @@
 <div class="clear"> </div>
 <!---start-content---->
 <div class="content">
-    <div class="content_top">
-        <div class="wrap">
-            <h1><a href="#">WELCOME.</a></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, </p>
-            <span><a class="learnmore" href="#">LEARN MORE</a></span>
-        </div>
-    </div>
-    <div class="copyrights">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
-    <div class="content-grids">
-        <div class="wrap">
-            <div class="grid">
-                <a href="#"><img src="images/grids-img1.jpg" title="image-name" /></a>
-                <h3>DESTINATIONS</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
-                <a class="button" href="{{url('scenicSpot')}}">More</a>
+    <div class="wrap">
+        <div class="about-us">
+            <div class="about-header">
+                <h3>About us</h3>
             </div>
-            <div class="grid">
-                <a href="#"><img src="images/grids-img2.jpg" title="image-name" /></a>
-                <h3>NEWS & EVENTS</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
-                <a class="button" href="{{url('scenicSpot')}}">More</a>
+            <div class="about-info">
+                <a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus.</a>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan male</p>
             </div>
-            <div class="grid last-grid">
-                <a href="#"><img src="images/grids-img3.jpg" title="image-name" /></a>
-                <h3>SUPPORT</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
-                <a class="button" href="{{url('scenicSpot')}}">More</a>
-            </div>
-
-            <div class="clear"> </div>
         </div>
     </div>
     <div class="specials">
         <div class="wrap">
             <div class="specials-heading">
-                <h3>Traveling Specials</h3>
+                <h3>Latest-News</h3>
             </div>
             <div class="specials-grids">
                 <div class="special-grid">
@@ -78,7 +56,6 @@
                     <a href="#">Free Plans</a>
                     <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
                 </div>
-
                 <div class="clear"> </div>
             </div>
         </div>
@@ -94,7 +71,8 @@
     </div>
 </div>
 <!---End-content---->
-@include('.index.public.foot')
+<!---End-content---->
+@include('index.public.foot')
+</body>
 </html>
-
 
