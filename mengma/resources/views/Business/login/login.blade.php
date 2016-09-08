@@ -388,8 +388,8 @@ jQuery('#'+id).addClass('visible');
 <script>
 
     $(function () {
-        //$('#form_id').validationEngine();
-        //$('#form_register').validationEngine();
+        $('#form_id').validationEngine();
+        $('#form_register').validationEngine();
         var st=$('#center').attr('st');
         if(st==1){
             $('.widget-box.visible').removeClass('visible');

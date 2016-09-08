@@ -9,7 +9,6 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 
-
 class LoginController extends Controller
 {
     /*
@@ -17,7 +16,8 @@ class LoginController extends Controller
      * */
     public function businessLogin()
     {
-
+        $c = \FileUp::image();
+        print_r($c);die;
         return view('business/login/login');
     }
 
