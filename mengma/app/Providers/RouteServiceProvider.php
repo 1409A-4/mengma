@@ -88,7 +88,7 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapAdminRoutes()
     {
         Route::group([
-            'middleware' => 'admin',
+            'middleware' => 'web',
             'namespace' => $this->namespace,
         ], function ($router) {
             require base_path('routes/admin.php');
@@ -98,7 +98,7 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapBusinessRoutes()
     {
         Route::group([
-            'middleware' => 'business',
+            'middleware' => 'web',
             'namespace' => $this->namespace,
         ], function ($router) {
             require base_path('routes/business.php');
@@ -108,7 +108,7 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapIndexRoutes()
     {
         Route::group([
-            'middleware' => 'index',
+            'middleware' => 'web',
             'namespace' => $this->namespace,
         ], function ($router) {
             require base_path('routes/index.php');
