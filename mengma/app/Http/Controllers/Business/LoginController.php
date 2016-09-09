@@ -16,8 +16,7 @@ class LoginController extends Controller
      * */
     public function businessLogin()
     {
-        $c = \FileUp::image();
-        print_r($c);die;
+
         return view('business/login/login');
     }
 
