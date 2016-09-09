@@ -387,14 +387,6 @@ jQuery('#'+id).addClass('visible');
 
 <script>
 
-    $(function () {
-        //$('#form_id').validationEngine();
-        //$('#form_register').validationEngine();
-        var st=$('#center').attr('st');
-        if(st==1){
-            $('.widget-box.visible').removeClass('visible');
-            $('#signup-box').addClass('visible');
-        }
-    });
+
     $(document).area("s_province","s_city","s_county");//调用三级插件
 </script>

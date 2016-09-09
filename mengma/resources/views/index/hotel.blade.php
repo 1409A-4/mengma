@@ -172,16 +172,13 @@
                 <div class="span3">
                     <div class="property-filter pull-right">
                         <div class="content">
-                            <form method="get" action="?">
+                            <form method="post" action="{{URL('search_hotel')}}">
                                 <div class="location control-group">
                                     <label class="control-label" for="inputLocation">
                                         位置
                                     </label>
                                     <div class="controls">
-                                        <select id="inputLocation">
-                                            <option id="malibu">马里布，CA</option>
-                                            <option id="palo-alto">帕罗奥图</option>
-                                        </select>
+                                            <select name="province" id="s_province" class=" validate[required] col-md-4"></select>
                                     </div><!-- /.controls -->
                                 </div><!-- /.control-group -->
 
@@ -190,9 +187,10 @@
                                         类型
                                     </label>
                                     <div class="controls">
-                                        <select id="inputType">
-                                            <option id="apartment">公寓</option>
-                                            <option id="condo">大型公寓</option>
+                                        <select id="inputType" name="rooms_type">
+                                            <option value="0" selected="selected">请选择房屋类型</option>
+                                            <option id="apartment" value="公寓">公寓</option>
+                                            <option id="condo" value="大型公寓">大型公寓</option>
                                         </select>
                                     </div><!-- /.controls -->
                                 </div><!-- /.control-group -->
@@ -258,7 +256,7 @@
 
                                 <div class="price-value">
                                     <span class="from"></span><!-- /.from -->
-                                    -
+                                   1 - 2
                                     <span class="to"></span><!-- /.to -->
                                 </div><!-- /.price-value -->
 
@@ -266,7 +264,8 @@
                                 </div><!-- /.price-slider -->
 
                                 <div class="form-actions">
-                                    <input type="submit" value="Filter now!" class="btn btn-primary btn-large">
+                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    <input type="submit" value="搜索" class="btn btn-primary btn-large">
                                 </div><!-- /.form-actions -->
                             </form>
                         </div><!-- /.content -->
@@ -1098,4 +1097,14 @@
 <script type="text/javascript" src="assets/libraries/bootstrap-fileupload/bootstrap-fileupload.js"></script>
 {{--<script type="text/javascript" src="assets/js/realia.js"></script>--}}
 </body>
+
 </html>
+<script src="assets/js/jq.js"></script>
+<script src="assets/js/jquery.validationEngine-zh_CN.js"></script>
+<script src="assets/js/jquery.validationEngine.js"></script>
+<script type="text/javascript" src="assets/js/region.js"></script>
+<script src="assets/js/area.ui.js"></script>
+
+<script>
+    $(document).area("s_province","s_city","s_county");//调用三级插件
+</script>

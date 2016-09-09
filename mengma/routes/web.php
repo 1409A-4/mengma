@@ -17,4 +17,5 @@ Route::get('/', function () {
 });
 Route::get('scenicSpot','Index\IndexController@scenicSpot');//景区详情
 Route::get('hotel','Index\IndexController@hotel');//酒店
+Route::post('search_hotel','Index\SearchController@Search_hotel');//搜索酒店
 
