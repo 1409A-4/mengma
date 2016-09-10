@@ -2,32 +2,41 @@
 
 namespace App\Http\Controllers\Index;
 
-use Illuminate\Http\Request;
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Request;
+use DB;
+use Redirect;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
-
-class IndexController extends Controller
+class IndexController extends BaseController
 {
-    /*
-     * 首页
-     * */
-    public function index()
-    {
-        return view('welcome');
+    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    //前台首页
+    public function index(){
+        $arr = DB::table("region")->where("parent_id",'=','1')->get();
+        return view('index/front/index',['list'=>$arr]);
     }
-    /*
-     * 景区详情
-     * */
-    public function scenicSpot()
-    {
-        return view('index.scenicSpot');
+    public function new(){
+        return view('index/front/new');
     }
-    /*
-     * 酒店
-     * */
-    public function hotel()
-    {
-        return view('index.hotel');
+    public function contacts(){
+        return view('index/front/Contacts');
+    }
+    public function offers(){
+        return view('index/front/Offers');
+    }
+    public function book(){
+        return view('index/front/Book');
+    }
+    public function services(){
+        return view('index/front/Services');
+    }
+    public function safe(){
+        return view('index/front/Safety');
+    }
+    public function books(){
+        return view('index/front/Book2');
     }
 }

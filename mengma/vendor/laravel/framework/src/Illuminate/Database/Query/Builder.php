@@ -909,11 +909,7 @@ class Builder
 
         $this->wheres[] = compact('type', 'column', 'values', 'boolean');
 
-        foreach ($values as $value) {
-            if (! $value instanceof Expression) {
-                $this->addBinding($value, 'where');
-            }
-        }
+        $this->addBinding($values, 'where');
 
         return $this;
     }

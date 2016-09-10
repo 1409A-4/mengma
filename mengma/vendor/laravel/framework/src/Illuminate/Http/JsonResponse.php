@@ -32,6 +32,8 @@ class JsonResponse extends BaseJsonResponse
      *
      * @param  string|null  $callback
      * @return $this
+     *
+     * @throws \InvalidArgumentException
      */
     public function withCallback($callback = null)
     {

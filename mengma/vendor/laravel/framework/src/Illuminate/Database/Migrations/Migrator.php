@@ -204,13 +204,11 @@ class Migrator
             $this->requireFiles($files);
 
             foreach ($migrations as $migration) {
-                $migration = (object) $migration;
-
                 $rolledBack[] = $files[$migration->migration];
 
                 $this->runDown(
                     $files[$migration->migration],
-                    $migration, Arr::get($options, 'pretend', false)
+                    (object) $migration, Arr::get($options, 'pretend', false)
                 );
             }
         }

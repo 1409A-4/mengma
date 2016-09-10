@@ -25,7 +25,7 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
      *
      * @var string
      */
-    const VERSION = '5.3.6';
+    const VERSION = '5.3.4';
 
     /**
      * The base path for the Laravel installation.
@@ -282,7 +282,6 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
         $this->instance('path.public', $this->publicPath());
         $this->instance('path.storage', $this->storagePath());
         $this->instance('path.database', $this->databasePath());
-        $this->instance('path.resources', $this->resourcePath());
         $this->instance('path.bootstrap', $this->bootstrapPath());
     }
 
@@ -358,7 +357,7 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
      */
     public function langPath()
     {
-        return $this->resourcePath().DIRECTORY_SEPARATOR.'lang';
+        return $this->basePath.DIRECTORY_SEPARATOR.'resources'.DIRECTORY_SEPARATOR.'lang';
     }
 
     /**
@@ -394,16 +393,6 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
         $this->instance('path.storage', $path);
 
         return $this;
-    }
-
-    /**
-     * Get the path to the resources directory.
-     *
-     * @return string
-     */
-    public function resourcePath()
-    {
-        return $this->basePath.DIRECTORY_SEPARATOR.'resources';
     }
 
     /**

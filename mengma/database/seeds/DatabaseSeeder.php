@@ -11,6 +11,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        DB::table('admin')->insert([
+            'uname' => 'admin',
+            'uemail' => '123@qq.com',
+            'upwd' => '0192023a7bbd73250516f069df18b500',
+            'ubtime'=>date('Y-m-d H:i:s'),
+            'uip'=>'::1',
+        ]);
     }
 }

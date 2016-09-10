@@ -42,7 +42,7 @@ class MockFoo extends Foo implements PHPUnit_Framework_MockObject_MockObject
 
     public static function bar(string $baz): Bar
     {
-        throw new PHPUnit_Framework_MockObject_BadMethodCallException('Static method "bar" cannot be invoked on mock object');
+        throw new PHPUnit_Framework_MockObject_BadMethodCallException;
     }
 
     public function expects(PHPUnit_Framework_MockObject_Matcher_Invocation $matcher)
