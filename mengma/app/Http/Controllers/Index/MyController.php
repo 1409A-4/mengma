@@ -33,7 +33,7 @@ class MyController  extends Controller{
 
         $data =json_decode($str,true);
         $value = $data['result']['area_style_areanm'];
-     
+
         $a =  substr($value,strpos($value,',')+1);
         $arr['ip']=$a;
       
