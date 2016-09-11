@@ -7,7 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'AirTicketTable' => $baseDir . '/database/migrations/2016_09_08_034554_air_ticket_table.php',
-    'App\\libs\\Vcode' => $baseDir . '/app/libs/Vcode.php',
     'CreateHotelTable' => $baseDir . '/database/migrations/2016_09_08_031841_create_hotel_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
@@ -84,6 +83,7 @@ return array(
     'Hamcrest\\Util' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
     'Hamcrest\\Xml\\HasXPath' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
     'HotelClassTable' => $baseDir . '/database/migrations/2016_09_08_034252_hotel_class_table.php',
+    'Meng' => $baseDir . '/database/migrations/2016_09_09_105953_meng.php',
     'Mengobj' => $baseDir . '/database/migrations/2016_09_02_150645_mengobj.php',
     'PHPUnit\\Framework\\TestCase' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/TestCase.php',
     'PHPUnit_Exception' => $vendorDir . '/phpunit/phpunit/src/Exception.php',
