@@ -3,12 +3,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>流年呐伤的旅行足迹-穷游网</title>
-    <base href="{{URL::asset('/')}}">
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta name="renderer" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <link rel="shortcut icon" href="http://www.qyer.com/favicon.ico" />
+    <base href="{{URL::asset('index\/')}}">
+    @include('index.public.style')
     <script>
         window.QYER = {
             uid:[0][0]|0
@@ -32,163 +28,7 @@
 <script src="Scripts/headerfoot_black.min-e0b0f90a51b948628c849d2fa239d0e5.js" async="async"></script>
 
 
-<div class="q-layer-header">
-    <div class="header-inner">
-        <a data-bn-ipg="head-logo" href="http://www.qyer.com"><img class="logo" src="Picture/logo_116x36.png" width="58" height="18" /></a>
-        <div class="nav">
-            <ul class="nav-ul">
-                <li class="nav-list "><a class="nav-span" href="http://place.qyer.com/" data-bn-ipg="head-nav-place" title="穷游目的地">目的地</a></li>
-                <li class="nav-list "><a class="nav-span" href="http://guide.qyer.com/" data-bn-ipg="head-nav-guide" title="穷游锦囊">锦囊</a></li>
-                <li class="nav-list nav-list-plan ">
-                    <a class="nav-span" href="http://plan.qyer.com/" data-bn-ipg="head-nav-plan" title="穷游行程助手">行程助手</a>
-                </li>
-                <li class="nav-list nav-list-layer  ">
-                    <a class="nav-span" href="http://bbs.qyer.com/" data-bn-ipg="head-nav-community" title="穷游论坛">社区<i class="iconfont icon-jiantouxia"></i></a>
-                    <div class="q-layer q-layer-nav q-layer-arrow">
-                        <ul>
-                            <li class="nav-list-layer">
-                                <a href="http://bbs.qyer.com" data-bn-ipg="head-nav-bbs" title="穷游论坛"><i class="iconfont icon-luntan"></i> 旅行论坛 <i class="iconfont icon-jiantouyou"></i></a>
-                                <div class="q-layer q-layer-section">
-                                    <div class="q-layer">
-                                        <div class="section-title">
-                                            <a class="more" href="http://bbs.qyer.com">全部版块<i class="iconfont icon-jiantouyou"></i></a>
-                                            <span>热门版块</span>
-                                        </div>
-
-
-                                        <dl class="section-item">
-                                            <dt>兴趣小组</dt>
-                                            <dd>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-2" href="http://bbs.qyer.com/forum-2-1.html">结伴同游</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-3" href="http://bbs.qyer.com/forum-3-1.html">签证</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-22" href="http://bbs.qyer.com/forum-22-1.html">旅行摄影</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-88" href="http://bbs.qyer.com/forum-88-1.html">潜水俱乐部</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-122" href="http://bbs.qyer.com/forum-122-1.html">带孩子旅行</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-49" href="http://bbs.qyer.com/forum-49-1.html">明信片</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-100" href="http://bbs.qyer.com/forum-100-1.html">旅行购物</a>
-                                            </dd>
-                                        </dl>
-                                        <dl class="section-item">
-                                            <dt>穷游欧洲</dt>
-                                            <dd>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-14" href="http://bbs.qyer.com/forum-14-1.html">法国/摩纳哥</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-12" href="http://bbs.qyer.com/forum-12-1.html">德国</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-16" href="http://bbs.qyer.com/forum-16-1.html">英国/爱尔兰</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-15" href="http://bbs.qyer.com/forum-15-1.html">瑞士/列支敦士登</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-162" href="http://bbs.qyer.com/forum-162-1.html">土耳其</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-25" href="http://bbs.qyer.com/forum-25-1.html">挪威/瑞典/芬兰/丹麦/冰岛</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-13" href="http://bbs.qyer.com/forum-13-1.html">意大利/梵蒂冈/圣马力诺/马耳他</a>
-                                            </dd>
-                                        </dl>
-                                        <dl class="section-item">
-                                            <dt>穷游亚洲</dt>
-                                            <dd>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-52" href="http://bbs.qyer.com/forum-52-1.html">台湾</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-57" href="http://bbs.qyer.com/forum-57-1.html">日本</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-106" href="http://bbs.qyer.com/forum-106-1.html">泰国</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-164" href="http://bbs.qyer.com/forum-164-1.html">新加坡</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-165" href="http://bbs.qyer.com/forum-165-1.html">斯里兰卡</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-156" href="http://bbs.qyer.com/forum-156-1.html">韩国/朝鲜</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-163" href="http://bbs.qyer.com/forum-163-1.html">香港/澳门</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-108" href="http://bbs.qyer.com/forum-108-1.html">马来西亚/文莱</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-175" href="http://bbs.qyer.com/forum-175-1.html">柬埔寨</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-104" href="http://bbs.qyer.com/forum-104-1.html">马尔代夫</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-177" href="http://bbs.qyer.com/forum-177-1.html">缅甸</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-59" href="http://bbs.qyer.com/forum-59-1.html">伊朗</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-103" href="http://bbs.qyer.com/forum-103-1.html">印度/孟加拉</a>
-                                            </dd>
-                                        </dl>
-                                        <dl class="section-item">
-                                            <dt>穷游美洲</dt>
-                                            <dd>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-54" href="http://bbs.qyer.com/forum-54-1.html">加拿大</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-53" href="http://bbs.qyer.com/forum-53-1.html">美国</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-168" href="http://bbs.qyer.com/forum-168-1.html">中美</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-55" href="http://bbs.qyer.com/forum-55-1.html">南美/南极</a>
-                                            </dd>
-                                        </dl>
-                                        <dl class="section-item">
-                                            <dt>穷游大洋洲</dt>
-                                            <dd>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-56" href="http://bbs.qyer.com/forum-56-1.html">澳大利亚</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-83" href="http://bbs.qyer.com/forum-83-1.html">新西兰</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-178" href="http://bbs.qyer.com/forum-178-1.html">太平洋海岛</a>
-                                            </dd>
-                                        </dl>
-                                        <dl class="section-item">
-                                            <dt>穷游非洲</dt>
-                                            <dd>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-173" href="http://bbs.qyer.com/forum-173-1.html">东非地区</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-174" href="http://bbs.qyer.com/forum-174-1.html">非洲海岛</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-86" href="http://bbs.qyer.com/forum-86-1.html">北非地区</a>
-                                                <a data-bn-ipg="index-head-bbs-hotboard-60" href="http://bbs.qyer.com/forum-60-1.html">非洲其他国家</a>
-                                            </dd>
-                                        </dl>
-
-
-
-                                    </div>
-                                </div>
-                            </li>
-                            <li><a href="http://ask.qyer.com/" data-bn-ipg="head-nav-ask" title="穷游问答"><i class="iconfont icon-wenda"></i> 旅行问答</a></li>
-                            <li><a href="http://jne.qyer.com/" data-bn-ipg="head-nav-qlab" title="JNE旅行生活美学" target="_blank"><i class="iconfont icon-shenghuoshiyanshi"></i> JNE旅行生活美学</a></li>
-                        </ul>
-                    </div>
-                </li>
-
-                <li class="nav-list nav-list-zuishijie ">
-                    <a class="nav-span" href="http://z.qyer.com/" data-bn-ipg="head-nav-lastminute" title="最世界·自由行">最世界<span class="point">·</span>自由行</a>
-                    <div>
-                        <img class="gif1" src="Picture/gif.gif" height="19" width="44" >
-                    </div>
-                </li>
-
-                <li class="nav-list "><a class="nav-span" href="http://flight.qyer.com/" data-bn-ipg="head-nav-plane" title="机票">机票</a></li>
-
-                <li class="nav-list "><a class="nav-span" href="http://hotel.qyer.com/" data-bn-ipg="head-nav-hotel" title="穷游酒店">酒店</a></li>
-
-                <li class="nav-list nav-list-layer nav-list-yuding">
-                    <span class="nav-span">预订<i class="iconfont icon-jiantouxia"></i></span>
-                    <div class="q-layer q-layer-nav q-layer-arrow">
-                        <ul>
-                            <!-- <li><a href="http://flight.qyer.com/" data-bn-ipg="head-nav-plane" title="机票"><i class="iconfont icon-feiji"></i> 机票</a></li> -->
-                            <li><a href="http://www.qyer.com/hoteldeal/" data-bn-ipg="head-nav-hoteldeal" title="特价酒店"><i class="iconfont icon-chengshi"></i> 特价酒店</a></li>
-
-                            <li><a href="http://bx.qyer.com/" data-bn-ipg="head-nav-insure" title="保险"><i class="iconfont icon-baoxian"></i> 保险</a></li>
-                            <!--
-                            <li><a href="http://z.qyer.com/visa/" data-bn-ipg="head-nav-visa" title="签证"><i class="iconfont icon-visa"></i> 签证</a></li>
-                            -->
-
-                            <li><a href="http://www.qyer.com/shop/" data-bn-ipg="head-nav-shop" title="华人旅馆"><i class="iconfont icon-huarenlvguan"></i> 华人旅馆</a></li>
-                            <!--<li><a href="http://www.qyer.com/goto.php?hotel_name=Airbnb&url=https%3A%2F%2Fzh.airbnb.com%2Fstay%2Fqyer%2F%3Faf%3D18864084%26c%3DQyerReservation" target="_blank" data-bn-ipg="head-nav-airbnb" title="当地人家"><i class="iconfont icon-airbnb"></i> 当地人家</a></li>-->
-                            <li><a href="http://z.qyer.com/cruise/all_0_0_0_0_0_0_0/" data-bn-ipg="head-nav-liner" title="邮轮"><i class="iconfont icon-lunchuan"></i> 邮轮</a></li>
-                            <li><a href="http://car.qyer.com/" data-bn-ipg="head-nav-car" title="租车"><i class="iconfont icon-zuche"></i> 租车</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <!-- <li class="nav-list"><a class="nav-span icon-phone-a" href="http://app.qyer.com"><i class="iconfont icon-phone"></i>手机穷游</a></li> -->
-            </ul>
-        </div>
-        <div class="fun">
-            <div id="siteSearch" class="nav-search">
-                <form action="http://search.qyer.com/index" method="get">
-                    <input class="txt" name="wd" type="text" autocomplete="off">
-                    <button class="btn" type="submit"><i class="iconfont icon-sousuo"></i><span>搜索</span></button>
-                </form>
-            </div>
-            <div id="js_qyer_header_userStatus" class="status">
-                <div class="login show">
-                    <a class="otherlogin-link" href="javascript:;" url="http://www.qyer.com/u/8384004/footprint" rel="noflow" data-bn-ipg="index-head-un-qq" data-type="qq"><i class="iconfont icon-qq"></i></a>
-                    <a class="otherlogin-link" href="javascript:;" url="http://www.qyer.com/u/8384004/footprint" rel="noflow" data-bn-ipg="index-head-un-weibo" data-type="weibo"><i class="iconfont icon-weibo"></i></a>
-                    <a class="otherlogin-link" href="javascript:;" url="http://www.qyer.com/u/8384004/footprint" rel="noflow" data-bn-ipg="index-head-un-wechat" data-type="weixin"><i class="iconfont icon-weixin"></i></a>
-
-                    <a href="http://login.qyer.com/?action=register&refer=http://www.qyer.com%2Fu%2F8384004%2Ffootprint" data-bn-ipg="index-head-un-register">注册</a>
-                    <a href="http://login.qyer.com/?action=login&refer=http://www.qyer.com%2Fu%2F8384004%2Ffootprint" data-bn-ipg="index-head-un-login">登录</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+@include('index.public.header')
 <!--token:d41d8cd98f00b204e9800998ecf8427e--><!--头部 -->
 <div class="u_headbar">
     <div class="infos">
@@ -211,7 +51,7 @@
             <li data-bn-ipg="usercenter-tab-footprint"  class="current">
                 <a href="http://www.qyer.com/u/8384004/footprint" class="a_list">足迹与点评</a>
             </li>
-            <li data-bn-ipg="usercenter-tab-thread"  ><a href="{{URL('')}}" class="a_list">邀请注册</a></li>
+            <li data-bn-ipg="usercenter-tab-thread"  ><a href="{{URL('index/resetpass')}}" class="a_list">邀请注册</a></li>
             <li data-bn-ipg="usercenter-tab-thread"  ><a href="http://www.qyer.com/u/8384004/travel" class="a_list">帖子</a></li>
             <li data-bn-ipg="usercenter-tab-album" ><a href="http://www.qyer.com/pictrip/8384004/" class="a_list">照片</a></li>
             <li data-bn-ipg="usercenter-tab-ask" ><a href="http://www.qyer.com/u/8384004/ask" class="a_list">问答</a></li>

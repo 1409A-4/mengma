@@ -48,11 +48,11 @@ class LoginController extends Controller{
     public function registration (Request $request){
         $data = $request->except('_token');
         $rules = [
-            'username' => 'required |unique:user,uname',
+            'username' => 'required |unique:user,u_name',
             'password' => 'required',
             'confirm_password' => "required",
-            'phone_number' => "required | unique:user,uphone",
-            'email' => "required | unique:user,uemail",
+            'phone_number' => "required | unique:user,u_phone",
+            'email' => "required | unique:user,u_email",
 
         ];
         $message = [
@@ -74,15 +74,16 @@ class LoginController extends Controller{
           if($rand==$data['code']){
               //判断密码是否一致
                 if($data['password']==$data['confirm_password']){
-                        $arr['uname']=$data['username'];
-                        $arr['upwd']=md5($data['password']);
-                        $arr['uemail']=$data['email'];
-                        $arr['uphone']=$data['phone_number'];
-                        $arr['ubtime']=date('Y-m-d H:i:s');
-                        $arr['uip']=$_SERVER['REMOTE_ADDR'];
-                        $arr['uimg']="./image/tx_img.gif";
+                        $arr['u_name']=$data['username'];
+                        $arr['u_pwd']=md5($data['password']);
+                        $arr['u_email']=$data['email'];
+                        $arr['u_phone']=$data['phone_number'];
+                        $arr['u_btime']=date('Y-m-d H:i:s');
+                        $arr['u_ip']=$_SERVER['REMOTE_ADDR'];
+                        $arr['u_img']="./image/tx_img.gif";
                    // print_r($arr);die;
-                   $res =  DB::table('user')->insert($arr);
+                    $user = new User();
+                   $res =  $user->insert($arr);
                     if($res){
                         return redirect::to('index/login');
                     }else{
@@ -107,7 +108,7 @@ class LoginController extends Controller{
     public function send(Request $request){
        $email = $request->get('email');
         $rand = rand(10000,99999);
-        session(['rand'=>$rand]);
+        session(['rand'=>$rand],time()+300);
         Mail::raw('您好，猛犸旅途网欢迎您，您的注册邮箱为：'.$email.',您的邮箱验证码为：'.$rand, function ($m) use($email) {
             $m->to($email)->subject('欢迎加入猛犸旅途，请验证注册邮箱');
         });
@@ -136,14 +137,11 @@ class LoginController extends Controller{
             $user = new User();
             if ($verify->check($_POST['uverify'])) {
                 unset($data['uverify']);
-                $arr['uname']=$data['username'];
-                $arr['upwd'] = md5($data['password']);
+                $arr['u_name']=$data['username'];
+                $arr['u_pwd'] = md5($data['password']);
 
                 $bool=$user->where($arr)->first()->toArray();
-                \Request::session()->put('name',$bool['uname']);
-
-                $value = $request->session()->get('name');
-             
+                session(['name'=>$bool['u_name']]);
                 return redirect::to('/');
             } else {
                 return back()->with(['message' => "验证码错误！"]);
@@ -161,20 +159,19 @@ class LoginController extends Controller{
         $open = new open51094();
         $arr = $open->me($code);
 
-        $data['uname']=$arr['name'];
-        $data['uimg']=$arr['img'];
-        $data['uniq']=$arr['uniq'];
+        $data['u_name']=$arr['name'];
+        $data['u_img']=$arr['img'];
+        $data['u_uniq']=$arr['uniq'];
         $data['from']=$arr['from'];
-        $data['created_at']=date('Y-m-d');
-        $data['uip']=$_SERVER['REMOTE_ADDR'];
+        $data['u_btime']=date('Y-m-d');
+        $data['u_ip']=$_SERVER['REMOTE_ADDR'];
 
         //判断用户是否登录过
-        //$re = DB::table('third')->where('uname',$data['uname'])->first();
-        $re = DB::table('user')->where('uniq',$data['uniq'])->first();
+        $user = new User();
+        $re = $user->where('u_uniq',$data['u_uniq'])->first();
+
         if($re){
-           // session(['uid'=>$re->id,'uname'=>$re->uname], time()+900);
-            \Request::session()->put('name',$re['uname']);
-           // echo \Request::session()->get('uname');die;
+           session(['uid'=>$re->id,'name'=>$re->u_name], time()+900);
             return redirect::to('/');
         }else{
             //$res =  DB::table('third')->insert($data);
@@ -196,35 +193,9 @@ class LoginController extends Controller{
     }
     
     /*
-     * 用户中心
-     * 
-     * */
-    
-    public function usercenter(){
-        $name =\Request::session()->get('name');
-
-        $arr = DB::table('user')->where('uname',$name)->first();
-
-        if($arr){
-
-        }else{
-            $arr = DB::table('third')->where('uname',$name)->first();
-        }
-        $curl = "http://api.k780.com:88/?app=ip.get&ip=".$arr['uip']."&appkey=10003&sign=b59bc3ef6191eb9f747dd4e83c99f2a4&format=json";
-        $str = file_get_contents($curl);
-
-        $data =json_decode($str,true);
-        $value = $data['result']['area_style_areanm'];
-        $a =  substr($value,strpos($value,',')+1);
-        $arr['ip']=$a;
-      
-      //  print_r($arr);die;
-        return view('index.login.center',$arr);
-    }
-    /*
      *  微信登录
      * 
-     * */
+     */
     public function weixin(Request $request){
        $appid = $request->get('user');
         $re = DB::table('user')->where('uniq',$appid)->first();

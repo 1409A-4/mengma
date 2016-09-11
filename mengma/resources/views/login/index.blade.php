@@ -54,11 +54,12 @@
 {{--第三方登录--}}
 <script type="text/javascript" src="http://open.51094.com/user/myscript/157a481067e6d3.html "></script>
 <script src="./js/jquery.min.js"></script>
-<script src="./js/common.js"></script>
+
 <!--背景图片自动更换-->
 <script src="./js/supersized.3.2.7.min.js"></script>
 <script src="./js/supersized-init.js"></script>
 <!--表单验证-->
+<script src="./js/common.js"></script>
 <script src="./js/jquery.validate.min.js?var1.14.0"></script>
 
 </body>

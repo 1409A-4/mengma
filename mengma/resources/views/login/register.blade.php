@@ -23,7 +23,7 @@
             </ul>
         </div>
     @endif
-    <form action="{{URL('index/regis')}}" method="post" id="registerForm">
+    <form action="{{URL('login/regis')}}" method="post" id="registerForm">
         <div>
             <input type="hidden" name="_token" value="{{csrf_token()}}">
             <input type="text" name="username" class="username" placeholder="您的用户名" autocomplete="off"/>
@@ -70,7 +70,7 @@
 <script>
     $('#code').click(function () {
         email=$('#email').val();
-       $.get('send',{email:email},function (msg) {
+       $.get('login/send',{email:email},function (msg) {
 
        })
     })

@@ -27,14 +27,17 @@ Route::group(['prefix'=>'login'],function() {
     Route::get('third','Index\LoginController@thirdlogin');//第三方登录
     Route::get('wei','Index\LoginController@weixin');//微信登录
     Route::post('regiswei','Index\LoginController@RegisWeixin');//微信注册
-    Route::get('login/loginout','Index\LoginController@loginout');//退出
+    Route::get('loginout','Index\LoginController@loginout');//退出
 
 });
 
 
 Route::group(['prefix'=>'index'],function(){
-    Route::get('center','Index\MyController@index');//用户中心
-    Route::get('center','Index\MyController@index');//用户中心
+    Route::get('center','Index\MyController@Index');//用户中心
+    Route::get('invite','Index\MyController@Invite');//邀请注册页面
+    Route::post('invite_check','Index\MyController@invite_Check');//邀请注册
+    Route::get('resetpass','Index\MyController@resetPass');//修改密码
+    Route::get('resetpass','Index\MyController@resetPass');//
 });
 
 
