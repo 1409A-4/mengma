@@ -8,6 +8,8 @@
 <meta name="description" content="Bootstrap" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="assets/css/validationEngine.jquery.css">
+<link rel="stylesheet" href="assets/css/toastr.css">
+<link rel="stylesheet" href="assets/css/toastr.min.css">
 <!-- basic styles -->
 
 <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -56,7 +58,7 @@
 <div class="row">
 <div class="col-sm-10 col-sm-offset-1">
 <div class="login-container">
-<div class="center" id="center" st="{{ session('st') }}">
+<div class="center" id="center" st="{{ session('st') }}" mag="{{session('messages')}}">
 <h1>
     <i class="icon-leaf green"></i>
     <span class="red">合作</span>
@@ -87,7 +89,7 @@
             @endif
 
 
-            <span style="color:red;">{{ empty(session('messages'))? '': session('messages')}}</span>
+
             <div class="space-6"></div>
 
             <form id="form_id" method="post" action="business/login_pro">
@@ -384,17 +386,32 @@ jQuery('#'+id).addClass('visible');
 <script src="assets/js/jquery.validationEngine.js"></script>
 <script type="text/javascript" src="assets/js/region.js"></script>
 <script src="js/area.ui.js"></script>
-
+<script type="text/javascript" src="assets/js/toastr.js"></script>
 <script>
 
+    toastr.options = {
+        positionClass: "toast-top-center",
+    };
     $(function () {
-        //$('#form_id').validationEngine();
-        //$('#form_register').validationEngine();
+        $('#form_id').validationEngine();
+        $('#form_register').validationEngine();
         var st=$('#center').attr('st');
+        var mag=$('#center').attr('mag');
         if(st==1){
             $('.widget-box.visible').removeClass('visible');
             $('#signup-box').addClass('visible');
         }
+        if(mag==3){
+            toastr.error ("账号或密码错误！");
+        }else if(mag==4){
+            toastr.success ("退出成功！");
+        }else if(mag==5){
+            toastr.success ("入驻成功，请登录！");
+        }
+/*        toastr.warning ("警告！");
+
+        toastr.info ("写入！");
+        toastr.success ("入驻成功！请登录");*/
     });
     $(document).area("s_province","s_city","s_county");//调用三级插件
 </script>

@@ -11,6 +11,9 @@ return array(
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
+
+    'FileUp' => $baseDir . '/app/cl/FileUp.php',
+
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/src/Iterator.php',
     'File_Iterator_Facade' => $vendorDir . '/phpunit/php-file-iterator/src/Facade.php',
     'File_Iterator_Factory' => $vendorDir . '/phpunit/php-file-iterator/src/Factory.php',
@@ -83,7 +86,10 @@ return array(
     'Hamcrest\\Util' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
     'Hamcrest\\Xml\\HasXPath' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
     'HotelClassTable' => $baseDir . '/database/migrations/2016_09_08_034252_hotel_class_table.php',
+<<<<<<< HEAD
     'Meng' => $baseDir . '/database/migrations/2016_09_09_105953_meng.php',
+=======
+>>>>>>> 2016-09-08
     'Mengobj' => $baseDir . '/database/migrations/2016_09_02_150645_mengobj.php',
     'PHPUnit\\Framework\\TestCase' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/TestCase.php',
     'PHPUnit_Exception' => $vendorDir . '/phpunit/phpunit/src/Exception.php',
@@ -536,7 +542,13 @@ return array(
     'SebastianBergmann\\Version' => $vendorDir . '/sebastian/version/src/Version.php',
     'TestCase' => $baseDir . '/tests/TestCase.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
+    'Tool' => $baseDir . '/app/cl/Tool.php',
     'TrainTable' => $baseDir . '/database/migrations/2016_09_08_035821_train_table.php',
+<<<<<<< HEAD
     'Verify' => $baseDir . '/app/libs/Verify.php',
     'app\\libs\\open51094' => $baseDir . '/app/libs/open51094.php',
+=======
+    'Verify' => $baseDir . '/app/cl/Verify.php',
+    'Z' => $baseDir . '/app/cl/Z.php',
+>>>>>>> 2016-09-08
 );

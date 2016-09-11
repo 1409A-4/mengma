@@ -12,5 +12,8 @@
             maxwidth: 2500,
             speed: 600
         });
+        $('.aa').click(function () {
+           $(this).parent().addClass('active');
+        });
     });
 </script>

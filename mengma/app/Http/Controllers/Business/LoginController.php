@@ -9,7 +9,6 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 
-
 class LoginController extends Controller
 {
     /*
@@ -52,7 +51,7 @@ class LoginController extends Controller
                 $business->where('bid', session('bid'))->update($b_time);   //修改登录时间
                 return redirect('business/home');
             }else{
-                return back()->with(['messages'=>'商号或密码错误！']);
+                return back()->with(['messages'=>'3']);
             }
         } else {
             return back()->withErrors($validator);
@@ -64,7 +63,7 @@ class LoginController extends Controller
      * */
     public function businessLogout(Request $request){
         $request->session()->flush();
-        return redirect('business/login')->with(['messages'=>'退出成功!']);
+        return redirect('business/login')->with(['messages'=>'4']);
     }
 
     /*
@@ -149,7 +148,7 @@ class LoginController extends Controller
                 unset($data['province'],$data['city'],$data['county']);
                 $re = $business -> insert($data);
                 if($re){
-                    return back()->with(['messages'=>'入驻成功！请登录']);
+                    return back()->with(['messages'=>'5']);
                 }else{
                     return back()->with(['message'=>'入驻失败！','st'=>1]);
                 }
