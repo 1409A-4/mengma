@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
     <![endif]-->
     <link href="jsupload/css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="assets/css/toastr.min.css">
     <!-- page specific plugin styles -->
 
     <link rel="stylesheet" href="assets/css/jquery-ui-1.10.3.custom.min.css" />
@@ -126,37 +128,40 @@
                             <input type="hidden" name="_token" value="{{ csrf_token()}}">
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 商品名称 </label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 酒店名称
+                                </label>
 
                                 <div class="col-sm-9">
-                                    <input type="text" name="gname" id="form-field-1" placeholder="商品名称" class="col-xs-10 col-sm-5" />
+                                    <input type="text" name="h_name" id="form-field-1" placeholder="酒店名称"
+                                           class="col-xs-10 col-sm-5" />
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 所属分类 </label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 房间类型 </label>
 
                                 <div class="col-sm-9">
-                                    <select name="nid" >
-                                        <option value="0">--顶级分类--</option>
+                                    <select name="hc_id" >
+                                        <option value="0">--请选择--</option>
                                         @foreach($type as $ty)
-                                            <option value="{{ $ty['nid'] }}"><?php echo str_repeat("+",
-                                                        $ty['level']*3) ?>{{ $ty['nname'] }}</option>
+                                            <option value="{{ $ty['hc_id'] }}">{{ $ty['hc_name'] }}</option>
                                         @endforeach
                                     </select>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 商品价格 </label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 房间价格
+                                </label>
 
                                 <div class="col-sm-9">
-                                    <input type="text" name="gprice" id="form-field-1" placeholder="商品价格" class="col-xs-10 col-sm-5" />
+                                    <input type="text" name="h_price" id="form-field-1" placeholder="房间价格"
+                                           class="col-xs-10 col-sm-5" />
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 商品产地 </label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 酒店地址 </label>
 
                                 <div class="col-sm-9">
                                     <select name="province" id="s_province" class=" validate[required]
@@ -170,20 +175,22 @@
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 详细地址 </label>
 
                                 <div class="col-sm-9">
-                                    <input type="text" name="ghome" id="form-field-1" placeholder="商品详细地址" class="col-xs-10 col-sm-5" />
+                                    <input type="text" name="h_home" id="form-field-1" placeholder="详细地址"
+                                           class="col-xs-10 col-sm-5" />
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 库存数量 </label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 房间数量 </label>
 
                                 <div class="col-sm-9">
-                                    <input type="text" name="gstock" id="form-field-1" placeholder="商品库存" class="col-xs-10 col-sm-5" />
+                                    <input type="text" name="h_stock" id="form-field-1" placeholder="房间数量"
+                                           class="col-xs-10 col-sm-5" />
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 商品图片
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 房间图片
                                 </label>
 
                                 <div class="col-md-9">
@@ -220,7 +227,7 @@
                 <i class="icon-cog bigger-150"></i>
             </div>
 
-            <div class="ace-settings-box" id="ace-settings-box">
+            <div class="ace-settings-box" id="ace-settings-box"  b_error="{{ session('b_error') }}">
                 <div>
                     <div class="pull-left">
                         <select id="skin-colorpicker" class="hide">
@@ -617,9 +624,23 @@
 <script src="js/area.ui.js"></script>
 <script src="jsupload/js/fileinput.js" type="text/javascript"></script>
 <script src="jsupload/js/fileinput_locale_zh.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/js/toastr.js"></script>
 <script>
 
+    toastr.options = {
+        positionClass: "toast-top-center"
+    };
     $(function () {
+        var mag=$('#ace-settings-box').attr('b_error');
+
+        if(mag==6){
+            toastr.success ("添加成功");
+
+        }else if(mag==7){
+            toastr.error ("图片添加失败");
+        }else if(mag==8){
+            toastr.error ("添加失败");
+        }
         $('#form_id').validationEngine();
         $('#form_register').validationEngine();
     });

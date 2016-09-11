@@ -94,7 +94,9 @@
     </div>
 </div>
 <!---End-content---->
+</body>
 @include('.index.public.foot')
 </html>
+
 
 

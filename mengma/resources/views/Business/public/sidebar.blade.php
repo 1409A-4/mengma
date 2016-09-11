@@ -48,30 +48,7 @@
             </a>
         </li>
 
-        <li>
-            <a href="#" class="dropdown-toggle">
-                <i class="icon-desktop"></i>
-                <span class="menu-text"> 分类管理 </span>
 
-                <b class="arrow icon-angle-down"></b>
-            </a>
-
-            <ul class="submenu">
-                <li>
-                    <a href="business/typeAdd">
-                        <i class="icon-double-angle-right"></i>
-                        添加分类
-                    </a>
-                </li>
-
-                <li>
-                    <a href="business/myType">
-                        <i class="icon-double-angle-right"></i>
-                        我的分类
-                    </a>
-                </li>
-            </ul>
-        </li>
 
         <li>
             <a href="#" class="dropdown-toggle">
@@ -98,71 +75,7 @@
             </ul>
         </li>
 
-        <li>
-            <a href="#" class="dropdown-toggle">
-                <i class="icon-edit"></i>
-                <span class="menu-text"> 用户管理 </span>
 
-                <b class="arrow icon-angle-down"></b>
-            </a>
-
-            <ul class="submenu">
-                <li>
-                    <a href="form-elements.html">
-                        <i class="icon-double-angle-right"></i>
-                        表单组件
-                    </a>
-                </li>
-
-                <li>
-                    <a href="form-wizard.html">
-                        <i class="icon-double-angle-right"></i>
-                        向导提示 &amp; 验证
-                    </a>
-                </li>
-
-                <li>
-                    <a href="wysiwyg.html">
-                        <i class="icon-double-angle-right"></i>
-                        编辑器
-                    </a>
-                </li>
-
-                <li>
-                    <a href="dropzone.html">
-                        <i class="icon-double-angle-right"></i>
-                        文件上传
-                    </a>
-                </li>
-            </ul>
-        </li>
-
-        <li>
-            <a href="widgets.html">
-                <i class="icon-list-alt"></i>
-                <span class="menu-text"> 订单管理 </span>
-            </a>
-        </li>
-
-        <li>
-            <a href="calendar.html">
-                <i class="icon-calendar"></i>
-
-                <span class="menu-text">
-									日历
-									<span class="badge badge-transparent tooltip-error" title="2&nbsp;Important&nbsp;Events">
-										<i class="icon-warning-sign red bigger-130"></i>
-									</span>
-								</span>
-            </a>
-        </li>
-
-        <li>
-            <a href="gallery.html">
-                <i class="icon-picture"></i>
-                <span class="menu-text"> 相册 </span>
-            </a>
-        </li>
 
         <li>
             <a href="#" class="dropdown-toggle">

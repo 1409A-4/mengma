@@ -18,7 +18,7 @@
     <![endif]-->
 
     <!-- page specific plugin styles -->
-
+    <link rel="stylesheet" href="assets/css/toastr.min.css">
     <!-- fonts -->
 
 
@@ -104,7 +104,8 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="table-responsive">
-                            <table id="sample-table-1" class="table table-striped table-bordered table-hover">
+                            <table id="sample-table-1" class="table table-striped table-bordered table-hover"
+                                   h_error="{{ session('h_error') }}">
                                 <thead>
                                 <tr>
                                     <th class="center">
@@ -113,16 +114,11 @@
                                             <span class="lbl"></span>
                                         </label>
                                     </th>
-                                    <th>分类名称</th>
-                                    <th>排序</th>
-
-
-                                    <th>
-                                        <i class="icon-time bigger-110 hidden-480"></i>
-                                        添加时间
-                                    </th>
-
-
+                                    <th>酒店名称</th>
+                                    <th>房间类型</th>
+                                    <th>房间价格</th>
+                                    <th>酒店地址</th>
+                                    <th>状态</th>
                                     <th></th>
                                 </tr>
                                 </thead>
@@ -138,13 +134,19 @@
                                         </td>
 
                                         <td>
-                                            <a href="#">{{ str_repeat("+",
-                                                    $ty['level']*3) }}{{$ty['nname'] }}</a>
+                                            <a href="#">{{$ty['h_name'] }}</a>
                                         </td>
-                                        <td>{{ $ty['nsort'] }}</td>
+                                        <td>{{ $ty['hc_name'] }}</td>
 
-                                        <td>{{ $ty['nbtime'] }}</td>
-
+                                        <td>{{ $ty['h_price'] }}</td>
+                                        <td>{{ $ty['h_place'].','.$ty['h_home'] }}</td>
+                                        <td>
+                                            @if($ty['h_status']==0)
+                                            审核中
+                                                @else
+                                            上架
+                                                @endif
+                                        </td>
 
 
                                         <td>
@@ -153,7 +155,7 @@
                                                     <i class="icon-ok bigger-120"></i>
                                                 </button>
 
-                                                <a href="business/type_upd?nid={{$ty['nid']}}"><button
+                                                <a href="business/goodsUpd?h_id={{$ty['h_id']}}"><button
                                                             class="btn
 
                                                     btn-xs
@@ -161,7 +163,7 @@
                                                         <i class="icon-edit bigger-120"></i>
                                                     </button></a>
 
-                                                <a href="business/type_del?nid={{$ty['nid']}}"><button
+                                                <a href="business/goodsDel?h_id={{$ty['h_id']}}"><button
                                                             class="btn
                                                     btn-xs btn-danger">
                                                         <i class="icon-trash bigger-120"></i>
@@ -211,6 +213,7 @@
 
                                 </tbody>
                             </table>
+                            {{ $tasks->links() }}
                         </div><!-- /.table-responsive -->
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -350,6 +353,25 @@
             return 'left';
         }
     })
-</script
+</script>
 </body>
 </html>
+<script type="text/javascript" src="assets/js/toastr.js"></script>
+<script>
+
+    toastr.options = {
+        positionClass: "toast-top-center"
+    };
+    $(function () {
+        var mag=$('#sample-table-1').attr('h_error');
+
+        if(mag==1){
+            toastr.success ("删除成功");
+
+        }else if(mag==2){
+            toastr.error ("删除失败");
+        }
+
+    });
+
+</script>
