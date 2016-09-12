@@ -28,7 +28,30 @@
 <script src="Scripts/headerfoot_black.min-e0b0f90a51b948628c849d2fa239d0e5.js" async="async"></script>
 
 
-@include('index.public.header')
+<div class="header">
+    <div class="wrap">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" title="logo" /></a>
+        </div>
+        <div class="top-nav">
+            <ul>
+                <li ><a href="{{url('/')}}">首页</a></li>
+                <li><a href="about.html">机票</a></li>
+                <li><a href="{{url('hotel')}}">酒店</a></li>
+                <li><a href="plans.html">景区</a></li>
+                @if(session('name'))
+                    <li><a href="{{URL('index/center')}}" class="nav2" style="text-decoration:none" >用户中心</a></li>
+                    <li><a href="{{URL('login/loginout')}}" class="nav3" style="text-decoration:none">退出</a></li>
+                @else
+                    <li><a href="{{url('login/register')}}">注册</a></li>
+                    <li><a href="{{url('login/login')}}">登录</a></li>
+                @endif
+
+            </ul>
+        </div>
+        <div class="clear"> </div>
+    </div>
+</div>
 <!--token:d41d8cd98f00b204e9800998ecf8427e--><!--头部 -->
 <div class="u_headbar">
     <div class="infos">

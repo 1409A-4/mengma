@@ -30,4 +30,20 @@ class IndexController extends Controller
     {
         return view('index.hotel');
     }
+
+    /*
+     * 线路
+     */
+    public function hotelCar()
+    {
+        return view('index.hotelcar');
+    }
+
+    /*
+      * 线路详情
+      */
+    public function hotelCarin()
+    {
+        return view('index.hcinfo');
+    }
 }

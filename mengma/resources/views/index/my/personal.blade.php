@@ -24,13 +24,37 @@
     {{--<script type="text/javascript" src="js/jia.js"></script>--}}
     @include("index.public.style")
 </head>
+
 <body>
 <link href="css/jiathis_share.css" rel="stylesheet" type="text/css">
 <iframe frameborder="0" style="position: absolute; display: none; opacity: 0;"></iframe>
 {{--<div class="jiathis_style" style="position: absolute; z-index: 1000000000; display: none; top: 50%; left: 50%; overflow: auto;"></div>
 <div class="jiathis_style" style="position: absolute; z-index: 1000000000; display: none; overflow: auto;"></div>--}}
 {{--<iframe frameborder="0" src="./修改我的用户密码 - 穷游网_files/jiathis_utility.html" style="display: none;"></iframe>--}}
-@include("index.public.header")
+<div class="header">
+    <div class="wrap">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" title="logo" /></a>
+        </div>
+        <div class="top-nav">
+            <ul>
+                <li ><a href="{{url('/')}}">首页</a></li>
+                <li><a href="about.html">机票</a></li>
+                <li><a href="{{url('hotel')}}">酒店</a></li>
+                <li><a href="plans.html">景区</a></li>
+                @if(session('name'))
+                    <li class="active"><a href="{{URL('index/center')}}" class="nav2" style="text-decoration:none" >用户中心</a></li>
+                    <li><a href="{{URL('login/loginout')}}" class="nav3" style="text-decoration:none">退出</a></li>
+                @else
+                    <li><a href="{{url('login/register')}}">注册</a></li>
+                    <li><a href="login/login">登录</a></li>
+                @endif
+
+            </ul>
+        </div>
+        <div class="clear"> </div>
+    </div>
+</div>
 
 
 <link href="css/headerfoot_black.min-b9b248b9e55e7c6d0d4563ef311d9f73.css" rel="stylesheet">

@@ -17,4 +17,6 @@ Route::get('/', function () {
 });
 Route::get('scenicSpot','Index\IndexController@scenicSpot');//景区详情
 Route::get('hotel','Index\IndexController@hotel');//酒店
+Route::get('hotelCar','Index\IndexController@hotelCar');//线路
+Route::get('hotelCarin','Index\IndexController@hotelCarin');//线路详情
 
