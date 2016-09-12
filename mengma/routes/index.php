@@ -35,9 +35,9 @@ Route::group(['prefix'=>'login'],function() {
 Route::group(['prefix'=>'index'],function(){
     Route::get('center','Index\MyController@Index');//用户中心
     Route::get('invite','Index\MyController@Invite');//邀请注册页面
-    Route::post('invite_check','Index\MyController@invite_Check');//邀请注册
+    Route::post('invite_Check','Index\MyController@invite_Check');//处理邀请注册
     Route::get('resetpass','Index\MyController@resetPass');//修改密码
-    Route::get('resetpass','Index\MyController@resetPass');//
+    Route::post('pass_Check','Index\MyController@pass_Check');//处理修改密码
 });
 
 
