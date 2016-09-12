@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Model\Admin\Admin;
+use App\Model\Admin\Admin_Role;
+use App\Model\Admin\Power;
+use App\Model\Admin\Role_Power;
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
+use DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 
@@ -16,7 +19,11 @@ class LoginCoontroller extends Controller
      * */
     public function loadLogin()
     {
+        if(session('uid')){
+            redirect('admin/index');
+        }
         return view('admin/login/login');
+
     }
 
     /*
@@ -42,7 +49,18 @@ class LoginCoontroller extends Controller
                 unset($data['uverify']);
                 $data['upwd'] = md5($data['upwd']);
                 if( $bool=Admin::where($data)->first()){
-                    session(['uid'=>$bool->uid,'uname'=>$bool->uname]);
+                    $routename=DB::table('admin')
+                        ->where('admin.uid',$bool->uid)
+                        ->leftJoin('admin_role', 'admin.uid', '=', 'admin_role.uid')
+                        ->leftJoin('role_power', 'admin_role.rid', '=', 'role_power.rid')
+                        ->leftJoin('power', 'role_power.pid', '=', 'power.pid')
+                        ->distinct()
+                        ->select('routename')
+                        ->get();
+                    foreach($routename as $k=>$v){
+                        $route[]=$v->routename;
+                    }
+                    session(['uid'=>$bool->uid,'uname'=>$bool->uname,'routename'=>$route]);
                     Admin::where('uid',$bool->uid)->update(['uetime'=>date('Y-m-d H:i:s')]);
                     return redirect()->action('Admin\IndexController@index');
                 }else{
@@ -62,7 +80,7 @@ class LoginCoontroller extends Controller
     {
         $verify = new \Verify();
         $verify->codeSet = '012356789';
-        $verify->useImgBg = true;
+        $verify->fontttf  = '5.ttf';
         $verify->entry();
     }
     /*
@@ -108,3 +126,15 @@ class LoginCoontroller extends Controller
         }
     }
 }
+//                    $one=Admin_Role::where('uid',$bool->uid)->get();
+//                    foreach($one as $k=>$v){
+//                        $rid[]=$v->rid;
+//                    }
+//                    $two=Role_Power::whereIn('rid',$rid)->select('pid')->distinct()->get();
+//                    foreach($two as $k=>$v){
+//                        $pid[]=$v->pid;
+//                    }
+//                    $three=Power::whereIn('pid',$pid)->select('routename')->get();
+//                    foreach($three as $k=>$v){
+//                        $routename[]=$v->routename;
+//                    }

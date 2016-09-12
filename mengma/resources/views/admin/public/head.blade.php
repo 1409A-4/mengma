@@ -268,6 +268,16 @@
                             </li>
                         </ul>
                     </li>
+                    <li><a href="#"><i class="fa fa-tasks"><div class="icon-bg bg-pink"></div></i><span class="menu-title">权限管理</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="admin/power/create"><i class="fa fa-tasks"></i><span class="submenu-title">权限添加</span></a>
+                            </li>
+                            <li><a href="admin/power"><i class="fa fa-tasks"></i><span class="submenu-title">权限管理</span></a>
+                            </li>
+                            <li><a href="admin/loadPowerAssign"><i class="fa fa-tasks"></i><span class="submenu-title">权限分配</span></a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </nav>

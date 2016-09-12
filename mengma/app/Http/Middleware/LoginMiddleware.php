@@ -18,6 +18,11 @@ class LoginMiddleware
         if(!session('uid')){
             return redirect()->action('Admin\LoginCoontroller@loadLogin')->with(['message'=>"请登录！"]);
         }
+        if(session('uname')!="admin"){
+            if(!in_array($request->path(),session('routename'))){
+                return redirect()->action('Admin\LoginCoontroller@loadLogin')->with(['message'=>"您没有此权限！"]);
+            }
+        }
         return $next($request);
     }
 }

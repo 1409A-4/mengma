@@ -49,8 +49,11 @@ Route::group(['prefix' => 'admin','middleware'=>'login'],function () {
     Route::get('loadRoleAssign', 'Admin\RoleController@loadRoleAssign');//加载分配角色
     Route::post('roleAssign', 'Admin\RoleController@roleAssign');//分配角色
     Route::get('adminRole', 'Admin\RoleController@adminRole');//查找当前用户角色
-    Route::get('roleAssign', 'Admin\RoleController@roleAssign');
     Route::resource('role', 'Admin\RoleController');//角色路由
-    Route::resource('power', 'Admin\PowerController');//角色路由
+
+    Route::get('loadPowerAssign', 'Admin\PowerController@loadPowerAssign');//加载分配权限
+    Route::post('powerAssign', 'Admin\PowerController@powerAssign');//分配权限
+    Route::get('rolePower', 'Admin\PowerController@rolePower');//查找当前角色权限
+    Route::resource('power', 'Admin\PowerController');//权限路由
 
 });

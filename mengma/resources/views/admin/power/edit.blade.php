@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>权限添加</title>
+    <title>权限修改</title>
     <base href="{{URL::asset('/')}}"/>
     @include('admin.public.style')
 </head>
@@ -28,17 +28,18 @@
         <div id="page-user-profile" class="row">
             <div class="col-md-12">
                 <div class="panel panel-blue">
-                    <div class="panel-heading">权限添加</div>
+                    <div class="panel-heading">权限修改</div>
                     <div class="panel-body pan">
-                        <form action="admin/power" method="post" class="form-horizontal">
+                        <form action="admin/power/{{$data->pid}}" method="post" class="form-horizontal">
                             <input type="hidden" name="_token" value="{{csrf_token()}}">
+                            {{ method_field('PUT') }}
                             <div class="form-body pal">
                                 <div class="form-group">
                                     <label for="inputUsername" class="col-md-3 control-label">权限名称 <span class='require'>*</span>
                                     </label>
                                     <div class="col-md-9">
                                         <div class="input-icon"><i class="fa fa-indent"></i>
-                                            <input id="inputUsername" type="text" placeholder="权限名称" name="pname" class="form-control" />
+                                            <input id="inputUsername" type="text" placeholder="权限名称" value="{{$data->pname}}" name="pname" class="form-control" />
                                         </div>
                                     </div>
                                 </div>
@@ -47,14 +48,14 @@
                                     </label>
                                     <div class="col-md-9">
                                         <div class="input-icon"><i class="fa fa-indent"></i>
-                                            <input id="inputUsername" type="text" placeholder="权限路由" name="routename" class="form-control" />
+                                            <input id="inputUsername" type="text" placeholder="权限路由" value="{{$data->routename}}" name="routename" class="form-control" />
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-actions">
                                 <div class="col-md-offset-3 col-md-9">
-                                    <button type="submit" class="btn btn-primary">添加</button>&nbsp;
+                                    <button type="submit" class="btn btn-primary">修改</button>&nbsp;
                                     <button type="reset" class="btn btn-green">取消</button>
                                 </div>
                             </div>

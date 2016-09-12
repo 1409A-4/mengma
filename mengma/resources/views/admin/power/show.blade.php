@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>分类管理</title>
+    <title>权限管理</title>
     <base href="{{URL::asset('/')}}"/>
     @include('admin.public.style')
 </head>
@@ -28,31 +28,31 @@
         <div id="page-user-profile" class="row">
             <div class="col-md-12">
                 <div class="panel panel-grey">
-                    <div class="panel-heading">分类管理</div>
+                    <div class="panel-heading">权限管理</div>
                     <div class="panel-body">
                         <table class="table table-hover table-bordered table-striped">
                             <thead class="bg-blue text-center">
                             <tr>
-                                <th class="text-center">分类编号</th>
-                                <th class="text-center">分类名称</th>
-                                <th class="text-center">创建时间</th>
-                                <th class="text-center">分类排序</th>
-                                <th class="text-center">分类删除</th>
-                                <th class="text-center">分类编辑</th>
+                                <th class="text-center">权限编号</th>
+                                <th class="text-center">权限名称</th>
+                                <th class="text-center">路由名称</th>
+                                <th class="text-center">添加时间</th>
+                                <th class="text-center">删除</th>
+                                <th class="text-center">编辑</th>
                             </tr>
                             </thead>
                             <tbody>
                             @foreach($data as $k=>$v)
                                 <tr class="text-center">
-                                    <td class="nid">{{$v['nid']}}</td>
-                                    <td>{{$v['nname']}}</td>
-                                    <td>{{$v['nbtime']}}</td>
-                                    <td>{{$v['nsort']}}</td>
+                                    <td class="pid">{{$v->pid}}</td>
+                                    <td>{{$v->pname}}</td>
+                                    <td>{{$v->routename}}</td>
+                                    <td>{{$v->pbtime}}</td>
                                     <td>
                                         <span class="label label-sm label-danger del">删除</span>
                                     </td>
                                     <td>
-                                        <a href="admin/loadClassifyEdit?nid={{$v['nid']}}" class="label label-sm label-success">修改</a>
+                                        <a href="admin/power/{{$v->pid}}/edit" class="label label-sm label-success">修改</a>
                                     </td>
                                 </tr>
                             @endforeach
@@ -65,6 +65,7 @@
     </div>
     <!--END CONTENT-->
 </div>
+<input type="hidden" name="_token" id="token" value="{{csrf_token()}}">
 <input type="hidden" name="message" value="{{session('message')}}" id="message">
 @include('admin.public.foot')
 </body>
@@ -74,20 +75,20 @@
     if(message!==""){
         layer.msg(message, {icon:6 });
     }
+    /*
+     * 删除权限
+     * */
     $('.del').click(function(){
         var _this=$(this);
-        var nid=$(this).parents('tr').find('.nid').html();
-        $.getJSON('admin/classifyDel',{nid:nid},function(msg){
+        var pid=$(this).parents('tr').find('.pid').html();
+        $.post('admin/power/'+pid,{'_method':'delete','_token':$('#token').val()},function(msg){
+            alert(pid);
             if(msg==1){
                 _this.parents('tr').remove();
-                layer.msg("删除成功！", {icon:6 });
-            }else if(msg==2){
-                layer.msg("该分类下有子类，不能删除此分类！", {icon:6 });
-            }else if(msg==3){
-                layer.msg("该分类下有商品，不能删除此分类！", {icon:6 });
+                layer.msg('删除成功！', {icon:6 });
             }else{
-                layer.msg("系统异常，请联系管理员！", {icon:6 });
+                layer.msg('系统异常，请联系管理员！', {icon:6 });
             }
-        });
+        })
     })
 </script>

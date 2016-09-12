@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>角色分配</title>
+    <title>权限分配</title>
     <base href="{{URL::asset('/')}}"/>
     @include('admin.public.style')
 </head>
@@ -28,30 +28,30 @@
         <div id="page-user-profile" class="row">
             <div class="col-md-12">
                 <div class="panel panel-blue">
-                    <div class="panel-heading">角色分配</div>
-                    <form action="admin/roleAssign" method="post" class="form-horizontal">
-                    <div class="panel-body pan">
+                    <div class="panel-heading">权限分配</div>
+                    <form action="admin/powerAssign" method="post" class="form-horizontal">
+                        <div class="panel-body pan">
 
                             <input type="hidden" name="_token" value="{{csrf_token()}}">
                             <div class="form-body pal">
                                 <div class="form-group">
-                                    <label for="inputEmail" class="col-md-3 control-label">选择用户<span class='require'>*</span>
+                                    <label for="inputEmail" class="col-md-3 control-label">选择角色<span class='require'>*</span>
                                     </label>
                                     <div class="col-md-9">
-                                        <select  class="selectpicker bg-green form-control" name="uid" id="uid">
-                                            <option value="选择用户">选择用户</option>
-                                            @foreach($admin as $k=>$v)
-                                                <option value="{{$v->uid}}">{{$v->uname}}</option>
+                                        <select  class="selectpicker bg-green form-control" name="rid" id="rid">
+                                            <option value="选择角色">选择角色</option>
+                                            @foreach($role as $k=>$v)
+                                                <option value="{{$v->rid}}">{{$v->rname}}</option>
                                             @endforeach
                                         </select>
                                     </div>
                                 </div>
                                 <div class="form-group" id="roles">
-                                    <label for="inputUsername" class="col-md-3 control-label">选择角色 <span class='require'>*</span>
+                                    <label for="inputUsername" class="col-md-3 control-label">选择权限 <span class='require'>*</span>
                                     </label>
                                     <div class="col-md-9">
-                                        @foreach($role as $k=>$v)
-                                                <input type="checkbox"  name="rid[]" value="{{$v->rid}}" />&nbsp; {{$v->rname}}
+                                        @foreach($power as $k=>$v)
+                                            <input type="checkbox"  name="pid[]" value="{{$v->pid}}" />&nbsp; {{$v->pname}}
                                         @endforeach
                                     </div>
                                 </div>
@@ -65,22 +65,22 @@
 
                                 </div>
 
-                        @if (count($errors) > 0)
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
+                                @if (count($errors) > 0)
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
                         @endif
                     </form>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--END CONTENT-->
+</div>
+<!--END CONTENT-->
 </div>
 <input type="hidden" name="message" value="{{session('message')}}" id="message">
 </div>
@@ -131,24 +131,28 @@
     if(message!==""){
         layer.msg(message, {icon:6 });
     }
-    $('#uid').change(function(){
-        var rid=document.getElementsByName('rid[]');
-        for(var xh=0;xh< rid.length;xh++){
-            rid[xh].checked=false;
+    /*
+    * 查看当前角色所拥有权限
+    * */
+    $('#rid').change(function(){
+        var pid=document.getElementsByName('pid[]');
+        for(var xh=0;xh< pid.length;xh++){
+            pid[xh].checked=false;
         }
-        var uid=$(this).val()
-        if(uid=="选择用户"){
-            layer.msg('请选择用户！', {icon:6 });
+        var rid=$(this).val()
+        if(rid=="选择角色"){
+            layer.msg('请选择角色！', {icon:6 });
         }else{
-            $.getJSON('admin/adminRole',{uid:uid},function(msg){
-                for(var xh=0;xh< rid.length;xh++){
+            $.getJSON('admin/rolePower',{rid:rid},function(msg){
+                for(var xh=0;xh< pid.length;xh++){
                     for( i in msg){
-                        if(rid[xh].value==msg[i]){
-                            rid[xh].checked=true;
+                        if(pid[xh].value==msg[i]){
+                            pid[xh].checked=true;
                         }
                     }
                 }
             })
         }
     })
+
 </script>

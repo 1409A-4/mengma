@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Model\Admin\Classify;
+use App\Model\Admin\Goods;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -99,10 +100,14 @@ class ClassifyController extends Controller{
         if(Classify::where('pid',$nid)->get()->toArray()){
             echo json_encode(2);
         }else{
-            if(Classify::where('nid',$nid)->delete()){
-                echo json_encode(1);
+            if(Goods::where('nid',$nid)->get()->toArray()){
+                echo json_encode(3);
             }else{
-                echo json_encode(0);
+                if(Classify::where('nid',$nid)->delete()){
+                    echo json_encode(1);
+                }else{
+                    echo json_encode(0);
+                }
             }
         }
     }

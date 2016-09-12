@@ -5,8 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Model\Admin\Admin;
 use App\Model\Admin\Admin_Role;
 use App\Model\Admin\Role;
+use App\Model\Admin\Role_Power;
 use Illuminate\Http\Request;
-
+use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
@@ -120,9 +121,15 @@ class RoleController extends Controller
      */
     public function destroy($id)
     {
-        if (Role::where('rid', $id)->delete()) {
+        try{
+            DB::beginTransaction();
+            Role::where('rid', $id)->delete();
+            Admin_Role::where('rid',$id)->delete();
+            Role_Power::where('rid',$id)->delete();
+            DB::commit();
             echo 1;
-        } else {
+        }catch(\PDOException $e){
+            DB::rollBack();
             echo 0;
         }
     }
@@ -159,7 +166,6 @@ class RoleController extends Controller
                 $arr[$k]['uid'] = $data['uid'];
                 $arr[$k]['rid'] = $v;
             }
-            return $arr;
             if(Admin_Role::insert($arr)){
                 return back()->with(['message' => "分配成功！"]);
             }
