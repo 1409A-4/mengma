@@ -69,9 +69,10 @@
         </div>
         <!--设置模块栏目内容 -->
         <div class="u_set_pass">
-            <form action="{{url('')}}" method="post" name="editpwd" id="passwordform" onsubmit="return false">
+            <form action="{{url('index/pass_Check')}}" method="post"  id="passwordform" {{--onsubmit="return false"--}}>
                 <ul class="clearfix">
                     <li>
+                        <input type="hidden" name="_token" value="{{csrf_token()}}">
                         <div class="fl">当前密码：</div>
                         <div class="fr">
                             <input name="oldpassword" id="oldpassword" type="password" class="ui2_input">
@@ -94,7 +95,8 @@
                     </li>
                     <li>
                         <div class="fr">
-                            <input type="submit" class="ui_buttonB fl mr10" value="保存设置">
+                            <button class="ui_buttonB fl mr10" >保存设置</button>
+
                         </div>
                     </li>
                 </ul>
@@ -105,43 +107,8 @@
 </div>
 
 <script language="javascript" type="text/javascript">
-    // jQuery(document).ready(function(){
-    //    $("#newpassword").keyup(function(){
-    //    var npwd = $.trim($('#newpassword').val());
-    //         //密码强度
-    //         var s = PasswordStrength.StrengthLevel(npwd);
 
-    //         switch(s)
-    //         {
-    //             case '1':
-    //                 $("#upassq").html('<span style="width:20%;background:#aa0033;">太短</span>');
-    //                 $("#upasssafe h6 span").html("太短");
-    //                 break;
-    //             case '2':
-    //                 $("#upassq").html('<span style="width:40%;background:#aa0033;">弱</span>');
-    //                 $("#upasssafe h6 span").html("弱");
-    //                 break;
-    //             case '3':
-    //                 $("#upassq").html('<span style="width:60%;background:#ffcc33;">很好</span>');
-    //                 $("#upasssafe h6 span").html("很好");
-    //                 break;
-    //             case '4':
-    //                 $("#upassq").html('<span style="width:80%;background:#2d98f3;">强</span>');
-    //                 $("#upasssafe h6 span").html("强");
-    //                 break;
-    //             case '5':
-    //                 $("#upassq").html('<span style="width:100%;background:#76c261;">最佳</span>');
-    //                 $("#upasssafe h6 span").html("最佳");
-    //                 break;
-    //             default:
-    //                 $("#upassq").html('<span style="width:40%;background:#aa0033;">弱</span>');
-    //                 $("#upasssafe h6 span").html("弱");
-    //                 break;
-    //         }
-    //     });
-    // });
-
-    $("#passwordform").submit(function(){
+    /*$("#passwordform").submit(function(){
         var oldpassword = $.trim($('#oldpassword').val());
         var newpassword = $.trim($('#newpassword').val());
         var repassword = $.trim($('#repassword').val());
@@ -169,7 +136,7 @@
                     }
 
                     //alert(msg);
-                    /*if(msg == 1){
+                    /!*if(msg == 1){
                      tips.show('密码修改成功!');
                      //alert('更新成功');
                      }else if(msg == 0 || msg == -7){
@@ -179,13 +146,13 @@
                      }else if(msg == -1){ //旧密码不正确
                      $('#user_pwd_ret').html('旧密码不正确');
                      $('#user_pwd_ret').show();
-                     }  */
+                     }  *!/
 
                 }
             });
         }
         return false;
-    });
+    });*/
 
     $(function(){
         $('#oldpassword').blur(function(){ checkOldPwd(); });
@@ -214,8 +181,8 @@
             $('#newpasswordtips').show();
             return false;
         }
-        if(! /^(?=.*[a-zA-Z]+)(?=.*[0-9]+)[\w\W]{8,16}$/.test(newpassword)){
-            $('#newpasswordtips').html('密码需要8-16位，包含字母及数字!');
+        if(! /^[\w\W]{4,12}$/.test(newpassword)){
+            $('#newpasswordtips').html('密码需要4-12位，包含字母及数字!');
             //$('#newpassword').focus();
             $('#newpasswordtips').show();
             return false;
@@ -235,8 +202,8 @@
             return false;
         }
 
-        if(! /^(?=.*[a-zA-Z]+)(?=.*[0-9]+)[\w\W]{8,16}$/.test(repassword)){
-            $('#user_npwd1_ret').html('密码需要8-16位，包含字母及数字!');
+        if(! /^[\d]{4,12}$/.test(repassword)){
+            $('#user_npwd1_ret').html('密码需要4-12位，包含字母及数字!');
             $('#newpassword1').focus();
             $('#user_npwd1_ret').show();
             return false;
@@ -276,51 +243,6 @@
     </div>
 </div>
 
-
-{{--<script type="text/javascript">
-
-    var _gaq = _gaq || [];
-
-    _gaq.push(["_setAccount", "UA-185023-1"]);
-    _gaq.push(["_setDomainName", "qyer.com"]);
-    _gaq.push(["_setSiteSpeedSampleRate",10]);
-    _gaq.push(["_addIgnoredRef", "qyer.com"]);
-    _gaq.push(["_addOrganic","soso","w"]);
-    _gaq.push(["_addOrganic","sogou","query"]);
-    _gaq.push(["_addOrganic","baidu","word"]);
-    _gaq.push(["_addOrganic","baidu","q1"]);
-    _gaq.push(["_addOrganic","baidu","q2"]);
-    _gaq.push(["_addOrganic","m.baidu","word"]);
-    _gaq.push(["_addOrganic","so.360","q"]);
-    _gaq.push(["_addOrganic","so","q"]);
-    _gaq.push(["_addOrganic","baidu","w"]);
-    _gaq.push(["_addOrganic","cn.bing","q"]);
-    _gaq.push(["_addOrganic","sm","q"]);
-    _gaq.push(["_trackPageview"]);
-
-    var _qyer_userid = "8384004";
-
-    (function() {
-
-        var qt = document.createElement("script"); qt.type = "text/javascript"; qt.async = true;
-
-        qt.src = "http://qt.qyer.com/beacon.js";
-
-        var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
-
-//ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
-        ga.src = "http://api.qyer.com/js/ga";
-
-
-//if("https:" == document.location.protocol){
-//    var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);
-//}else{
-        var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(qt, s); s.parentNode.insertBefore(ga, s);
-//}
-
-    })();
-
-</script>--}}
 
 
 

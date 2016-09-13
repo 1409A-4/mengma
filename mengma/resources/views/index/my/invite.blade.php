@@ -86,7 +86,7 @@
                 <strong class="text fontYaHei">邀请好友</strong>
             </div>
             <!--设置模块栏目内容 -->
-            <form name="" action="{{url('index/invite_check')}}" method="post" onSubmit="return userLogin()">
+            <form name="" action="{{url('index/invite_Check')}}" method="post" onSubmit="return userLogin()">
                 <table width="300px" border="1" align="center" >
                     <tr >
                         <input type="hidden" name="_token" value="{{csrf_token()}}">

@@ -52,54 +52,27 @@ class MyController  extends Controller{
     /*
      * 处理邀请
      * */
-    /*function invite_Check(Request $request){
+    function invite_Check(Request $request){
         $data = $request->except('_token');
-      $email = trim($data['email_start']).trim($data['email_end']);
+        $email = trim($data['email_start']).trim($data['email_end']);
         $name = session('name');
         $user = new User();
         $arr = $user->where('u_name',$name)->first()->toArray();
 
-        Mail::raw("您好，猛犸旅途网欢迎您，您的好友".$arr['u_name']."邀请你注册", function ($m) use($email) {
-            $m->to($email)->subject('欢迎加入猛犸旅途，请验证注册邮箱');
+        $name = $arr['u_name'];
+        $id = $arr['u_id'];
+
+        $content = '您好,猛犸旅途网欢迎您,您的好友'. $name .'邀请您注册猛犸旅途，
+    <a href="http://'. $_SERVER['HTTP_HOST'].'/login/register?id='. $id .'" >点击</a>
+    ，立即注册';
+
+       Mail::raw($content, function ($m) use($email) {
+            $m->to($email)->subject('欢迎加入猛犸旅途');
         });
 
+        echo "<script>alert('邀请成功');location.href=document.referrer</script>";
 
-
-        $title   = '您好，我是iwebshop商城的管理员×××';
-        $content = '您的好友'. $user_name .'正在疯狂的购物，
-    <a href="http://'. $_SERVER['HTTP_HOST'].'/months8/iwebshop/index.php?controller=simple&action=reg&id='. $user_id .'" >点击注册</a>
-    ，立即去购物';
-        //print_r($content);die;
-        $smtp  = new SendMail();
-        $error = $smtp->getError();
-
-        $list = array();
-        $tb   = new IModel("email_registry");
-
-        $ids_sql = "1";
-        if($ids)
-        {
-            $ids_sql = "id IN ({$ids})";
-        }
-        $to = $email;
-
-        $bcc = array();
-        foreach($list as $value)
-        {
-            $bcc[] = $value['email'];
-        }
-        $bcc = join(";",$bcc);
-        $result = $smtp->send($to,$title,$content,$bcc);
-        if(!$result)
-        {
-            die('发送失败');
-        }else{
-            //自定义跳转页面
-            $callback = $callback ? urlencode($callback) : '';
-            $this->redirect('/site/success?message='.urlencode("邀请成功！").'&callback='.$callback);
-        }
-
-    }*/
+    }
     /*
      *  修改密码
      * 
@@ -108,4 +81,30 @@ class MyController  extends Controller{
     public function resetPass(){
         return view("index.my.resetPass");
     }
+    
+    /*
+     * 处理修改密码 
+     **/
+    public function pass_Check(Request $request){
+        $data = $request->except('_token');
+        $user = new User();
+        $name = session('name');
+        $newpwd = md5($data['oldpassword']);
+        $arr = $user->where('u_name',$name)->first()->toArray();
+        if($arr['u_pwd']==$newpwd){
+            $res = $user->update(['pwd'=>$newpwd])->where('u_name',$name);
+            if($res){
+                echo "<script>alert('修改密码成功');location.href=document.referrer</script>";
+            }else{
+                echo "<script>alert('修改密码失败');location.href=document.referrer</script>";
+            }
+        }else{
+            echo "<script>alert('修改密码失败');location.href=document.referrer</script>";
+        }
+
+
+    }
 }
+
+
+
