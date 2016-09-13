@@ -36,8 +36,7 @@ class PusherBroadcaster extends Broadcaster
     public function auth($request)
     {
         if (Str::startsWith($request->channel_name, ['private-', 'presence-']) &&
-            ! $request->user()
-        ) {
+            ! $request->user()) {
             throw new HttpException(403);
         }
 

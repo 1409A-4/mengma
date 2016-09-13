@@ -970,10 +970,6 @@ class Connection implements ConnectionInterface
             return $this->getPdo();
         }
 
-        if ($this->readPdo instanceof Closure) {
-            return $this->readPdo = call_user_func($this->readPdo);
-        }
-
         return $this->readPdo ?: $this->getPdo();
     }
 

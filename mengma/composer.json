@@ -21,7 +21,7 @@
     "autoload": {
         "classmap": [
             "database",
-
+            "app/class"
             "app/libs"
 
             "app/cl"

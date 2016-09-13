@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit79e030cef035dbf5abaff2e278a37667
+class ComposerStaticInit7fb81aceb8772aaaa410b0de365dec8c
 {
     public static $files = array (
         '1d1b89d124cc9cb8219922c9d5569199' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest.php',
@@ -67,10 +67,6 @@ class ComposerStaticInit79e030cef035dbf5abaff2e278a37667
         'L' => 
         array (
             'League\\Flysystem\\' => 17,
-        ),
-        'J' => 
-        array (
-            'Jenssegers\\Date\\' => 16,
         ),
         'I' => 
         array (
@@ -200,10 +196,6 @@ class ComposerStaticInit79e030cef035dbf5abaff2e278a37667
         array (
             0 => __DIR__ . '/..' . '/league/flysystem/src',
         ),
-        'Jenssegers\\Date\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/jenssegers/date/src',
-        ),
         'Illuminate\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate',
@@ -285,14 +277,10 @@ class ComposerStaticInit79e030cef035dbf5abaff2e278a37667
     );
 
     public static $classMap = array (
-        'AirTicketTable' => __DIR__ . '/../..' . '/database/migrations/2016_09_08_034554_air_ticket_table.php',
-        'CreateHotelTable' => __DIR__ . '/../..' . '/database/migrations/2016_09_08_031841_create_hotel_table.php',
-        'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
-        'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
+        'AdminTableSeeder' => __DIR__ . '/../..' . '/database/seeds/AdminTableSeeder.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
-
-        'FileUp' => __DIR__ . '/../..' . '/app/cl/FileUp.php',
-
+        'Editpower' => __DIR__ . '/../..' . '/database/migrations/2016_09_07_095459_editpower.php',
+        'FileUp' => __DIR__ . '/../..' . '/app/class/FileUp.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',
         'File_Iterator_Factory' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Factory.php',
@@ -364,10 +352,6 @@ class ComposerStaticInit79e030cef035dbf5abaff2e278a37667
         'Hamcrest\\Type\\IsString' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Type/IsString.php',
         'Hamcrest\\Util' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
         'Hamcrest\\Xml\\HasXPath' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
-        'HotelClassTable' => __DIR__ . '/../..' . '/database/migrations/2016_09_08_034252_hotel_class_table.php',
-
-        'Meng' => __DIR__ . '/../..' . '/database/migrations/2016_09_09_105953_meng.php',
-
         'Mengobj' => __DIR__ . '/../..' . '/database/migrations/2016_09_02_150645_mengobj.php',
         'PHPUnit\\Framework\\TestCase' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/TestCase.php',
         'PHPUnit_Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
@@ -820,24 +804,18 @@ class ComposerStaticInit79e030cef035dbf5abaff2e278a37667
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
         'TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
-        'Tool' => __DIR__ . '/../..' . '/app/cl/Tool.php',
-        'TrainTable' => __DIR__ . '/../..' . '/database/migrations/2016_09_08_035821_train_table.php',
-
-        'Verify' => __DIR__ . '/../..' . '/app/libs/Verify.php',
-        'app\\libs\\open51094' => __DIR__ . '/../..' . '/app/libs/open51094.php',
-
-        'Verify' => __DIR__ . '/../..' . '/app/cl/Verify.php',
-        'Z' => __DIR__ . '/../..' . '/app/cl/Z.php',
-
+        'Tool' => __DIR__ . '/../..' . '/app/class/Tool.php',
+        'Verify' => __DIR__ . '/../..' . '/app/class/Verify.php',
+        'Z' => __DIR__ . '/../..' . '/app/class/Z.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit79e030cef035dbf5abaff2e278a37667::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit79e030cef035dbf5abaff2e278a37667::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit79e030cef035dbf5abaff2e278a37667::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit79e030cef035dbf5abaff2e278a37667::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit7fb81aceb8772aaaa410b0de365dec8c::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit7fb81aceb8772aaaa410b0de365dec8c::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit7fb81aceb8772aaaa410b0de365dec8c::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit7fb81aceb8772aaaa410b0de365dec8c::$classMap;
 
         }, null, ClassLoader::class);
     }

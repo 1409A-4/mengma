@@ -83,7 +83,7 @@ class RouteServiceProvider extends ServiceProvider
 
 
     /*
-     * 路由分割
+     * ·�ɷָ�
      */
     protected function mapAdminRoutes()
     {
