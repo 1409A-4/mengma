@@ -82,6 +82,7 @@ class LoginCoontroller extends Controller
         $verify->codeSet = '012356789';
         $verify->fontttf  = '5.ttf';
         $verify->entry();
+        die;
     }
     /*
      * 退出登录
