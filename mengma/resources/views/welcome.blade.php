@@ -1,7 +1,7 @@
 
 <!DOCTYPE HTML>
 <head>
-    <title>Ê×Ò³</title>
+    <title>é¦–é¡µ</title>
     <base href="{{URL::asset('/')}}"/>
     @include('.index.public.style')
 </head>
@@ -14,16 +14,16 @@
         </div>
         <div class="top-nav">
             <ul>
-                <li class="active"><a href="{{url('/')}}">Ê×Ò³</a></li>
-                <li><a href="">»úÆ±</a></li>
-                <li ><a href="hotel">¾Æµê</a></li>
-                <li ><a href="hotelCar">×ÔÓÉĞĞ</a></li>
+                <li class="active"><a href="{{url('/')}}">é¦–é¡µ</a></li>
+                <li><a href="">æœºç¥¨</a></li>
+                <li ><a href="hotel">é…’åº—</a></li>
+                <li ><a href="hotelCar">è‡ªç”±è¡Œ</a></li>
                 @if(session('name'))
-                    <li><a href="index/center" class="nav2" style="text-decoration:none" >ÓÃ»§ÖĞĞÄ</a></li>
-                    <li><a href="login/loginout" class="nav3" style="text-decoration:none">ÍË³ö</a></li>
+                    <li><a href="index/center" class="nav2" style="text-decoration:none" >ç”¨æˆ·ä¸­å¿ƒ</a></li>
+                    <li><a href="login/loginout" class="nav3" style="text-decoration:none">é€€å‡º</a></li>
                 @else
-                    <li><a href="login/register">×¢²á</a></li>
-                    <li><a href="login/login">µÇÂ¼</a></li>
+                    <li><a href="login/register">æ³¨å†Œ</a></li>
+                    <li><a href="login/login">ç™»å½•</a></li>
                 @endif
 
             </ul>
@@ -55,7 +55,7 @@
             <span><a class="learnmore" href="#">LEARN MORE</a></span>
         </div>
     </div>
-    <div class="copyrights">Collect from <a href="http://www.cssmoban.com/"  title="ÍøÕ¾Ä£°å">ÍøÕ¾Ä£°å</a></div>
+    <div class="copyrights">Collect from <a href="http://www.cssmoban.com/"  title="ç½‘ç«™æ¨¡æ¿">ç½‘ç«™æ¨¡æ¿</a></div>
     <div class="content-grids">
         <div class="wrap">
             <div class="grid">
