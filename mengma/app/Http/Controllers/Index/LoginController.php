@@ -8,7 +8,7 @@ use input;
 use Validator;
 use Redirect;
 use Mail;
-
+use toArray;
 use App\libs\Open51094;
 use App\Model\Index\User;
 
@@ -18,7 +18,10 @@ class LoginController extends Controller{
      * 登陆页面
      **/
     public function index(){
-
+        $name = session('name');
+        if(isset($name)){
+            return redirect::to('/');
+        }
         return view('login.index');
     }
 
@@ -47,33 +50,34 @@ class LoginController extends Controller{
      */
     public function registration (Request $request){
         $data = $request->except('_token');
+
         $rules = [
             'username' => 'required |unique:user,u_name',
             'password' => 'required',
-            'confirm_password' => "required",
-            'phone_number' => "required | unique:user,u_phone",
-            'email' => "required | unique:user,u_email",
+            'valid_code' => "required",
+            'mail_valid_code' => "required",
+            'mail_input' => "required | unique:user,u_email",
 
         ];
         $message = [
+            'mail_input.required' => '邮箱地址不能为空！',
+            'mail_input.unique' => '邮箱地址已存在！',
+            'valid_code.required' => '图片验证码不能为空！',
+            'mail_valid_code.required' => '邮箱验证码不能为空！',
             'username.required' => '账户不能为空！',
             'username.unique' => '账户已存在！',
             'password.required' => '密码不能为空！',
-            'confirm_password.required' => '确认密码不能为空！',
-            'confirm_password.confirmed' => '确认密码不一致！',
-            'phone_number.required' => '手机号码不能为空！',
-            'phone_number.unique' => '手机号码已存在！',
-            'email.required' => '邮箱地址不能为空！',
-            'email.unique' => '邮箱地址已存在！',
         ];
         $validator = Validator::make($data, $rules, $message);
         if($validator->passes()){
             //print_r($data);
+            //判断邮箱验证码
             $rand = $request->session()->get('rand');
-            //判断验证码
-          if($rand==$data['code']){
-              //判断密码是否一致
-                if($data['password']==$data['confirm_password']){
+
+           if($rand==$data['mail_valid_code']){
+              //判断验证码是否一致
+              $verify = new \Verify();
+              if ($verify->check($_POST['valid_code'])) {
                         $arr['u_name']=$data['username'];
                         $arr['u_pwd']=md5($data['password']);
                         $arr['u_email']=$data['email'];
@@ -81,25 +85,37 @@ class LoginController extends Controller{
                         $arr['u_btime']=date('Y-m-d H:i:s');
                         $arr['u_ip']=$_SERVER['REMOTE_ADDR'];
                         $arr['u_img']="./image/tx_img.gif";
-                   // print_r($arr);die;
+
                     $user = new User();
-                   $res =  $user->insert($arr);
+                    $res =  $user->insert($arr);
                     if($res){
                         return redirect::to('index/login');
                     }else{
                        echo "window.location.href = document.referrer";
                     }
 
-                }else{
-                    return back()->with(['message' => "两次输入密码不一致！"]);
-                }
-          }else{
+              } else {
+                  return back()->with(['message' => "验证码错误！"]);
+              }
+            }else{
               return back()->with(['message' => "邮箱验证码错误！"]);
-          }
+            }
         }else{
             return back()->withErrors($validator);
         }
 
+    }
+    /*
+     *  忘记密码
+     * */
+    public function forget_Pass(){
+      
+        return view('login.forget');
+    }
+    
+    public function forget_Check(){
+       
+        return view('login.forgett');
     }
     /*
      *  注册发送邮箱验证码
@@ -118,34 +134,42 @@ class LoginController extends Controller{
     //登录验证
 
     public function loginin(Request  $request){
-
         $data = $request->except('_token');
+
         $rules = [
             'username' => 'required',
             'password' => 'required',
-            'uverify' => "required",
+           /* 'uverify' => "required",*/
         ];
         $message = [
             'username.required' => '账户不能为空！',
             'password.required' => '密码不能为空！',
-            'uverify.required' => '验证码不能为空！'
+       /*     'uverify.required' => '验证码不能为空！'*/
         ];
         $validator = Validator::make($data, $rules, $message);
-
+        
         if ($validator->passes()) {
-            $verify = new \Verify();
-            $user = new User();
-            if ($verify->check($_POST['uverify'])) {
-                unset($data['uverify']);
-                $arr['u_name']=$data['username'];
+            if(preg_match("/^13[0-9]{1}[0-9]{8}$|15[0189]{1}[0-9]{8}$|18[0-9]{9}$/",$data['username'])){
+                //验证通过
+                $arr['u_phone']=$data['username'];
+                $arr['u_pwd'] = md5($data['password']);
+            }else{
+                //手机号码格式不对
+                $arr['u_email']=$data['username'];
                 $arr['u_pwd'] = md5($data['password']);
 
-                $bool=$user->where($arr)->first()->toArray();
-                session(['name'=>$bool['u_name']]);
-                return redirect::to('/');
-            } else {
-                return back()->with(['message' => "验证码错误！"]);
             }
+            $bool=User::where($arr)->first();
+
+                if($bool) {
+                    session(['name' => $bool['u_name']]);
+                    return redirect::to('/');
+                }else{
+                    return back()->with(['message'=>"账户或密码错误"]);
+                }
+           /* } else {
+                return back()->with(['message' => "验证码错误！"]);
+            }*/
         } else {
             return back()->withErrors($validator);
         }
@@ -154,7 +178,7 @@ class LoginController extends Controller{
      * 第三方登录
      * */
 
-    public function thirdlogin(Request $request){
+    public function third_Login(Request $request){
         $code = $request->get('code');
         $open = new open51094();
         $arr = $open->me($code);
@@ -264,6 +288,9 @@ class LoginController extends Controller{
             return back()->withErrors($validator);
         }
     }
+    public function fdsf(){
+    return view('login.forgett');
+}
 
 
 

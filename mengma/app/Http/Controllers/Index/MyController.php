@@ -18,6 +18,13 @@ use App\Model\Index\User;
 
 class MyController  extends Controller{
 
+    public function init(){
+        if(session('name')){
+            return redirect::to('index/center');
+        };
+    }
+
+
     /*
     * 用户中心
     * 
@@ -62,15 +69,12 @@ class MyController  extends Controller{
         $name = $arr['u_name'];
         $id = $arr['u_id'];
 
-        $content = '您好,猛犸旅途网欢迎您,您的好友'. $name .'邀请您注册猛犸旅途，
-    <a href="http://'. $_SERVER['HTTP_HOST'].'/login/register?id='. $id .'" >点击</a>
-    ，立即注册';
 
-       Mail::raw($content, function ($m) use($email) {
+        Mail::send('login.test',['name'=>$name,'id'=>$id], function ($m) use($email) {
             $m->to($email)->subject('欢迎加入猛犸旅途');
         });
 
-        echo "<script>alert('邀请成功');location.href=document.referrer</script>";
+        echo "<script>alert('发送邀请成功');location.href=document.referrer</script>";
 
     }
     /*

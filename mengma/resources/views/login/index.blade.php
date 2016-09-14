@@ -1,66 +1,98 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>猛犸旅途登录表单</title>
+    <title>登录</title>
     <base href="{{URL::asset('/')}}">
-    <link rel="stylesheet" href="./css/style.css" />
-
+    <meta name="google-site-verification" content="DVVM1p1HEm8vE1wVOQ9UjcKP--pNAsg_pleTU5TkFaM" />
+    <link href="index/css/b780e.css" rel="stylesheet" type="text/css" media="screen" />
+    <link rel="shortcut icon" href="http://www.qyer.com/favicon.ico" />
+    <script type="text/javascript" src="index/Scripts/f1753d9d1e4645ca9ce2ffdcb679920f.js"></script>
+    @include('index.public.style')
+</head>
 <body>
+@include('index.public.header')
+<div class="main">
+    <div class="login-container">
+        <div class="wrapper">
+            <div class="login-logo">
 
-<div class="login-container">
-    <h1>登录</h1>
-
-    <div class="connect">
-        {{--<p>www.17sucai.com</p>--}}
-    </div>
-
-    <form action="{{URL('login/loginin')}}" method="post" id="loginForm" {{--style="float: left;padding-left: 30%;margin-right: 10%"--}}>
-        @if (count($errors) > 0)
-            <div >
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
+                <span class="title">登录</span>
             </div>
-        @endif
-        <div>
-            <input type="hidden" name="_token" value="{{csrf_token()}}">
-            <input type="text" name="username" class="username" placeholder="用户名" autocomplete="off"/>
-        </div>
-        <div>
-            <input type="password" name="password" class="password" placeholder="密码" oncontextmenu="return false" onpaste="return false" />
-        </div>
-        <div>
-            <input type="text" name="uverify" class="password" placeholder="验证码">
+            <div class="section">
+                @if (count($errors) > 0)
+                    <div >
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
 
-            <img src="{{URL('login/verify/1')}}" width="100%" height="50px" onclick="this.src='{{URL('login/verify')}}/'+Math.random()">
-        </div>
-        <button id="submit" type="submit">登 陆</button>
-    </form>
-{{--<div style="float: left; ">--}}
-    <a href="{{URL('login/register')}}" {{--style="display: block;margin-top: 40%"--}}>
+                <div class="qui-login-section section-login">
+                    <div class="qui-login-tabs">
+                        <a class="change-tab change-login-type change-login-mail current" href="javascript:;" data-action="login" data-type="mail" data-bn-ipg="web-login-page-tab-mail">账号登录</a>
 
-        <div>  <button type="button" class="">还有没有账号？</button></div>
-        <br><p style="font-size: 20px;color: #ff4a4d">使用以下帐号直接登录</p>
-        <br><a href="http://123.56.88.15/yanan/demo/index.php"><img src="/images/weixin.png" style="width: 32px;height: 32px" alt=""></a><span id="hzy_fast_login"></span>
-    </a>
+                    </div>
+
+                    <div class="qui-login-form">
+                        <form id="loginForm" action="login/loginin"  method="post" {{--autocomplete="off"--}}>
+                            <input type="hidden" name="_token" value="{{csrf_token()}}">
+                            <div class="qui-login-input input-control input-control-login-mail">
+                                <a href="javascript:;" class="icon-clear"></a>
+                                <input type="text" class="ui3_input field_valid" name="username" tabindex="1" title="邮箱/手机号"  placeholder="邮箱/手机号" autocomplete="off" >
+
+                                <div class="message-box"></div>
+                            </div>
+
+                            <div class="qui-login-input input-control input-control-login-mail">
+                                <input type="password" class="ui3_input field_valid" name="password" title="密码" tabindex="2" placeholder="密码" autocomplete="off">
+                                <div class="message-box"></div>
+                            </div>
+
+
+                            <div class="qui-login-input qui-login-btn posr">
+                                <input type="submit" class="ui_button " tabindex="5" value="登录" data-value="登录">
+                                <div class="message-box">
+                            <span class="fl">
+                                <input id="remember" name="remember" type="checkbox" tabindex="4" class="vm" checked="checked"> <label for="remember" class="vm">记住我</label>
+                            </span>
+                            <span class="forget input-control input-control-login-mail">
+                                <a class="remember-link" href="http://login.qyer.com/?action=getemailpass" target="_blank" data-bn-ipg="web-login-page-getpassword">忘记密码</a>
+                            </span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="qui-login-otherlogin">
+                        <div class="otherlogin">
+                            <script type="text/javascript" src="http://open.51094.com/user/myscript/157a481067e6d3.html "></script>
+                            <script src="./js/jquery.min.js"></script>
+                            <span id="hzy_fast_login"></span>
+                            <a href="http://123.56.88.15/yanan/demo/index.php"><img src="/images/weixin.png" style="width: 32px;height: 32px" alt=""></a>
+
+                        </div>
+                    </div>
+                    <div class="qui-login-link-register gray">
+                        <a class="fr" href="login/register" data-bn-ipg="web-login-page-register">立即注册</a>
+                        <a class="gray" href="/?action=usernamelogin&refer=http://z.qyer.com/?utm_source=baidusemp">用户名登录</a> |
+                        <a class="gray" href="/?action=aboard&refer=http://z.qyer.com/?utm_source=baidusemp">境外手机号登录</a>
+                    </div>
+                    <div class="section-message-box"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-{{--</div>--}}
-{{--第三方登录--}}
-<script type="text/javascript" src="http://open.51094.com/user/myscript/157a481067e6d3.html "></script>
-<script src="./js/jquery.min.js"></script>
+<div class="phpreferer" style="display: none;"></div>
+<div class="qyer_footer">
+    @include('.index.public.foot')
+</div>
 
-<!--背景图片自动更换-->
-<script src="./js/supersized.3.2.7.min.js"></script>
-<script src="./js/supersized-init.js"></script>
-<!--表单验证-->
-<script src="./js/common.js"></script>
-<script src="./js/jquery.validate.min.js?var1.14.0"></script>
 
+<script type="text/javascript">
+
+</script>
 </body>
 </html>

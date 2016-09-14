@@ -41,6 +41,6 @@
 <!---End-footer---->
 <div class="clear"> </div>
 <div class="copy-right">
-    <p>Design Collect from <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a></p>
+    <p>Design Collect from </p>
 </div>
 </body>
