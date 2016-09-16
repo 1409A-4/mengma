@@ -40,4 +40,18 @@
 </div>
 <!---End-footer---->
 <div class="clear"> </div>
-
+<script src="index/js/responsiveslides.min.js"></script>
+<script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+        // Slideshow 1
+        $("#slider1").responsiveSlides({
+            maxwidth: 2500,
+            speed: 600
+        });
+        $('.aa').click(function () {
+            $(this).parent().addClass('active');
+        });
+    });
+</script>
+<script src="index/dist/js/txt.wav.min.js"></script>

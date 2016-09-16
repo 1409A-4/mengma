@@ -13,8 +13,14 @@
 
 
 Route::get('/', function () {
-    return view('welcome');
+    $data=\App\Model\Business\Goods::get();
+    foreach($data as $k=>$v){
+        $gimg=\App\Model\Admin\GoodsImg::where('gid',$v->gid)->first();
+        $data[$k]->gimg=$gimg->gimg;
+    }
+    return view('welcome',['data'=>$data]);
 });
+
 Route::get('scenicSpot','Index\IndexController@scenicSpot');//景区详情
 Route::get('hotel','Index\IndexController@hotel');//酒店
 Route::get('hotelCar','Index\IndexController@hotelCar');//线路

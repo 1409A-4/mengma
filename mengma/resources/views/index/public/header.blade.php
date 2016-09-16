@@ -5,7 +5,7 @@
         </div>
         <div class="top-nav">
             <ul>
-                <li class="active"><a href="{{url('/')}}">首页</a></li>
+                <li class="active"><a href="{{url('/')}}"><div class="txtwav flip">首页</div></a></li>
                 <li><a href="about.html">机票</a></li>
                 <li><a href="{{url('hotel')}}">酒店</a></li>
                 <li><a href="plans.html">景区</a></li>

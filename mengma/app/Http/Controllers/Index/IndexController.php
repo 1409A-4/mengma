@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Index;
 
+use App\Model\Admin\Goods;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -14,6 +15,8 @@ class IndexController extends Controller
      * */
     public function index()
     {
+        $data=Goods::get();
+        return $data;
         return view('welcome');
     }
     /*
