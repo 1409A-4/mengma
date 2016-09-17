@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <meta charset="UTF-8"/>
+    <base href="{{URL::asset('front\hotelstyle\/')}}"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css"  media="all" />
+    <link rel="stylesheet" href="assets/css/responsiveslides.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/responsiveslides.min.js"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Aviators - byaviators.com">
-    <base href="{{URL::asset('front\hotelstyle\/')}}"/>
+
 
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
     <link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css">
@@ -15,152 +22,32 @@
     <link rel="stylesheet" href="assets/css/realia-blue.css" type="text/css" id="color-variant-default">
     <link rel="stylesheet" href="#" type="text/css" id="color-variant">
 
-    <title>酒店详情</title>
+    <title>酒店</title>
+    <script>
+        // You can also use "$(window).load(function() {"
+        $(function () {
+            $('.act').click(function () {
+                $(this).parent().addClass('active');
+
+            });
+
+        });
+    </script>
 </head>
 <body>
 <div id="wrapper-outer" >
     <div id="wrapper">
         <div id="wrapper-inner">
             <!-- BREADCRUMB -->
-            <div class="breadcrumb-wrapper">
-                <div class="container">
-                    <div class="row">
-                        <div class="span12">
-                            <ul class="breadcrumb pull-left">
-                                <li><a href="{{URL('/')}}">Home</a></li>
-                            </ul><!-- /.breadcrumb -->
 
-                            <div class="account pull-right">
-                                <ul class="nav nav-pills">
-                                    <li><a href="#">登陆</a></li>
-                                    <li><a href="#">注册</a></li>
-                                </ul>
-                            </div>
-                        </div><!-- /.span12 -->
-                    </div><!-- /.row -->
-                </div><!-- /.container -->
-            </div><!-- /.breadcrumb-wrapper -->
-
+@include('.index.public.style')
+@include('.index.public.header')
             <!-- HEADER -->
-            <div id="header-wrapper">
-                <div id="header">
-                    <div id="header-inner">
-                        <div class="container">
-                            <div class="navbar">
-                                <div class="navbar-inner">
-                                    <div class="row">
-                                        <div class="logo-wrapper span4">
-                                            <a href="#nav" class="hidden-desktop" id="btn-nav">切换导航</a>
-
-                                            <div class="logo">
-                                                <a href="index.html" title="Home">
-                                                    <img src="assets/img/logo.png" alt="Home">
-                                                </a>
-                                            </div><!-- /.logo -->
-
-                                            <div class="site-name">
-                                                <a href="{{URL('hotel')}}" title="Home" class="brand">酒店</a>
-                                            </div><!-- /.site-name -->
-
-                                            <div class="site-slogan">
-                                                <span>房地产 &amp; 租金<br>made easy</span>
-                                            </div><!-- /.site-slogan -->
-                                        </div><!-- /.logo-wrapper -->
-
-                                        <div class="info">
-                                            <div class="site-email">
-                                                <a href="mailto:973787614@qq.com">973787614@qq.com</a>
-                                            </div><!-- /.site-email -->
-
-                                            <div class="site-phone">
-                                                <span>666-666-6666</span>
-                                            </div><!-- /.site-phone -->
-                                        </div><!-- /.info -->
-
-                                        <a class="btn btn-primary btn-large list-your-property arrow-right" href="list-your-property.html">个人财产</a>
-                                    </div><!-- /.row -->
-                                </div><!-- /.navbar-inner -->
-                            </div><!-- /.navbar -->
-                        </div><!-- /.container -->
-                    </div><!-- /#header-inner -->
-                </div><!-- /#header -->
-            </div><!-- /#header-wrapper -->
+            <!-- /#header-wrapper -->
             <div class="copyrights">Collect from <a href="http://www.973787614@qq.com/"  title="猛犸技术">猛犸技术</a></div>
 
             <!-- NAVIGATION -->
-            <div id="navigation">
-                <div class="container">
-                    <div class="navigation-wrapper">
-                        <div class="navigation clearfix-normal">
-
-                            <ul class="nav">
-                                <li class="menuparent">
-                                    <span class="menuparent nolink">主页</span>
-                                    <ul>
-                                        <li><a href="index-slider.html">主页的滑块</a></li>
-                                        <li><a href="index.html">主页的地图</a></li>
-                                        <li><a href="index-simple.html">简单的主页</a></li>
-                                        <li><a href="index-carousel.html">网站首页轮播</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menuparent">
-                                    <span class="menuparent nolink">上市</span>
-                                    <ul>
-                                        <li><a href="listing-grid.html">上市的网格</a></li>
-                                        <li><a href="listing-grid-filter.html">带过滤器的列表网格</a></li>
-                                        <li><a href="listing-rows.html">上市行</a></li>
-                                        <li><a href="listing-rows-filter.html" >带筛选器的列表行</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menuparent">
-                                    <span class="menuparent nolink">页面</span>
-                                    <ul>
-                                        <li><a href="about-us.html">关于我们</a></li>
-                                        <li><a href="our-agents.html">我们的代理</a></li>
-                                        <li><a href="faq.html">常见问题解答</a></li>
-                                        <li><a href="shortcodes.html">简码</a></li>
-                                        <li class="menuparent">
-                                            <span class="menuparent nolink">另一个层面</span>
-                                            <ul>
-                                                <li><a href="contact-us.html">联系我们</a></li><li><a href="http://www.cssmoban.com">更多主题</a></li>
-                                                <li><a href="grid-system.html">电子网</a></li>
-                                                <li><a href="typography.html">排版</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="404.html">404 page</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menuparent">
-                                    <span class="menuparent nolink">定价</span>
-                                    <ul>
-                                        <li><a href="pricing-boxed.html">盒装定价</a></li>
-                                        <li><a href="pricing-multiple.html">多重定价</a></li>
-                                        <li><a href="pricing-simple.html">简单的定价</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact-us.html">联系我们</a></li><li><a href="http://www.cssmoban.com">更多主题</a></li>
-                            </ul><!-- /.nav -->
-
-                            <div class="language-switcher">
-                                <div class="current en"><a href="/" lang="en">英语</a></div><!-- /.current -->
-                                <div class="options">
-                                    <ul>
-                                        <li class="fr"><a href="#">法语</a></li>
-                                        <li class="de"><a href="#">德语</a></li>
-                                    </ul>
-                                </div><!-- /.options -->
-                            </div><!-- /.language-switcher -->
-
-                            <form method="get" class="site-search" action="?">
-                                <div class="input-append">
-                                    <input title="Enter the terms you wish to search for." class="search-query span2 form-text" placeholder="Search" type="text" name="">
-                                    <button type="submit" class="btn"><i class="icon-search"></i></button>
-                                </div><!-- /.input-append -->
-                            </form><!-- /.site-search -->
-                        </div><!-- /.navigation -->
-                    </div><!-- /.navigation-wrapper -->
-                </div><!-- /.container -->
-            </div><!-- /.navigation -->
+           <!-- /.navigation -->
 
             <!-- CONTENT -->
             <div id="content"><div class="map-wrapper">
@@ -172,7 +59,7 @@
                 <div class="span3">
                     <div class="property-filter pull-right">
                         <div class="content">
-                            <form method="post" action="{{URL('search_hotel')}}">
+                            <form method="post" action="">
                                 <div class="location control-group">
                                     <label class="control-label" for="inputLocation">
                                         位置
@@ -189,83 +76,20 @@
                                     <div class="controls">
                                         <select id="inputType" name="rooms_type">
                                             <option value="0" selected="selected">请选择房屋类型</option>
-                                            <option id="apartment" value="公寓">公寓</option>
-                                            <option id="condo" value="大型公寓">大型公寓</option>
+                                            @foreach($res as $key => $v)
+                                            <option value="{{$v['ht_id']}}">{{$v['ht_name']}}</option>
+                                            @endforeach
                                         </select>
                                     </div><!-- /.controls -->
                                 </div><!-- /.control-group -->
 
-                                <div class="beds control-group">
-                                    <label class="control-label" for="inputBeds">
-                                        床
-                                    </label>
-                                    <div class="controls">
-                                        <select id="inputBeds">
-                                            <option id="11">1</option>
-                                            <option id="21">2</option>
-                                        </select>
-                                    </div><!-- /.controls -->
-                                </div><!-- /.control-group -->
-
-                                <div class="baths control-group">
-                                    <label class="control-label" for="inputBaths">
-                                        浴
-                                    </label>
-                                    <div class="controls">
-                                        <select id="inputBaths">
-                                            <option id="1">1</option>
-                                            <option id="2">2</option>
-                                        </select>
-                                    </div><!-- /.controls -->
-                                </div><!-- /.control-group -->
-
-
-                                <div class="rent control-group">
-                                    <div class="controls">
-                                        <label class="checkbox" for="inputRent">
-                                            <input type="checkbox" id="inputRent"> 租金
-                                        </label>
-                                    </div><!-- /.controls -->
-                                </div><!-- /.control-group -->
-
-                                <div class="sale control-group">
-                                    <div class="controls">
-                                        <label class="checkbox" for="inputSale">
-                                            <input type="checkbox" id="inputSale"> 特价
-                                        </label>
-                                    </div><!-- /.controls -->
-                                </div><!-- /.control-group -->
-
-                                <div class="price-from control-group">
-                                    <label class="control-label" for="inputPriceFrom">
-                                        价格从
-                                    </label>
-                                    <div class="controls">
-                                        <input type="text" id="inputPriceFrom" name="inputPriceFrom">
-                                    </div><!-- /.controls -->
-                                </div><!-- /.control-group -->
-
-                                <div class="price-to control-group">
-                                    <label class="control-label" for="inputPriceTo">
-                                        价格到
-                                    </label>
-                                    <div class="controls">
-                                        <input type="text" id="inputPriceTo" name="inputPriceTo">
-                                    </div><!-- /.controls -->
-                                </div><!-- /.control-group -->
-
-                                <div class="price-value">
-                                    <span class="from"></span><!-- /.from -->
-                                   1 - 2
-                                    <span class="to"></span><!-- /.to -->
-                                </div><!-- /.price-value -->
 
                                 <div class="price-slider">
                                 </div><!-- /.price-slider -->
 
                                 <div class="form-actions">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                    <input type="submit" value="搜索" class="btn btn-primary btn-large">
+                                    <input type="button" value="搜索" class="btn btn-primary btn-large" id="btn_hotel">
                                 </div><!-- /.form-actions -->
                             </form>
                         </div><!-- /.content -->
@@ -279,179 +103,40 @@
     <div id="main">
         <div class="row">
             <div class="span9">
-                <h1 class="page-header">特征特性</h1>
+                <h1 class="page-header">酒店预定</h1>
                 <div class="properties-grid">
-    <div class="row">
+    <div class="row" id="part">
+        @foreach($sql as $key =>$c)
         <div class="property span3">
             <div class="image">
                 <div class="content">
-                    <a href="detail.html"></a>
-                    <img src="assets/img/tmp/property-small-1.png" alt="">
+                    <a href="{{URL('details')}}?id={{$c['h_id']}}"></a>
+                    <img src="{{$c['img']}}" alt="">
                 </div><!-- /.content -->
 
-                <div class="price">1 250 000€</div><!-- /.price -->
-                <div class="reduced">Reduced </div><!-- /.reduced -->
+                <div class="price">￥{{$c['h_price']}}</div><!-- /.price -->
+                <div class="reduced">价格 </div><!-- /.reduced -->
             </div><!-- /.image -->
 
             <div class="title">
-                <h2><a href="detail.html">27523 Pacific Coast</a></h2>
+                <h2><a href="detail.html">酒店</a></h2>
             </div><!-- /.title -->
 
-            <div class="location">Palo Alto CA</div><!-- /.location -->
+            <div class="location">{{$c['h_name']}}</div><!-- /.location -->
             <div class="area">
-                <span class="key">Area:</span><!-- /.key -->
-                <span class="value">120</span><!-- /.value -->
+                <span class="key">地区:</span><!-- /.key -->
+                <span class="value">{{$c['h_place']}}</span><!-- /.value -->
             </div><!-- /.area -->
             <div class="bedrooms"><div class="content">4</div></div><!-- /.bedrooms -->
             <div class="bathrooms"><div class="content">3</div></div><!-- /.bathrooms -->
         </div><!-- /.property -->
-
-        <div class="property span3">
-            <div class="image">
-                <div class="content">
-                    <a href="detail.html"></a>
-                    <img src="assets/img/tmp/property-small-2.png" alt="">
-                </div><!-- /.content -->
-                <div class="price">1 250 000€</div><!-- /.price -->
-                <div class="reduced">Reduced </div><!-- /.reduced -->
-            </div><!-- /.image -->
-
-            <div class="title">
-                <h2><a href="detail.html">27523 Pacific Coast</a></h2>
-            </div><!-- /.title -->
-
-            <div class="location">Palo Alto CA</div><!-- /.location -->
-            <div class="area">
-                <span class="key">Area:</span><!-- /.key -->
-                <span class="value">120</span><!-- /.value -->
-            </div><!-- /.area -->
-            <div class="bedrooms"><div class="content">4</div></div><!-- /.bedrooms -->
-            <div class="bathrooms"><div class="content">3</div></div><!-- /.bathrooms -->
-        </div><!-- /.property -->
-
-        <div class="property span3">
-            <div class="image">
-                <div class="content">
-                    <a href="detail.html"></a>
-                    <img src="assets/img/tmp/property-small-3.png" alt="">
-                </div><!-- /.content -->
-
-                <div class="price">1 250 000€</div><!-- /.price -->
-                <div class="reduced">Reduced </div><!-- /.reduced -->
-            </div><!-- /.image -->
-
-            <div class="title">
-                <h2><a href="detail.html">27523 Pacific Coast</a></h2>
-            </div><!-- /.title -->
-
-            <div class="location">Palo Alto CA</div><!-- /.location -->
-            <div class="area">
-                <span class="key">Area:</span><!-- /.key -->
-                <span class="value">120</span><!-- /.value -->
-            </div><!-- /.area -->
-            <div class="bedrooms"><div class="content">4</div></div><!-- /.bedrooms -->
-            <div class="bathrooms"><div class="content">3</div></div><!-- /.bathrooms -->
-        </div><!-- /.property -->
-
-        <div class="property span3">
-            <div class="image">
-                <div class="content">
-                    <a href="detail.html"></a>
-                    <img src="assets/img/tmp/property-small-4.png" alt="">
-                </div><!-- /.content -->
-                <div class="price">1 250 000€</div><!-- /.price -->
-                <div class="reduced">Reduced </div><!-- /.reduced -->
-            </div><!-- /.image -->
-
-            <div class="title">
-                <h2><a href="detail.html">27523 Pacific Coast</a></h2>
-            </div><!-- /.title -->
-
-            <div class="location">Palo Alto CA</div><!-- /.location -->
-            <div class="area">
-                <span class="key">Area:</span><!-- /.key -->
-                <span class="value">120</span><!-- /.value -->
-            </div><!-- /.area -->
-            <div class="bedrooms"><div class="content">4</div></div><!-- /.bedrooms -->
-            <div class="bathrooms"><div class="content">3</div></div><!-- /.bathrooms -->
-        </div><!-- /.property -->
-
-        <div class="property span3">
-            <div class="image">
-                <div class="content">
-                    <a href="detail.html"></a>
-                    <img src="assets/img/tmp/property-small-5.png" alt="">
-                </div><!-- /.content -->
-
-                <div class="price">1 250 000€</div><!-- /.price -->
-                <div class="reduced">Reduced </div><!-- /.reduced -->
-            </div><!-- /.image -->
-
-            <div class="title">
-                <h2><a href="detail.html">27523 Pacific Coast</a></h2>
-            </div><!-- /.title -->
-
-            <div class="location">Palo Alto CA</div><!-- /.location -->
-            <div class="area">
-                <span class="key">Area:</span><!-- /.key -->
-                <span class="value">120</span><!-- /.value -->
-            </div><!-- /.area -->
-            <div class="bedrooms"><div class="content">4</div></div><!-- /.bedrooms -->
-            <div class="bathrooms"><div class="content">3</div></div><!-- /.bathrooms -->
-        </div><!-- /.property -->
-
-        <div class="property span3">
-            <div class="image">
-                <div class="content">
-                    <a href="detail.html"></a>
-                    <img src="assets/img/tmp/property-small-6.png" alt="">
-                </div><!-- /.content -->
-
-                <div class="price">1 250 000€</div><!-- /.price -->
-                <div class="reduced">Reduced </div><!-- /.reduced -->
-            </div><!-- /.image -->
-
-            <div class="title">
-                <h2><a href="detail.html">27523 Pacific Coast</a></h2>
-            </div><!-- /.title -->
-
-            <div class="location">Palo Alto CA</div><!-- /.location -->
-            <div class="area">
-                <span class="key">Area:</span><!-- /.key -->
-                <span class="value">120</span><!-- /.value -->
-            </div><!-- /.area -->
-            <div class="bedrooms"><div class="content">4</div></div><!-- /.bedrooms -->
-            <div class="bathrooms"><div class="content">3</div></div><!-- /.bathrooms -->
-        </div><!-- /.property -->
+    @endforeach
+    </div>
     </div><!-- /.row -->
-</div><!-- /.properties-grid -->
+<!-- /.properties-grid -->
             </div>
             <div class="sidebar span3">
-                <div class="widget our-agents">
-    <div class="title">
-        <h2>Our Agents</h2>
-    </div><!-- /.title -->
 
-    <div class="content">
-        <div class="agent">
-            <div class="image">
-                <img src="assets/img/photos/emma-small.png" alt="">
-            </div><!-- /.image -->
-            <div class="name">Victoria Summer</div><!-- /.name -->
-            <div class="phone">333-666-777</div><!-- /.phone -->
-            <div class="email"><a href="mailto:victoria@example.com">victoria@example.com</a></div><!-- /.email -->
-        </div><!-- /.agent -->
-
-        <div class="agent">
-            <div class="image">
-                <img src="assets/img/photos/john-small.png" alt="">
-            </div><!-- /.image -->
-            <div class="name">John Doe</div><!-- /.name -->
-            <div class="phone">111-222-333</div><!-- /.phone -->
-            <div class="email"><a href="mailto:john.doe@example.com">victoria@example.com</a></div><!-- /.email -->
-        </div><!-- /.agent -->
-    </div><!-- /.content -->
-</div><!-- /.our-agents -->
                 <div class="hidden-tablet">
                     <div class="widget properties last">
     <div class="title">
@@ -1107,4 +792,23 @@
 
 <script>
     $(document).area("s_province","s_city","s_county");//调用三级插件
+    //hotel搜索提交
+    $(function(){
+        $('#btn_hotel').click(function(){
+            var province = $("#s_province option:selected").val();
+            var rooms_type = $('#inputType option:selected').val();
+            $.get('{{URL('search_hotel')}}',{province:province,rooms_type:rooms_type},function(msg){
+                if(msg==1){
+                    alert('暂无酒店信息');
+                }else{
+                    var hh="";
+                    for(var i in msg){
+                        var obj = msg[i];
+                        hh+="<div class='property span3'><div class='image'><div class='content'><a href='detail.html'></a><img src='assets/img/hotels/690.png' alt=''></div><div class='price'>￥"+obj.h_price+"</div><div class='reduced'>价格</div></div><div class='title'><h2><a href='detail.html'>酒店</a></h2></div><div class='location'>"+obj.h_name+"</div><div class='area'><span class='key'>地区:</span><span class='value'>"+obj.h_place+"</span></div><div class='bedrooms'><div class='content'>4</div></div><div class='bathrooms'><div class='content'>3</div></div></div>";
+                    };
+                    $('#part').html(hh);
+                }
+            })
+        })
+    })
 </script>

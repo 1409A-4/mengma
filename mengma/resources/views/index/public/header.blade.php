@@ -5,12 +5,12 @@
         </div>
         <div class="top-nav">
             <ul>
-                <li class="active"><a href="{{url('/')}}">首页</a></li>
-                <li><a href="about.html">机票</a></li>
-                <li><a href="{{url('hotel')}}">酒店</a></li>
-                <li><a href="plans.html">景区</a></li>
-                <li><a href="plans.html">注册</a></li>
-                <li><a href="plans.html">登录</a></li>
+                <li class="active"><a href="{{url('/')}}" class="act">首页</a></li>
+                <li><a href="{{URL('booking')}}" class="act">机票</a></li>
+                <li><a href="{{url('hotel')}}" class="act">酒店</a></li>
+                <li><a href="plans.html" class="act"> 景区</a></li>
+                <li><a href="plans.html" class="act">注册</a></li>
+                <li><a href="plans.html" class="act">登录</a></li>
             </ul>
         </div>
         <div class="clear"> </div>

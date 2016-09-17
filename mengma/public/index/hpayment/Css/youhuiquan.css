@@ -1,0 +1,750 @@
+﻿.orderBg{background:#f9f9f9;width:100%}.wrap{width:1000px;margin:0
+auto 0px auto;padding-top:15px}.container{width:998px;font-family:microsoft yahei}.content{}.main{width:630px;float:left;background:#fff;margin:0
+0 50px 0}.aside{width:320px;float:right;padding:10px
+15px 10px 15px;background:#fff;border:1px
+solid #eaeaea;border-top:2px solid #E74C26}.title{line-height:39px;margin:0
+10px 10px 0px}.title_warn{width:100%;border:1px
+solid #FDDDAB;margin-bottom:10px;line-height:2em;background:#fcf8e3;text-align:center;font-family:microsoft yahei;font-size:14px;color:#5a5a5a}.title_warn a.login,.title_warn
+a.register{color:#FD6B03;margin:0
+4px}.main_left{border:1px
+solid #eaeaea;width:100%}.leftRoomNumTips,.fullRoomTips{display:inline;font-size:12px;color:#F00}.title
+h1{color:#2e9700;font-weight:bold;font-size:16px;line-height:18px;margin-bottom:5px}.f_f600{color:#f60}.yh{}.red{color:#e80000}.mb10{margin-bottom:10px}.mb20{margin-bottom:20px}.mt15{margin-top:15px}.ml10{margin-left:10px}.ml20{margin-left:20px}.grey{color:#aaa}.cgreen{color:#009CDE;text-decoration:underline}.f60{color:#f60}.hide{display:none}.mr15{margin-right:15px}.hidden{display:none}.hint{color:#999;position:relative;padding:0px;display:inline-block;line-height:22px}.minus, .plus, .com_bug .shdaw, .fan, .c_icon, .order_icon, .note, .fuwu_icon
+span{background:url("../Images/order_icon.png") no-repeat}.card_pic{background:url("../Images/card_focus.png") no-repeat}.step{width:1000px;height:34px;margin:0px
+auto 20px}#footer{margin:0
+auto;text-align:center;margin-bottom:20px;padding:40px
+0;border-top:1px solid #eee}.order_box{font-size:12px;color:#333;padding:0
+10px 0px 10px;border-bottom:1px solid #eaeaea}.order_menu{width:72px;float:left;text-align:left;font-size:15px;font-weight:bold;line-height:22px}.order_menu
+h2{font-weight:bold;font-size:14px;color:#333;line-height:30px}.order_con{width:525px;float:right;border-left:1px solid #eaeaea;padding-left:11px;height:100%;padding-bottom:10px;padding-top:15px;position:relative}.fapiao_con
+.hint{font-size:12px;text-indent:24px}.fapiao_con .hint
+em{position:absolute;width:16px;height:16px;top:1px;left:5px;background:url("../Images/gentuan_icon.png") -32px -4px no-repeat}.shadow_tel{width:180px;line-height:30px;height:32px;position:absolute;top:-15px;border:1px
+solid #FDDDAB;background:#fcf8e3;text-align:center;color:#FD6B03;font-size:20px;border-bottom:1px solid #FDEBCD;display:none;box-shadow:3px 2px 6px 0px #FDEBCD}.cashback{border:1px
+solid #FD6B03;color:#FD6B03;display:inline-block;line-height:14px;padding:0px
+2px}.cashback
+em{font-size:12px}.cashback
+span{font-size:12px}.cashBackBlock{font-size:14px;font-weight:400}.cashBackBlock
+td{font-size:12px}.cashBackBlock
+em{padding:0
+5px 0 0;float:left}.reallyPay.cashBackBlock
+i{border:1px
+solid #FD6B03;display:inline-block;line-height:14px;padding:0px
+2px;font-size:12px;margin-top:3px}#noRoomPaidContent{display:none;padding:0px
+15px 10px 15px}#noRoomPaidContent
+.pickUp{float:right;padding:5px}.doc
+strong{font-weight:700}.reallyPay_tip{float:right;width:100%;text-align:right}.orderTotalBlock{background:#FFFCE8;margin:10px
+-8px -8px -8px;padding:10px
+8px;max-height:100px}.orderTotalBlock:after{content:'.';visibility:hidden;display:block;clear:both;height:0px}.invoice_tip{line-height:30px}.notice{font-size:12px;color:#777;line-height:22px;padding:6px
+0}.notice
+p{white-space:pre-line;text-indent:0;line-height:18px;font-family:microsoft yahei;padding:5px;font-size:12px}.order_box
+.guaranteeRule{padding:5px
+5px 5px 6px;color:#999;line-height:18px;font-size:12px}.orderBg
+a{color:#2E9700}input.input_txt,select.input_txt{height:27px;line-height:22px;padding-left:5px;border:1px
+solid #e5e5e5;width:175px;border-radius:0px;margin:0
+10px 0 0}.select.input_txt{*height:23px;*line-height:23px}input.txt_focus,select.txt_focus{border:1px
+solid #e3e9ef;border-top-color:#abadb3}.error{position:relative;color:#e80000;font-weight:400;margin:5px
+0;display:none;font-size:12px;line-height:14px;padding:5px
+20px 6px 24px;background-color:#FAEFEF;border:1px
+solid #F9C4C4}.error
+em{position:absolute;top:5px;left:2px;background:url("../Images/gentuan_icon.png") -32px -32px no-repeat;width:16px;height:16px}#travelCoupons_error
+em{left:-6px}.order_box .revise, .order_box
+.preservation{color:#2e9700;margin-left:15px}.input_tip{font-size:12px}.loginTip
+a{color:#2E9700;cursor:pointer}.fan{background-position:-40px -7px;display:inline-block;height:18px;margin:3px
+0 0 20px;overflow:hidden;padding-left:21px}.name .fan
+span{border-right:1px solid #4E9700;color:#4E9700;float:left;font-size:12px;height:18px;line-height:18px;overflow:hidden;padding-right:3px;margin-right:0}.c_icon{width:13px;height:7px;display:inline-block;background-position:-40px 0;margin-left:5px}.c_icon.top{background-position:-77px 0}.submit_order{text-align:right;padding:15px
+10px 0 0;background:#FFFCE8;margin-top:0px;width:620px;border-right:solid 1px #eaeaea}#rz_name_tip{margin-top:0}#realPrice{border-bottom:#FD6B03 dotted 1px;line-height:22px}.prepay_nav{background-position:30px -39px }.prepay_1{background-position:30px -74px}.prepay_2{background-position:30px -113px}.prepay_3{background-position:30px -151px}.payment_nav{background-position:30px -261px}.payment_1{background-position:30px -304px}.payment_2{background-position:30px -342px}.purchase_nav{background-position:30px -418px}.purchase_1{background-position:30px -449px}.purchase_2{background-position:30px -488px}.purchase_3{background-position:30px -526px}.aside
+h3{font-size:15px;font-weight:700;line-height:30px;color:#5a5a5a}.to_hotel
+.notice{padding:8px
+8px 8px 3px}.headbg{background:none repeat scroll 0 0 #fff;border:1px
+solid #d8d9db;padding-bottom:20px;padding-top:20px;border-left:none;border-right:none}#logo{top:0px}#logo
+img{height:61px}.headbg
+#head{height:68px;overflow:visible}.headbg
+.book_mes{bottom:-66px;display:none}.step_nav{display:none}#wrap
+.step{margin:-82px 730px 48px;width:270px}.icon_tip{border-bottom:1px dotted #000}.step
+li{width:20px;height:20px;float:left;text-align:center;border-radius:50%;font-size:14px;color:#fff;font-size:14px;line-height:20px}.step
+.sline{position:relative;height:20px}.step .sline
+li{position:absolute}.step
+.sline1{left:0;z-index:3}.step
+.sline2{left:115px;z-index:3}.step
+.sline3{right:20px;z-index:3}.step .sline1, .step .sline2, .step
+.sline3{height:20px;width:20px;border-radius:50%;background:#43b313}.steptext
+li{width:115px;text-align:left;color:#43b313;border-radius:0;text-align:right;font-size:14px}.steptext{margin:5px
+0 0 -75px}.step
+.slinebg{width:230px;left:10px;background:#ddd;border-radius:0;height:5px;top:7px;border:1px
+solid #ccc}.step
+.slinefg{width:58px;left:10px;background:#43b313;border-radius:0;height:5px;top:8px}.prepay_1 .sline2, .prepay_1
+.sline3{background:#ccc;color:#999}.prepay_1 .text2, .prepay_1
+.text3{color:#ddd}.prepay_2
+.sline3{background:#ccc;color:#999}.prepay_2
+.text3{color:#ddd}.prepay_2
+.slinefg{width:173px}.prepay_3
+.slinefg{width:230px}.payment_order
+.sline3{display:none}.payment_order
+.sline2{left:230px}.payment_order
+.text2{color:#fff}.payment_order
+.slinefg{width:115px}.payment_1
+.sline2{color:#999;background:#ccc}.payment_1 .steptext
+.text3{color:#ddd}.payment_2
+.slinefg{width:230px}.order_warning,.price_change{display:none;background-color:#FAEFEF;margin-bottom:10px;width:100%;border:1px
+solid #F9C4C4;color:#e80000}.price_change{color:#F23030}.icon_error{background:url("../Images/gentuan_icon.png") no-repeat}.order_warning .icon_error,.price_change
+.icon_error{background-position:-30px -29px;padding:4px
+13px 3px 13px;line-height:22px}.order_warning span,.price_change
+span{line-height:2.5em;font-family:microsoft yahei;font-size:14px}.order_error{background:#f2dede;padding:15px;margin:0
+10px 10px 0}.name{font-size:14px}.name
+span{margin-right:10px;float:left}.name span
+a{color:#2e9700}.order_table{color:#333;font-size:14px}.order_table .login,  .order_table
+.register{color:#2E9700;cursor:pointer}.order_table
+.table_left{width:60px;padding-right:10px;vertical-align:top;text-align:right;position:relative}#dateRegion
+input{border:1px
+solid #e5e5e5;height:27px}#dateRegion input:hover{outline:none;border:#6EBAF9 1px solid;box-shadow:0 0 3px #71BFFF;height:27px}#dateRegion
+.hint{color:#000;padding-left:3px;font-size:12px}.order_table
+td{padding:5px
+0;line-height:33px;font-size:12px}.order_table td
+.tit{display:inline-block;line-height:30px;color:#000;width:60px;font-size:12px}#hotel_invoice
+.tit{display:inline-block;line-height:27px;width:60px;font-size:12px}#hotel_invoice input,#hotel_invoice
+select{font-size:12px}#hotel_invoice
+.fapiao_con{display:none}#invoice_title_tip{float:left}.input_date{font-size:12px;height:22px;line-height:22px;padding-left:5px;border:1px
+solid #e5e5e5;width:130px;border-radius:0px}.alterDate
+.dateTxt{border:1px
+solid #b9bcbe}.alterDate{line-height:26px}select.num{width:51px}.serchBtn{color:#009cde;border:0
+none;background:none;cursor:pointer}.hotel_price{color:#f60}.price_tip{padding-top:10px}.tip_table{width:400px;padding:5px
+0 0px 10px;position:relative}.arrow{color:#f1f1f1;position:absolute;top:-10px;left:20px}.tip_table
+ul{width:400px;background:#f1f1f1;padding-top:10px}.tip_table
+li{font-size:12px;float:left;display:inline;padding-bottom:10px;width:80px;text-align:center}.tip_con{margin-top:10px;line-height:30px;font-size:12px}.house_select
+p{font-size:12px;line-height:26px}.house_select
+.input_tip{margin-top:0}.order_table
+.red{top:5px;position:absolute;display:inline;margin-left:-8px}.distribution
+.mb5{font-family:microsoft yahei}.order_table
+select{height:27px;line-height:18px;border:1px
+solid #e5e5e5;margin-right:5px}.house_select
+input{margin-right:5px;vertical-align:text-top}.next_step{line-height:35px}.back_link{font-size:16px;text-decoration:underline;margin-right:10px}.green_btn{background:#4e9700}.blue_btn{background:#2db2ea}.yellow_btn{background:#f68b33}.yellow_btn:hover{background:#FC8A2D}.grey_btn{background:#dbdbdb}.order_btn{width:158px;height:35px;line-height:35px;font-size:14px;font-weight:bold;color:#fff;border:0
+none;cursor:pointer;display:inline-block;text-align:center;vertical-align:middle}.alterDate
+.dateLabel{position:relative;font-size:12px;display:inline-block}.alterDate
+.date{position:absolute;top:4px;left:87px;font-size:12px;display:inline-block;height:22px;line-height:22px;color:#000}.rz_people{display:block;width:460px}.order_con
+p.hint{font-family:microsoft yahei;padding-right:5px;line-height:18px;font-size:12px}.rz_people
+.input_txt{margin:0
+5px 5px 0}.rz_ga_people
+.input_txt{margin-bottom:10px;float:left;margin-right:5px;width:135px}.rz_people_box
+ul{float:left;width:300px;margin-right:20px}.rz_people_box
+.rz_ga_tip{float:left;font-size:12px;margin-top:10px;color:#9c9c9c}.minus,.plus{width:20px;height:20px;display:inline-block;position:relative;top:4px}.minus{background-position:0 0 }.plus{background-position:-20px 0 }.minus.limit{background-position:0 -20px }.plus.limit{background-position:-20px -20px }.houseNum{width:50px;height:30px;line-height:30px;text-align:center}.total_day{font-size:12px;margin:10px
+75px 0 0}.total_day
+span{float:right;color:#9c9c9c}.invoice
+label{margin-left:20px}.order_invoice
+select{color:#5a5a5a;height:auto;padding:5px}.order_invoice select
+option{}.order_invoice
+.sheng{width:auto;margin:0
+5px 0px 0}.order_invoice
+.city{width:auto;margin:0
+5px 0px 0}.order_invoice
+.qu{width:auto;margin:0
+5px 0px 0}.order_invoice .address,#invoice_title{width:80%;font-family:microsoft yahei}.summaryInfo{color:#5a5a5a}.summaryInfo
+tr{line-height:22px}.summaryInfo
+th{color:#666;vertical-align:top}.summaryInfo .room_name
+td{color:#2e9700;padding:15px
+0 0px 0;font-weight:700;vertical-align:top}.summaryInfo
+.hotelName{line-height:30px;color:#000}.table_houseMes{z-index:3;right:0px;width:600px;display:none}.hotel_info
+table{width:100%}.hotel_info
+td{color:#000}#cashbackSummary{top:70px;position:absolute}.table_houseMes
+.houseMesList{background:#fff;border:1px
+solid #ccc;float:right;overflow:hidden}.table_houseMes td
+.close{padding:0
+5px}.table_houseMes
+ol{height:30px;line-height:30px;background:#FAFAFC;color:#989898;border-bottom:1px solid #ccc}.table_houseMes
+li{float:left;width:80px;text-align:center}.table_houseMes
+ul{clear:both;width:560px;margin:0
+-481px 0 0;border-bottom:1px solid #ccc}.table_houseMes ul
+li{width:80px;height:75px;padding-top:5px;text-align:center;line-height:22px;border-right:1px solid #ccc;margin:0
+-1px -1px 0}.table_houseMes ul li
+span{color:#FF9822;display:block;font-size:14px}.table_houseMes ul li
+em{color:#9D9D9D}.table_houseMes
+.cur{color:#FF9822}.table_houseMes li
+b{font-weight:400;padding:0
+2px 0 0}.table_houseMes li
+i{color:#9D9D9D;font-style:normal}.table_houseMes>em{border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:5px solid #BBB;position:absolute;top:-5px;width:0px;height:0;right:40px}.cashbackInfo{padding:15px
+10px;line-height:22px}.cashbackInfo
+.cashBackTotal{color:#F00}.total_price{margin:20px
+0}.total_price
+p{text-align:right}.total_price p
+span{color:#f60;font-size:14px}.summary_menu
+h3{color:#2e9700;font-weight:bold;font-size:14px;line-height:22px;margin-bottom:5px}.summary_menu
+p{line-height:20px;font-family:microsoft yahei;font-size:12px}.summary_menu p
+b{color:#d10000}.fan_icon{position:relative;padding-left:20px}.fan_tip{border:1px
+solid #4e9700;padding:10px;width:200px;position:absolute;top:30px;left:0;background:#fff;display:none}.border-triangle{border-color:#fff #fff #4e9700;border-style:solid;border-width:0 7px 7px;display:inline-block;height:0;width:0;position:absolute;top:-8px}#terms{display:none}#terms
+.pickUp{float:right;padding:5px}#terms
+.doc{background:#FFF;padding:10px
+35px 10px 20px;height:652px;overflow-x:hidden;overflow-y:scroll}#terms p,#noRoomPaidContent
+p{line-height:25px}#terms .doc
+h2{font-weight:bold;line-height:27px}#noRoomPaidContent .doc
+h2{font-weight:bold;line-height:30px}#promotion_part .travelCoupons_show
+i{border:1px
+solid #FD6B03;color:#FD6B03;line-height:14px;font-style:initial;display:inline-block;padding:0px
+3px 0px 2px}#promotion_part .travelCoupons_show
+em{color:#FD6B03;margin:0px;font-size:12px}#promotion_part .travelCoupons_show
+.yh{padding:0px;font-size:12px;line-height:14px;margin:0px}.travelCoupons_info .userRule,#cashBackRule
+.userRule{padding:0px;font-size:12px;border:none;border-bottom:1px dashed #2E9700;margin-left:10px;line-height:16px;position:relative}.travelCoupons_info .userRule span,#cashBackRule .userRule
+div{position:absolute;display:none;border:1px
+solid #FDDDAB;margin-bottom:10px;background:#fcf8e3;color:#333;width:18em;padding:5px;top:21px;z-index:10;left:10px;color:#3C3C3C;line-height:18px;box-shadow:1px 1px 5px -1px #FDDDAB}.verification_mes_box{border-color:#D5D5D5;font-family:microsoft yahei}.verification_mes_box
+h3{border-bottom:1px solid #ddd;padding-bottom:15px}.verification_mes_box
+.ver_con{border-bottom:1px solid #ddd;padding-bottom:15px}.verification_mes_box .ver_con
+.sureSubmit{color:#FFF;display:inline-block;background:#f68b33;border:none;padding:6px
+25px 6px 25px;font-size:16px;border-radius:4px}.verification_mes_box .ver_con
+#send_link{color:#FFF;display:inline-block;background:#f68b33;border:none;padding:5px;border-radius:3px}.verification_mes_box .ver_con
+#mark_area{border:1px
+solid #8E8888;width:137px}.verification_mes_box .ver_con
+li{line-height:31px}.verification_mes_box .ver_con
+label{font-size:14px;margin-right:5px}li{overflow:initial;overflow:inherit}.travelCoupons_info .userRule:hover .tips,#cashBackRule .userRule:hover
+.tips{display:block;z-index:10010}#noRoomPaidContent
+.doc{background:#FFF;padding:10px
+20px 10px 20px;overflow-y:scroll;height:648px;width:98%;margin-left:-12px;overflow-x:hidden}.info_head_img{width:47%;height:86px;float:left}.info_head_img
+img{width:152px;height:88px}.hotel_info_head
+h2{color:#333}.hotel_info_head:after{content:'.';display:block;visibility:hidden;clear:both;height:0px}.info_head_title{float:left;margin-left:5px;width:50%}.summary_menu
+h4{color:#333;font-size:14px;font-weight:bold;margin-bottom:10px;border-bottom:1px solid #eaeaea;line-height:22px;padding:0px}.step_detail{background-position:0 -35px}.crumb{margin-bottom:10px;font-size:13px}.crumb
+.current{color:#009cde}.order_mess{font-size:14px;margin-bottom:15px}.order_tit{font-weight:bold;margin-bottom:10px}.order_tit
+span{color:#009cde}.line1{border-bottom:1px dotted #b2b2b2;margin:10px
+0}.order_content
+ul{margin-bottom:10px}.order_content
+li{float:left;margin-right:20px}.table_mes
+th{background:#f1f1f1;border-right:5px solid #fff;color:#5e5d5d;text-align:center}.table_mes th, .table_mes
+td{padding:5px
+0;text-align:center;font-size:12px}.house_tip_par{position:relative;height:2px}.house_tip{background:#f1f1f1;padding:15px
+0 20px 20px;width:360px;font-size:14px;text-align:left;position:absolute;left:80px;top:10px}.house_tip_arrow{left:109px;top:-2px}.com_bug{background:#FAEFEF;white-space:nowrap;position:absolute;z-index:220;border:1px
+solid #F9C4C4}.com_bug
+.shdaw{display:none;width:7px;height:4px;background-position:-59px 0;position:absolute;left:30px;top:-4px}.com_bug
+.w{color:#e80000;padding:9px
+10px;position:relative}.searchForm .err, .alterDate
+.input_date.dateTxt.err{border:1px
+solid #2E9601}.dateShow
+span{margin-right:15px}.aside
+.name{font-size:14px;font-weight:bold;color:#5a5a5a;font-weight:bold;height:25px}.aside
+.account{margin:0
+10px 30px 0;font-size:12px;background:#f9f9f9;padding:10px
+15px 10px 15px}.account
+.price{color:#f60;text-align:right;font-weight:bold}.account .total_price
+b{color:#f60}.account
+td{padding:10px
+0}.rz_people_c span, .book_name_c
+span{margin-right:20px}.order_box
+.preservation_tel{margin-left:0}.coupons
+.input_txt{width:48px}.coupons
+.name{margin-right:10px;display:inline-block;float:left}.coupons
+.dy_tip{margin-left:3px;clear:both;padding:5px
+0 7px}.reallyPay{font-size:14px;float:right;margin-bottom:10px}.reallyPay
+.position_price{width:120px;float:right;padding-left:5px;margin-left:10px}.reallyPay
+b{margin-right:5px;font-size:16px;color:#3C3C3C;float:left}.reallyPay
+i{font-style:normal;color:#FD6B03;font-size:20px;margin-right:5px}.totalPrice{color:#FD6B03;margin:0
+5px 0 5px;border-bottom:1px dotted #FD6B03}.total_price
+.totalPrice{font-size:14px;margin:0
+10px 0 0}.order_total{font-size:16px;font-weight:700}.order_total
+.totalPrice{}.payCon{padding:0
+40px 0 20px;font-size:14px;color:#5a5a5a}.payCon
+.bor_b{border-bottom:1px dashed #eaeaea;margin-bottom:25px}.payCon
+.name{color:#f60;font-weight:bold}.payCon
+.price{color:#f60;font-size:18px;font-style:normal;margin-right:5px}.payTable{padding-bottom:25px}.payTable
+td{padding:10px
+0}.payCard
+h2{font-weight:bold;margin-bottom:15px}.payCard h2
+i{font-size:12px;font-style:normal;font-weight:400;margin-left:15px}.payCard
+ul{margin-bottom:10px;width:910px;overflow:hidden}.payCard
+li{float:left;display:inline;width:127px;height:36px;border:1px
+solid #adadad;margin:0
+13px 10px 0;cursor:pointer}.payCard
+li.on{border:1px
+solid #f60}.moreCard{text-align:right;margin-bottom:20px}.moreCard
+a{color:#626262}.cardMes{width:300px;float:left;margin-right:130px}.cardMes .month, .cardMes
+.year{width:68px;margin-right:5px}.cardMes
+td{padding:7px
+0}.cardMes
+.s{margin-right:5px}#cardMes td
+p{padding:0px;margin:7px
+0 0 0}.cardPic{width:390px;float:left;height:235px;overflow:hidden}.card_pic{width:390px;height:235px}.card_1{background-position:0 0 }.card_2{background-position:0 -235px }.card_3{background-position:0 -470px }.card_4{background-position:0 -705px }.choose_card{text-align:center;margin-bottom:25px}.choose_card
+label{margin-right:70px}.choose_card label
+input{margin-right:5px;position:relative;top:2px}.order_state{}.order_success{position:relative}.order_success
+h2{color:#2e9700;font-size:32px}.order_state
+.main{padding:10px
+0 40px 130px;width:500px}.order_state
+.order_icon{vertical-align:bottom;display:inline-block}.success_icon{position:absolute;left:60px;top:10px;width:58px;height:58px;background-position:0 -69px}.order_success
+.t{font-size:14px;color:#787878;font-weight:bold;margin-bottom:25px}.order_success .next_step
+.order_btn{color:#fff}.orderMess{font-size:14px;color:#787878;line-height:24px;margin-bottom:40px}.orderMess p
+a{color:#2e9700}.orderMess p
+.f60{font-size:18px}.orderMess
+.grey{font-size:12px;margin:5px
+0}.orderMess
+.gift{font-size:12px;color:#6b6b6b;margin-left:-24px}.orderMess
+.gift_icon{display:inline-block;width:17px;height:19px;background-position:-183px -65px;margin-right:6px}.order_state
+.content{padding-bottom:20px}.order_state
+.next_step{text-align:left}.order_state
+.order_btn{width:125px}.dimension_code{padding:10px
+0 0 55px}.dimension_code
+img{display:block;width:216px;height:245px}.rule_tip{display:none}.popBox{background:none repeat scroll 0 0 #FFF;border:1px
+solid #E3E3E3;box-shadow:2px 2px 2px #999;position:absolute;z-index:1000;font-size:13px;padding:10px;font-style:normal;display:inline-block;width:300px}.order_false{margin:50px
+0 50px 130px}.order_false
+h1{background:url("../Images/false.png") no-repeat scroll left center rgba(0, 0, 0, 0);color:#000;font:32px/40px "微软雅黑";height:48px;line-height:48px;padding-left:70px;margin-bottom:20px}.order_false .order_tip
+a{color:#2e9700}.cred,a.cred:link,a.cred:visited{color:#F00}#travel_coupon_use_success_box{background:url(../Images/tip_box.gif) no-repeat;height:188px;position:absolute;width:338px;z-index:5}#travel_coupon_use_success_box
+.c_close{cursor:pointer;height:18px;overflow:hidden;position:absolute;right:16px;text-indent:-9999px;top:12px;width:18px}#travel_coupon_use_success_box
+h3{color:#F60;font-size:14px;height:23px;line-height:23px;margin:0
+auto;padding-top:10px;width:305px}#travel_coupon_use_success_box
+table{border:0
+none;border-collapse:collapse;margin:20px
+auto 0;width:305px}.main_tuan
+.order_box{border-bottom:1px solid #eaeaea;margin-right:20px;padding-bottom:10px}.main_tuan .order_box
+.order_con{width:500px}.main_tuan .order_table
+label.tit{width:65px}.main_tuan .order_box
+.order_con{width:500px}.main_tuan
+.tuan_tel{margin-left:100px;margin-bottom:20px;float:none}.main_tuan
+.price{text-align:right;margin-right:20px}.fuwu_icon
+span{display:inline-block;width:59px;height:50px;margin-right:10px}.fuwu_icon
+.s_tui{background-position:0 -136px}.fuwu_icon
+.g_tui{background-position:-69px -136px}.fuwu_icon
+.comment{background-position:-138px -136px}.aside_tuan
+h3{font-weight:bold;border-bottom:1px solid #d6d6d6;margin-bottom:10px;padding-bottom:10px;color:#333}.fuwu_icon{border-bottom:1px dotted #cdcdcd;padding-bottom:10px;margin-bottom:10px}.aside_tuan
+p{margin-bottom:5px}.aside_tuan
+.b{font-weight:bold;color:#333}.d_popBox{background:none repeat scroll 0 0 #FFF;border:1px
+solid #E3E3E3;box-shadow:2px 2px 2px #999;position:absolute;z-index:1000}.popCon{display:inline-block;font-size:13px;font-style:normal;padding:10px;width:300px}.tips_hover{border-bottom:1px dotted #000}#tnDateW{border-radius:0;border-right:#b9bcbe 1px solid;box-shadow:0 0 16px 2px rgba(0,0,0,0.2);border:none}.guaranteepage{background:#FFF;border:1px
+solid #eaeaea;border-top:3px solid #4e9700;padding:0
+0 50px 0}.guarantee-panel{padding-bottom:20px;font-family:'microsoft yahei'}.guarantee-panel
+.show{display:block!important}.guarantee-panel
+.hide{display:none!important}.popup{display:none;position:absolute;z-index:3000;width:618px;padding:0
+10px;border:1px
+solid #ddd;font-family:'microsoft yahei';color:#333;background:#fff}.popup-hd{height:45px;border-bottom:1px solid #eee}.popup-hd
+h2{line-height:45px;font-size:18px;padding:0
+5px;color:#999}.popup-hd .popup-close{position:absolute;top:0;right:0;width:15px;height:15px;padding:15px;cursor:pointer}.popup-hd .icon-popup-close{display:block;width:15px;height:15px;overflow:hidden;background-position:-142px -196px}.popup
+.order_btn{width:auto;min-width:56px;height:32px;line-height:32px;margin:0
+3px;padding:0
+25px;border-radius:3px;font-weight:normal;color:#fff;border-sizing:content-box}.popup
+.default_btn{height:30px;line-height:30px;border:1px
+solid #ddd;color:#999;background-color:#fff}.popup .default_btn:hover{border-color:#fc893d;color:#fc893d}.popup
+.hollow_btn{border:1px
+solid #fc893d;color:#fc893d;background-color:#fff}.popup .hollow_btn:hover{color:#fff;background-color:#fc893d}.popup .yellow_btn:hover{background-color:#e87e38}.popup .green_btn:hover{background-color:#288500}.popup-bd{padding:10px
+5px;font-size:14px}.popup-ft{padding-bottom:30px;text-align:center}.popup-result{padding:20px;text-align:center}.popup-result
+h3{margin-bottom:20px;font-size:24px;font-weight:bold;color:#666}.popup-result h3
+em{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;width:58px;height:58px;margin-right:5px}.popup-result
+.fail{color:#f86666}.popup-result .order-icon-fail{background-position:-58px -69px}.popup-result .order-icon-succMini{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;width:16px;height:16px;margin-right:5px;background-position:-79px -196px}.payment-massage-tip{font-size:12px;font-family:'宋体';color:#999}.payment-massage-con{margin-bottom:30px}.payment-massage-con
+.m{width:270px;text-align:center}.payment-faq{text-align:right}.payment-faq
+h3{display:inline;color:#2e9900;cursor:pointer}.payment-faq h3:hover{text-decoration:underline}.payment-faq .order-icon-arr{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;width:7px;height:4px;overflow:hidden;background-position:-162px -196px}.payment-faq h3
+.up{transform:rotate(180deg)}.payment-faq
+.con{display:none;text-align:left}.guarantee-info{margin-bottom:20px;border:3px
+solid #ffc27f;background-color:#fff}.guarantee-info-hd{padding:8px
+16px;border-bottom:2px solid #eee}.guarantee-info-hd
+h2{font-size:16px;font-weight:bold;color:#333}.guarantee-order-info{padding:8px
+16px;border-bottom:1px dotted #e5e5e5}.guarantee-order-info
+.price{display:inline-block;*display:inline;*zoom:1;line-height:36px;overflow:hidden;font-size:18px;font-family:Arial;color:#f60}.guarantee-order-info .price
+em{vertical-align:-4px;font-size:30px;font-weight:500;font-family:Tahoma}.guarantee-order-info .price-unit{font-size:16px;font-family:'microsoft yahei';color:#333}.guarantee-order-info .price-unit
+em{font-weight:500;font-family:Tahoma}.guarantee-order-info
+table{font-size:14px}.guarantee-order-info table th,.guarantee-order-info table
+td{padding:3px
+0}.guarantee-order-info table
+th{color:#666}.guarantee-order-info table .price-td{padding:0}.guarantee-rule{line-height:24px;padding:8px
+16px;border-bottom:1px dotted #e5e5e5;font-size:14px;background-color:#f7f9fb}.guarantee-rule
+h3{font-weight:bold}.guarantee-rule
+p{color:#666}.guarantee-order-remind{padding:10px
+16px;font-size:14px}.guarantee-order-remind .order-icon-clock{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;width:18px;height:18px;margin-right:4px;background-position:0 -196px}.guarantee-order-remind
+p{color:#999}.guarantee-order-remind p
+em{color:#f60}.guarantee-chooseWay{}.chooseWay-tabs{position:relative;zoom:1}.chooseWay-tabs .chooseWay-cut{line-height:0;overflow:hidden;padding-left:1px;_padding-left:2px;font-size:0;color:#ddd;background-color:#f8f8f8}.chooseWay-tabs .chooseWay-cut
+span{float:left;width:1px;height:14px;overflow:hidden;margin-top:15px;text-indeng:-9999px;background-color:#ddd}.chooseWay-tabs .chooseWay-cut
+li{float:left;height:40px;line-height:40px;padding:0
+25px;border:1px
+solid #f8f8f8;border-top:2px solid #f8f8f8;border-bottom:0;font-size:16px;font-weight:700;color:#666;background-color:#f8f8f8;cursor:pointer}.chooseWay-tabs .chooseWay-cut li:hover{color:#f80}.chooseWay-tabs .chooseWay-cut
+.cur{position:relative;height:41px;margin:0
+-1px;border:1px
+solid #ddd;border-top:2px solid #ff8b2c;border-bottom:0;color:#f80;background-color:#fff}.chooseWay-tabs .chooseWay-tab{display:none;margin-top:-1px;padding:20px;border:1px
+solid #ddd;background-color:#fff}.chooseWay-prompt{position:relative;zoom:1;padding:5px;border:1px
+solid #eddbb3;background-color:#fffede}.chooseWay-prompt
+p{font-size:14px;color:#666}.chooseWay-prompt .order-icon-prompt{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;_vertical-align:-3px;width:16px;height:16px;margin-right:4px;background-position:-23px -197px}.payment-latter .card-detail-img{margin-top:0}.payment-latter
+h3{margin-bottom:5px;font-size:16px}.payment-latter .guarantee-amount{font-size:14px;color:#666}.payment-latter .guarantee-amount
+.price{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;line-height:36px;overflow:hidden;font-size:18px;font-family:Arial;color:#f60}.payment-latter .guarantee-amount .price
+em{vertical-align:-3px;font-size:28px;font-weight:500;font-family:Tahoma}.paymentWay-choosed{margin-bottom:25px}.paymentWay-choosed
+ul{padding:10px;border:2px
+solid #c5e6b4}.paymentWay-choosed
+li{float:left;display:inline}.paymentWay-choosed .now
+label{display:block}.paymentWay-choosed .now
+input{float:left;margin:13px
+10px 0 0;_margin-top:10px}.paymentWay-choosed .now-alipay{padding:30px
+0}.paymentWay-choosed .bank-img{float:left;display:block;width:127px;height:36px;overflow:hidden;border:1px
+solid #ff9419}.paymentWay-choosed .bank-text{float:left;display:block;width:145px;height:36px;line-height:36px;margin-left:-1px;text-align:center;border:1px
+solid #ff9419;font-size:15px;font-family:Tahoma;color:#999}.paymentWay-choosed .bank-text
+em{font-weight:600;color:#555}.paymentWay-choosed
+.other{margin:6px
+0 0 45px}.paymentWay-choosed .other
+a{display:inline-block;*display:inline;*zoom:1;height:21px;overflow:hidden;padding:1px
+5px;border:1px
+dashed #69ca3d;font-size:14px;background-color:#edfbe6;cursor:pointer}.paymentWay-choosed .other .order-icon-add{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;_vertical-align:top;_margin-top:7px;width:9px;height:9px;margin-right:4px;background-position:-44px -197px}.paymentWay-choosed .other a:hover{color:#fff;background-color:#69ca3d}.paymentWay-choosed .other a:hover .order-icon-add{background-position:-44px -205px}.paymentWay-choosed .guarantee-amount{float:right}.payment-latter
+.weixin{margin-top:35px;padding-bottom:30px}.payment-latter .weixin-code,.payment-latter .weixin-code .code-img,.payment-latter .weixin-prompt{background:url("../Images/weixin_code.png") no-repeat}.payment-latter .weixin-code{float:left;width:164px;height:173px;overflow:hidden;padding:58px
+68px 0 68px;background-position:center top;transition:transform 1s linear;animation:fadeIn 1s}.payment-latter .weixin-code .code-img{display:block;width:170px;height:170px;background-position:-260px -236px}@keyframes
+fadeIn{from{opacity:0;transform:translateX(64px)}to{opacoty:1;transform:translateX(0)}}.payment-latter .weixin-message{position:relative;zoom:1;float:left;display:inline;width:260px;margin-left:40px}.payment-latter .weixin-message .guarantee-amount{padding:30px
+0 15px 0;text-align:center}.payment-latter .weixin-message .price
+em{vertical-align:-4px;font-size:30px}.payment-latter .weixin-prompt{width:260px;height:86px;overflow:hidden;background-position:0 -231px}.payment-latter .weixin
+.succ{background-position:0 -317px}.payment-result{padding:100px;text-align:center}.payment-result
+h3{margin-bottom:15px;font-size:30px;font-weight:bold;color:#2e9700}.payment-result h3
+em{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;width:58px;height:58px;margin-right:15px}.payment-result .order-icon-succ{background-position:0 -69px}.payment-result
+p{line-height:26px;font-size:14px}.payment-form{font-size:14px}.payment-form
+.area{margin-bottom:15px}.payment-form .area-ft{margin-top:25px}.payment-form .btn-mini{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;height:24px;line-height:24px;padding:0
+10px;*padding:0
+5px;font-size:12px;border:0
+none;border-radius:3px;font-family:'microsoft yahei';color:#fff;background-color:#ccc;cursor:pointer;box-sizing:content-box}.payment-form
+.orange{background-color:#fc893d}.payment-form
+.disable{cursor:not-allowed}.payment-form .sub-btn{display:inline-block;*display:inline;*zoom:1;min-width:150px;height:40px;line-height:40px;padding:0
+20px;font-size:18px;font-weight:600;text-align:center;border:0
+none;border-radius:4px;font-family:'microsoft yahei';color:#fff;background-color:#fc893d;cursor:pointer;box-sizing:content-box}.payment-form .sub-btn:hover{background-color:#fc7d28}.payment-form .code-btn{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;padding:5px
+10px;color:#fff;background-color:#ff9419;cursor:pointer}.payment-form .code-btn:hover{background-color:#eb8817}.payment-form .label,.payment-form .area-box,.payment-form .action,.payment-form .extra,.payment-form .t-message{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;margin-right:10px}.payment-form
+.label{width:90px;text-align:right}.payment-form .text-box{width:175px;height:21px;line-height:21px;padding:4px
+0 4px 5px;border:1px
+solid #cfcfcf;vertical-align:middle}.payment-form .text-boxS{width:115px}.payment-form .text-boxM{width:140px}.payment-form .text-boxL{width:230px}.payment-form .text-boxXl{width:270px}.payment-form .select-box{width:75px;height:29px;line-height:29px;height:24px\0;line-height:24px\0;padding:2px
+0 3px 0\0;*height:24px;border:1px
+solid #cfcfcf;*vertical-align:-5px;box-sizing:content-box}.payment-form
+.txt{vertical-align:0;margin-right:15px}.payment-form .t-message{font-size:12px}.payment-form .t-message
+em{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;width:16px;height:16px;margin-right:2px;background-position:-9999px -9999px}.payment-form .t-message .order-icon-succ{background-position:-79px -196px}.payment-form .t-message .order-icon-fail{background-position:-58px -196px}.payment-form
+.succ{color:#69ca3d}.payment-form
+.fail{color:#f23030}.payment-form
+.extra{font-size:12px}.payment-form .code-countdown{display:inline-block;*display:inline;*zoom:1;padding:5px;border:1px
+solid #f80}.payment-latter-form{float:left;width:550px}.payment-latter-form
+.label{width:112px}.payment-latter-form .area-box{min-width:128px}.payment-latter-form
+.num{font-weight:600;color:#003}.payment-latter-form .replace-num{cursor:pointer}.payment-latter-form .replace-num:hover{color:#f80}.choose-commonCard-tabs{}.choose-commonCard-hd{height:33px;overflow:hidden;margin-bottom:15px}.choose-commonCard-tabs .choose-commonCard-cut{float:left;height:31px;padding:0
+10px;border-bottom:1px solid #2e9900}.choose-commonCard-tabs .choose-commonCard-cut
+li{float:left;height:30px;line-height:30px;padding:0
+20px;border:1px
+solid #fff;border-bottom:0;font-size:16px;font-weight:bold;color:#666;background-color:#fff;cursor:pointer}.choose-commonCard-tabs .choose-commonCard-cut li:hover{color:#2e9900}.choose-commonCard-tabs .choose-commonCard-cut
+.cur{height:31px;border-color:#2e9900;color:#2e9900}.choose-commonCard-tabs .choose-commonCard-tab{display:none;padding:0
+20px 15px 20px}.choose-commonCard-tabs .return-latter{float:left;display:inline;margin:8px
+0 0 40px;font-family:'宋体'}.choose-commonCard-tabs .return-latter a:hover{color:#f80;cursor:pointer}.commonCard-menu{overflow:hidden;margin-bottom:15px}.commonCard-menu
+li{float:left;display:inline;margin:0
+10px 10px 0;padding:4px
+15px;color:#2e9900;cursor:pointer}.commonCard-menu li:hover,.commonCard-menu
+.cur{color:#fff;background-color:#2e9900}.commonCard-tab{display:none}.card-list{overflow:hidden}.card-list
+li{float:left;display:inline;overflow:hidden;margin:0
+28px 15px 0;*margin-right:20px;cursor:pointer;white-space:nowrap}.card-list
+input{vertical-align:middle;margin-right:5px}.card-list .bank-img{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;border:1px
+solid #adadad;cursor:pointer}.card-list .bank-img
+a{display:block;width:127px;height:36px;overflow:hidden;border:2px
+solid #fff}.card-list .chosed .bank-img,.card-list .chosed .bank-img
+a{border-color:#f80}.card-list .cur
+label{border:1px
+solid #f60}.discern-form{position:relative;zoom:1;padding:10px
+0 30px 0}.discern-form .label-txt{position:absolute;top:42px;left:0;width:300px;height:28px;line-height:28px;padding-left:6px;font-size:18px;font-family:Arial;color:#fff;background-color:#b0c2e1}.discern-form .discern-area{position:relative;zoom:1;float:left;width:305px;height:30px;overflow:hidden;border:1px
+solid #ccc}.discern-form .discern-area .text-box{position:relative;z-index:10;width:295px;height:20px;line-height:20px;padding:5px;border:0
+none;font-size:14px;font-family:Arial;background:none}.discern-form .discern-area .bank-img{position:absolute;top:-4px;right:-30px;width:140px;height:36px;overflow:hidden;text-align:right}.discern-form .discern-area .bank-img
+img{display:block;margin-left:-5px}.discern-form .discern-area .load-img,.discern-form .discern-area .load-img
+img{width:22px;height:22px}.discern-form .discern-area .load-img{position:absolute;top:8px;right:35px}.discern-form .discern-area .load-img
+img{margin:0}.discern-form .discern-action{position:relative;zoom:1;float:left;display:inline;margin-right:10px}.discern-form .dis-btn{width:70px;height:32px;line-height:32px;margin-left:-1px;text-align:center;border:0
+none;font-size:16px;font-family:'microsoft yahei';color:#fff;background-color:#fc893d;cursor:pointer}.discern-form .dis-btn:hover{background-color:#fc7a23}.discern-form
+.disable{background-color:#aaa;cursor:default}.discern-form .disable:hover{background-color:#aaa}.discern-form .t-message{float:left;margin-top:6px;font-size:12px}.discern-form .t-message
+em{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;width:16px;height:16px;margin-right:2px}.discern-form .t-message .order-icon-succ{background-position:-79px -196px}.discern-form .t-message .order-icon-fail{background-position:-58px -196px}.discern-form
+.succ{color:#69ca3d}.discern-form
+.fail{color:#f23030}.card-detail{position:relative;zoom:1;border:1px
+solid #c2c2c2;border-top-width:2px;background-color:#fff}.card-detail-main{padding:15px
+20px}.chosen-bank{padding-bottom:15px;border-bottom:1px dotted #e5e5e5}.chosen-bank .label,.chosen-bank .chosen-area,.chosen-bank .chosen-action{display:inline-block;*display:inline;*zoom:1;vertical-align:middle}.chosen-bank
+.label{width:90px;text-align:right;font-size:14px;font-weight:bold}.chosen-bank
+.type_name{display:inline-block;font-size:14px;vertical-align:middle}.chosen-bank .chosen-area{width:127px;height:36px;overflow:hidden;margin-right:10px;border:1px
+solid #ff9419}.chosen-bank
+.modify{font-size:14px;font-family:'宋体';cursor:pointer}.chosen-bank .modify .order-icon-modify{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;width:18px;height:15px;margin-right:8px;background-position:-100px -196px}.chosen-bank .modify:hover{text-decoration:underline}.card-detail-form{float:left;width:550px;padding-top:15px}.card-detail-form
+.area{position:relative;zoom:1;min-height:31px;margin-bottom:13px;padding-left:94px}.card-detail-form
+.label{position:absolute;top:0;left:0;width:79px;line-height:31px;*line-height:34px;font-weight:bold}.card-detail-form .area-box{margin-bottom:2px}.card-detail-form .select-box{*vertical-align:-10px}.card-detail-form
+.txt{*vertical-align:-6px}.card-detail-form .guarantee-amount{font-size:14px;color:#666}.card-detail-form .guarantee-amount
+.price{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;line-height:36px;overflow:hidden;font-size:18px;font-family:Arial;color:#f60}.card-detail-form .guarantee-amount .price
+em{vertical-align:-3px;font-size:28px;font-weight:500;font-family:Tahoma}.card-detail-form .sub-area
+.extra{display:block;margin-bottom:8px}.card-detail-img{float:left;display:inline;width:385px;height:228px;overflow:hidden;margin-top:40px;background:url("../Images/card_focus.png") no-repeat}.card-0{background-position:0 0}.card-1{background-position:0 -228px}.card-2{background-position:0 -456px}.card-3{background-position:0 -684px}.card-4{background-position:0 -912px}.verisign{border:1px
+solid #d8d8d8;width:280px;display:inline;margin:40px
+20px 0 0;padding:15px
+15px 45px;color:#404040;float:right;position:relative}.verisign
+p{margin:0
+0 10px 0;line-height:22px}.verisign
+.verisign_logo{margin:0;position:absolute;bottom:5px;right:0}.verisign .verisign_logo
+a{display:block}.payment-result-panel{margin-bottom:30px;border:1px
+solid #ddd;border-top-width:2px;font-family:'microsoft yahei';background-color:#fff}.payment-result-panel
+.order_btn{width:auto;height:40px;line-height:40px;padding:0
+25px;border-radius:3px;font-size:18px;color:#fff}.payment-result-panel .yellow_btn:hover{background-color:#e87e38}.payment-result-panel
+.green_btn{background-color:#2e9900}.payment-result-panel .green_btn:hover{background-color:#288500}.guarantee-result{padding:45px
+45px 15px 45px;text-align:center;background-color:#f8fafc}.guarantee-result
+h3{margin-bottom:15px;font-size:30px;font-weight:bold;color:#666}.guarantee-result h3
+em{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;width:58px;height:58px;margin-right:5px}.guarantee-result .order-icon-succ{background-position:0 -69px}.guarantee-result .guarantee-result-tip{padding-top:40px;font-size:12px;font-family:'宋体';color:#999}.guarantee-orderInfo{padding:30px;border-top:1px dotted #ddd}.guarantee-orderInfo-con{float:left;width:510px;font-size:14px}.guarantee-orderInfo-con
+table{line-height:24px}.guarantee-orderInfo-con table th,.guarantee-orderInfo-con table
+td{padding:5px
+0;vertical-align:top}.guarantee-orderInfo-con table
+th{padding-right:15px;font-weight:bold;text-align:right}.guarantee-orderInfo-con
+.explain{display:inline-block;*display:inline;*zoom:1;line-height:20px;margin-left:20px;border-bottom:1px dotted #39f;font-size:12px;color:#39f}.guarantee-orderInfo-con .order-icon-prompt{display:inline-block;*display:inline;*zoom:1;vertical-align:top;width:14px;height:14px;margin:3px
+2px 0 0;background-position:-123px -196px}.guarantee-orderInfo-con
+.price{font-size:12px;font-family:Arial;color:#f60}.guarantee-orderInfo-con .price
+em{font-size:18px;font-weight:500;font-family:Tahoma}.guarantee-orderInfo .weixin-code,.guarantee-orderInfo .weixin-code .code-img{background:url("../Images/wx_code.png") no-repeat}.guarantee-orderInfo .weixin-code{float:left;display:inline;width:126px;height:135px;overflow:hidden;margin:35px
+0 0 35px;padding:52px
+117px 55px 117px}.guarantee-orderInfo .weixin-code .code-img{display:block;width:132px;height:130px;background-position:-360px 0}.guarantee-orderInfo .weixin-code
+.text{text-align:center;font-size:14px;color:#2e9900}.jump-queue{display:table;margin:0
+20px;padding:30px
+0;border-top:1px dotted #ddd}.jump-queue
+dt{float:left;width:71px;height:42px;line-height:16px;overflow:hidden;margin-right:15px;padding-top:8px;text-align:center;font-size:14px;color:#f60;background:url("../Images/order_icon.png") no-repeat 0 -224px}.jump-queue
+dd{display:table-cell;vertical-align:middle;*float:left;*display:inline;*margin-left:25px;color:#666}.jump-queue
+h3{margin-bottom:5px;font-size:14px;color:#f80}.jump-queue
+.mark{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;padding:2px
+5px;font-size:12px;color:#fff;background-color:#f80}.recommend{margin-bottom:30px;border:1px
+solid #ddd;border-top-width:2px;font-family:'microsoft yahei';background-color:#fff}.recommend-hd{padding:10px
+20px;background-color:#f8f9fa}.recommend-hd .order-icon-stick{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;width:24px;height:24px;margin-right:4px;background-position:-176px -196px}.recommend-hd
+h2{font-size:16px;font-weight:700;color:#333}.recommend-bd{padding:10px
+20px;font-size:14px}.ticket-box{width:450px}.ticket-box
+.tt{position:relative;zoom:1;height:25px;margin-bottom:8px;padding:0
+5px 2px 5px;border-bottom:2px solid #ebebeb}.ticket-box .tt
+h3{font-weight:600}.ticket-box .tt
+.more{position:absolute;top:2px;right:5px;font-size:12px;font-family:'宋体'}.ticket-box .tt .more:hover{color:#f60}.ticket-box
+dd{padding:0
+5px;font-size:0}.ticket-box dd
+a{color:#404040;cursor:pointer}.ticket-box .num,.ticket-box .day,.ticket-box .time,.ticket-box .station,.gate-ticket li .name,.ticket-box
+.price{display:inline-block;*display:inline;*zoom:1;height:30px;line-height:30px;overflow:hidden;font-size:14px}.ticket-box .num,.ticket-box
+.day{width:100px}.ticket-box
+.time{width:150px}.ticket-box
+.station{width:95px}.ticket-box
+.price{width:95px;text-align:right;font-size:12px;color:#999}.ticket-box .price span,.ticket-box .price
+em{font-size:14px;font-weight:600}.gate-ticket{width:auto;overflow:hidden}.gate-ticket
+ul{margin-right:-100px;padding:5px;font-size:0}.gate-ticket
+li{float:left;display:inline;margin-right:36px}.gate-ticket li .img,.gate-ticket li .img
+img{width:210px;height:120px}.gate-ticket li
+.text{padding:0
+5px}.gate-ticket li
+.name{width:105px}.gate-ticket li .name
+a{color:#333}.gate-ticket li .name a:hover{color:#f60}.guaranteepage
+.next_step{text-align:center;padding:50px
+0 0 0}.orderdetailpage
+.order_menu{width:auto;float:none}.orderdetailpage
+.order_con{width:575px}.orderDetail-mod{border:1px
+solid #e1e2e6;color:#333}.orderDetail-mod-hd{position:relative;zoom:1;padding:10px
+20px}.orderDetail-mod .b1-b{border-bottom:1px solid #e1e2e6}.orderDetail-mod
+.tips{border-bottom:1px dashed #404040}.orderDetail-mod-hd
+h2{font-size:16px}.orderDetail-mod-hd
+.action{position:absolute;top:10px;right:20px}.orderDetail-mod-hd .action
+.order_btn{_position:relative;width:auto;height:22px;line-height:22px;margin-left:5px;padding:0
+10px;border:1px
+solid #ddd;border-radius:3px;font-size:12px;font-weight:normal;color:#666;background-color:#fff;box-sizing:content-box}.orderDetail-mod-hd .action .order_btn:hover{border-color:#fc893d;color:#fc893d}.orderDetail-mod-bd{padding:10px
+20px 20px 20px}.orderDetail-mod-bd table th,.orderDetail-mod-bd table
+td{padding:6px
+0;vertical-align:top;word-break:break-all}.orderDetail-mod-bd table
+th{text-align:right;color:#999}.orderDetail-total{position:relative;zoom:1;padding:15px
+20px;border-top:1px solid #fca;border-bottom:1px solid #fca;background-color:#fffaf7}.orderDetail-total .total-price{color:#999}.orderDetail-total .total-price .price-box{color:#666}.orderDetail-total .total-price
+.price{vertical-align:middle;font-size:16px;color:#f60}.orderDetail-total .total-price .price
+em{font-size:26px}.orderDetail-total .total-price
+.mark{vertical-align:0;margin-left:8px;padding:0
+5px;border:1px
+solid #ff931a;border-radius:2px;color:#ff931a}.orderDetail-total
+.action{position:absolute;top:50%;right:20px;margin-top:-16px}.orderDetail-total .action
+a{margin:0
+15px}.orderDetail-total .action
+.order_btn{_position:relative;width:auto;height:30px;line-height:30px;margin-left:5px;padding:0
+20px;border:1px
+solid #ddd;border-radius:3px;font-size:14px;font-weight:normal;color:#666;box-sizing:content-box}.orderDetail-total .action .order_btn:hover{border-color:#fc893d;color:#fc893d}.orderDetail-total .action .goto-evaluate{font-size:14px;color:#f60}.orderDetail-total .action .goto-evaluate:hover{text-decoration:underline}.orderDetail-total .action .order-icon-pen{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;width:10px;height:10px;overflow:hidden;margin-right:4px;background-position:-162px -202px}.orderDetail-status-main{width:800px}.orderDetail-status-main
+.title{margin-bottom:5px;font-size:16px;color:#000}.orderDetail-status-main .title
+.state{color:#f60}.orderDetail-steps{margin-bottom:20px}.orderDetail-steps .steps-list{position:relative;zoom:1;left:-15px}.orderDetail-steps
+li{position:relative;zoom:1;float:left;width:84px;overflow:visible;padding:0
+1px;text-align:center}.orderDetail-steps
+.line{position:absolute;display:block;height:4px;overflow:hidden;background-color:#f3f5f8}.orderDetail-steps
+.num{position:absolute;left:50%;display:block;width:6px;height:6px;margin-left:-6px;border:3px
+solid #b9b9b9;border-radius:100%;background-color:#fff}.orderDetail-steps .num
+.line{top:1px;left:-77px;width:74px}.orderDetail-steps .num .f-line,.orderDetail-steps .num .l-line{width:23px}.orderDetail-steps .num .f-line{left:-26px;border-radius:3px}.orderDetail-steps .num .l-line{left:9px;border-radius:3px}.orderDetail-steps li
+.text{display:block;padding-top:15px}.orderDetail-steps .cur .line,.orderDetail-steps .cur .f-line,.orderDetail-steps .cur .l-line{background-color:#fca}.orderDetail-steps .cur
+.num{border-color:#f60}.orderDetail-status-text{padding-left:2px}.orderDetail-status-text
+.item{height:18px;margin-bottom:10px;color:#999}.orderDetail-status-text .item-dt,.orderDetail-status-text .item-dd{float:left;display:inline}.orderDetail-status-text .item-dt{position:relative;zoom:1;width:5px;height:5px;margin-top:7px;margin-right:15px;border-radius:100%;background-color:#ddd}.orderDetail-status-text .item-dt
+div{position:absolute;top:-20px;left:50%;width:1px;height:18px;overflow:hidden;background-color:#eee}.orderDetail-status-text .item-dd
+span{display:inline-block;*display:inline;*zoom:1;margin-right:35px}.orderDetail-status-text
+.latest{color:#f60}.orderDetail-status-text .latest .item-dt{width:7px;height:7px;overflow:hidden;margin-top:6px;margin-left:-1px;background-color:#f60}.orderDetail-status-text
+.more{display:inline;padding-left:20px;color:#2e9900;cursor:pointer}.orderDetail-status-text .more .order-icon-arr{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;width:8px;height:4px;overflow:hidden;margin-left:5px;background-position:-162px -216px}.orderDetail-status-text .more
+.up{transform:rotate(180deg)}.orderDetail-status-text .more:hover{text-decoration:underline}.orderDetail-status .download-app{display:inline;margin:20px
+10px 0 0;text-align:center;color:#999}.orderDetail-status .download-app
+.img{width:102px;height:102px;margin-bottom:5px;background:url("../Images/two-dimensioncode.png") no-repeat}.abolish-rules .orderDetail-mod-hd
+.mark{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;width:60px;height:16px;line-height:16px;overflow:hidden;margin-left:8px;padding:0
+8px;text-align:center;font-size:12px;color:#fff;background:url("../Images/order_icon.png") no-repeat -76px -224px}.abolish-rules .orderDetail-mod-hd
+.mark.free{background-position:-76px -245px}.cost-preferential{position:relative;zoom:1;min-height:63px;_height:63px;padding-left:85px;background-color:#fffaf7}.cost-preferential
+.title{position:absolute;top:50%;left:0;width:85px;line-height:26px;overflow:hidden;margin-top:-31px;font-size:14px;text-align:center;color:#fca;background-color:#fffaf7}.cost-preferential .title .order-icon-cost{display:inline-block;*display:inline;*zoom:1;width:35px;height:37px;overflow:hidden;background-position:-154px -224px}.cost-preferential-main{float:left;overflow:hidden;padding:20px
+10px;background-color:#fff}.cost-preferential-list
+li{padding-left:10px;margin-bottom:10px;background:url("../Images/order_icon.png") no-repeat -195px -285px}.cost-preferential-list .item-dt,.cost-preferential-list .item-dd{float:left;line-height:24px}.cost-preferential-list .item-dd{}.cost-preferential-list .item-dd
+table{border:1px
+solid #eee}.cost-preferential-list .item-dd table
+td{padding:5px
+15px;border-right:1px solid #eee;text-align:center}.cost-preferential-main .tips-panel{display:none;position:absolute;padding:5px
+10px;border:1px
+solid #eddbb3;background-color:#fffee5}.cost-preferential-main .tips-panel .tips-panel-arr{position:absolute;top:5px;left:-5px;width:5px;height:10px;overflow:hidden;background-position:-195px -224px}.checkIn-info
+h3{padding-bottom:6px;font-size:16px;color:#2e9900}.checkIn-info
+.dweller{margin-bottom:5px}.checkIn-info .dweller dt,.checkIn-info .dweller
+dd{display:inline-block;*display:inline;*zoom:1;vertical-align:top}.checkIn-info .dweller
+dt{line-height:18px;margin-right:5px;padding:0
+5px;border:1px
+solid #50a240;border-radius:2px;color:#50a240;background-color:#efffec}.checkIn-info .dweller
+dd{line-height:20px}.orderDetail-form{font-size:12px}.orderDetail-form table th,.orderDetail-form table
+td{vertical-align:middle}.orderDetail-form .select-box{min-width:100px}.warm-prompt
+li{line-height:22px;padding-left:10px;background:url("../Images/order_icon.png") no-repeat -195px -285px}.selector_dialog{top:26px;left:0;display:none;max-width:144px;position:absolute;z-index:101;background-color:#fff;border:1px
+solid #e5e5e5;box-shadow:2px 2px 2px 1px #DDD}.selector_dialog
+ul{list-style:none}.selector_dialog
+li{width:2.5em;height:2.5em;float:left;text-align:center;border:1px
+solid #E7E5E5;color:#000;font-weight:700;font-size:14px;cursor:pointer;background-color:#FFFDED;margin:-1px 0 0 -1px;line-height:2.5em}.selector_dialog
+li.selected{background-color:#F2F2F2;cursor:default}.selector_dialog li:hover{background-color:#F2F2F2}.selector_dialog
+p{height:3.2em;border-top:1px solid #e5e5e5;border-right:1px solid #e5e5e5;width:127px;display:block;float:left;padding:0.21em 0.7em;background-color:#fff;text-align:justify;text-justify:inter-ideograph;font-size:1em;text-indent:0;margin:-1px 0 0 0;font-family:microsoft yahei;line-height:1.5em}.selector_dialog p
+span{color:#F40808;font-weight:800}.select-room-count{position:relative;z-index:12}.selectHandle{height:27px;width:51px;opacity:0;background-color:#ddd;z-index:102;display:block;position:absolute;top:0px;left:0;filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;line-height:27px}input:focus,select:focus{outline:none;border:#6EBAF9 1px solid;box-shadow:0 0 3px #71BFFF}.invoice_price,.invoice_price_pre,.invoice_price_next{color:#FD6B03}.invoice_price_pre{font-size:12px;margin-right:-4px}.invoice_price{font-size:16px}.invoice_price_next{font-size:12px;margin-left:-4px}.invoice_price{font-weight:bold}.order_table .need_invoice,.order_table .need_travelCoupons,.order_table
+.need_promotionRed{color:#000;cursor:pointer}.travelCoupons_info
+.nored{display:none;color:red}#promotionRed_info{display:none}#promotionRed_info
+#redtips{position:absolute;display:none;border:1px
+solid #FDDDAB;margin-bottom:10px;background:#fcf8e3;color:#333;width:18em;padding:5px;top:21px;z-index:10;left:10px;color:#3C3C3C;line-height:18px;box-shadow:1px 1px 5px -1px #FDDDAB}#promotionRed_info
+.redspan{display:none;margin-left:5px;border:1px
+solid #FD6B03;color:#FD6B03;line-height:14px;padding:0px
+2px;font-size:12px}#promotionRed_info
+.redfan{position:relative;display:inline-block}.hotel_favors
+a{color:#000;display:inline-block;width:130px;margin-right:5px;font-size:12px}#login_tip{display:none;width:250px;line-height:18px;background-color:#fff;border:1px
+solid #ccc;position:absolute;z-index:200;margin-top:30px;padding:8px}#login_tip
+.close{float:right;width:14px;height:14px;cursor:pointer;background:url(../Images/xubox_ico0.png) no-repeat;background-position:-6px -8px}.nameRule{border-bottom:1px dashed #2E9700;position:relative}.nameRule
+.tips{display:none;position:absolute;margin-bottom:10px;top:21px;z-index:10;left:10px}.nameRule:hover
+.tips{display:block;z-index:10010}#hotel_invoice
+.need_invoice{font-size:12px}.order_table
+.need_promotionCode{color:#000;cursor:pointer}.noPromotionCode,.noPromotionRed{margin-left:10px}.promotionContain
+label{font-size:12px;display:block;cursor:pointer;line-height:25px}.add_promotion{margin-left:20px}.promotionContain
+span{color:#e80000}.activeInfo{color:#999;font-size:12px;line-height:22px;padding:0px
+17px;font-family:microsoft yahei}.hideActiveInfo{height:88px;overflow:hidden}.travelCoupons_detail{margin-left:10px}.addPromotion{width:375px;height:188px;display:none}.addPromotion
+p.inputField{height:37%;padding-top:36px;text-align:center;font-family:microsoft yahei}.addPromotion p.inputField
+.cred{color:#e80000;font-weight:400;margin:5px
+152px 0px;font-size:12px;line-height:14px;padding:5px
+20px 6px 24px;background-color:#FDE5E5;border:1px
+solid #F9C4C4;width:110px;display:none}.addPromotion p.inputField
+input{border:1px
+solid #8E8888;height:23px;margin-left:5px}.addPromotion
+p.btnField{height:25%;text-align:center;font-family:microsoft yahei}.addPromotion p.btnField
+a{color:#FFF;display:inline-block;background:#f68b33;padding:0px
+24px;border-radius:3px;font-size:16px;line-height:30px;margin:3px
+auto;margin-left:28px}.addPromotion p.btnField
+.cancel{background:#DDD}.addPromotion p.btnField .submit:hover{background:#FD811A}.addPromotion p.btnField .submit:active{background:#fd7a16}.addPromotion p.btnField .cancel:hover{background:#D8D8D8}.travelCoupons_title,.travelCoupons_info{float:left;font-size:12px}.travelCoupons_info{max-width:85%}.travelCoupons_balance{color:#FD6B03}.travelCoupons_cut,.coupons
+em{color:#e80000}.coupons
+em{margin-left:10px}.need_promotionCode .icon,.need_invoice .icon,.need_travelCoupons .icon,.need_promotionRed .icon,.hotel_favors
+.icon{background-image:url(../Images/icon-scd8daa0182.png);background-repeat:no-repeat}.need_invoice .icon-square,.need_travelCoupons .icon-square,.need_promotionCode .icon-square,.need_promotionRed .icon-square,.hotel_favors .icon-square{display:inline-block;background-position:-1011px 0;height:13px;width:13px;margin:-2px 5px}.need_invoice .icon-square.selected,.need_travelCoupons .icon-square.selected,.need_promotionCode .icon-square.selected,.need_promotionRed .icon-square.selected,.hotel_favors .icon-square.selected{background-position:-132px 0}.select-room-count
+.leftRoomNum1{opacity:10;border:1px
+solid #e5e5e5;background:#fff;width:50px;text-align:center;filter:alpha(opacity=100)}.loading{font-size:13px;color:#aaa}.loading
+b{margin-right:3px}.loading
+.cur{color:#2e9700}.order_box .dy_tip
+strong{font-size:16px;font-weight:bold;color:#F00}.order_box .dy_tip .info-can, .order_box .dy_tip .info-applyed{color:#f68b33}a.coupons{margin-left:10px}a.coupons
+.icon{background:url(../Images/spirit.png) no-repeat;width:7px;height:4px;margin:10px
+0 0 0;padding:0;background-position:-148px -108px;vertical-align:top;display:inline-block}a.coupons
+.icon.expand{background-position:-148px -93px}.applyed_coupon
+.icon{background:url(../Images/travelcoupon_used.png) no-repeat;width:16px;height:16px;margin:5px
+0 0 0;padding:0;vertical-align:top;display:inline-block}.travelCoupon_detail_box
+th{background:none repeat scroll 0 0 #eee;font-weight:normal;height:40px;line-height:40px}.travelCoupon_detail_box
+td{line-height:21px;padding:5px
+15px}.travelCoupon_detail_box th,.travelCoupon_detail_box
+td{border:1px
+solid #ddd;text-align:center}.order_box
+.use_price_btn{width:50px;height:25px;line-height:25px;margin:0
+9px}.cleanfix{clear:both}.btn_disabled{background:#aaa}div#dyPop{border:2px
+solid #ADACAC}#dyPop
+.word_2{font-family:microsoft yahei}#travelCoupon_detail .info-all,#travelCoupon_detail .info-nocan{color:#FD6B04}div#cashbackSummary:after{content:'.';height:0px;clear:both;display:block;visibility:hidden}.guaranteeRule
+.guaranteeContent{color:#F68B33;font-weight:bold}.guaranteeRule
+em{position:absolute;width:16px;height:16px;top:6px;left:5px;background:url("../Images/gentuan_icon.png") -32px -4px no-repeat}#acceptError{width:200px;text-align:left;float:right}.xubox_main .xubox_setwin .xubox_close0:hover{background-position:-6px -8px}#container .xubox_title
+em{font-family:microsoft yahei;line-height:20px}.orderStep{padding:33px}.steps{float:right}.steps
+li{float:left;padding:0px
+40px}.steps
+.num{position:relative;padding:3px
+6px;background:#FFF;border-radius:20px;color:#FFF;font-weight:bold}.steps .num
+.border{position:absolute;border-top:7px solid #FFF;left:19px;top:30%;width:100px;display:block}.steps
+.content{display:block;font-family:microsoft yahei;margin:7px
+0px 0px -11px}.steps .effect
+.num{color:#FFF;background:#43b313}.steps .effect .num
+.border{border-top:7px solid #43b313}.steps .invalid .num,.steps .brief
+.num{color:#746969;background:#E7E7E7}.steps .briefed
+.num{color:#FFF;background:#43b313}.steps .invalid .num
+.border{border-top:7px solid #E7E7E7}.steps .brief .num
+.border{border-top:7px solid #FFF}#roomSummary{overflow:hidden;position:absolute;top:37px}.orderTotalBlock{position:relative}.submittip
+.roomtip{font-size:14px;color:#999;margin-left:8px}.submit_tip_table
+td{line-height:30px;font-size:12px}.submit_tip_table td:nth-child(1){width:30%}.submit_tip_table td:nth-child(2){width:70%}.submit_tip_table
+.tvalue{font-weight:bold;padding-left:5px}.submit_tip_table
+.orange{color:#f60}#dyPop
+.waitetip{margin:10px
+auto;text-align:center}#dyPop .waitetip
+span{color:#999}#mostcanuse{position:absolute;width:150px;height:20px;line-height:20px;top:27px;color:red;font-size:6px}#price_limit_plan_mind_info_about_rooms{font-family:'microsoft yahei';padding-right:5px;line-height:18px;font-size:12px;color:#999}#price_limit_plan_mind_info_about_nights{font-family:'microsoft yahei';padding-right:5px;line-height:18px;font-size:12px;color:#999}.right_scroll{position:fixed;bottom:197px;right:0px;width:87px;height:276px;background:#fff;border:1px
+solid #eee;border-bottom:none;z-index:999}@media only screen and (min-width: 1525px){.right_scroll{right:75px}}.right_scroll
+.des{width:87px;height:76px;background:#51c5b3;text-align:center}.right_scroll .des
+p{padding:9px
+0;line-height:19px;font-size:14px;color:#fff;cursor:default}.right_scroll
+.erweima{width:71px;height:71px;margin:12px
+8px 0;text-align:center}.right_scroll .erweima
+img{width:100%}.right_scroll .des-code{height:35px;border-bottom:1px solid #e5e5e5;font-size:12px;text-align:center;line-height:35px;color:#000;cursor:default}.right_scroll .com-li{height:39px;border-bottom:1px solid #e5e5e5}.right_scroll .kefu, .right_scroll .fankui, .right_scroll
+.ques{float:left;width:23px;height:25px;margin:7px
+0 0 6px}.right_scroll
+.kefu{background:url("../Images/kefu-icon.png") center no-repeat}.right_scroll
+.fankui{background:url("../Images/fankui-icon.png") center no-repeat}.right_scroll
+.ques{background:url("../Images/ques-icon.png") center no-repeat}.right_scroll .fankui-des, .right_scroll .ques-des, .right_scroll .kefu-des{float:left;font-size:12px;margin:10px
+0 0 3px;color:#51C5B3;font-weight:bold}.hide{display:none}.right_scroll
+.toTop{height:40px;border:1px
+solid #eee;border-top:none;background:#fff;width:87px;margin-left:-1px}.right_scroll .toTop
+a{display:block;height:40px;margin:0
+10px;line-height:57px;text-align:center;cursor:pointer}.right_scroll .toTop a
+img{margin-top:11px}.kefu-li{cursor:pointer}.price-calendar-footer{border:1px
+solid #ddd;border-top:none;padding:10px;background:#fff;word-wrap:break-word;color:#999;display:none}#downPayment{line-height:18px;float:right;color:#3C3C3C;padding-top:15px;padding-left:40px}#downPayment
+.msg{line-height:19px}#downPayment
+.tip{width:320px;height:40px;margin-left:-40px;display:-webkit-flex;display:flex;justify-content:flex-start;align-items:center}#downPayment .tip
+div{width:40px;height:40px;background:url(../Images/down-payment-tip.png) no-repeat;_background:url(../Images/down-payment-tip.png) no-repeat;background-position:5px 5px}#downPayment .tip
+span{display:inline-block;color:#2E9700;font-size:13px;font-weight:600}.cashback{position:relative}.cashback
+.tip{display:none;position:absolute;background:#fffceb;width:229px;border:1px
+solid #ffdbb2;top:21px;left:15px;padding:8px
+10px;z-index:1;word-break:break-all;text-align:left;color:#999}.cashback .tip .big-up-arrow{left:10px;position:absolute;top:-12px;border-width:6px;border-style:dashed dashed solid dashed;border-color:transparent transparent #ffdbb2 transparent;font-size:0;width:0;height:0;line-height:0}.cashback .tip .small-up-arrow{left:12px;position:absolute;top:-8px;border-width:4px;border-style:dashed dashed solid dashed;border-color:transparent transparent #fffceb transparent;font-size:0;width:0;height:0;line-height:0}.cashback:hover
+.tip{display:block}.cashback .tip
+p{font-weight:600;margin-bottom:-13px;margin-top:8px}.promotionTip{position:relative;border:1px
+solid #FD6B03;color:#FD6B03;display:inline-block;line-height:14px;padding:0px
+2px}.promotionTip
+.tip{display:none;position:absolute;background:#fffceb;width:120px;border:1px
+solid #ffdbb2;top:21px;left:15px;padding:8px
+10px;z-index:1;word-break:break-all;text-align:left;color:#999}.promotionTip:hover
+.tip{display:block}.promotionTip .tip .big-up-arrow{left:10px;position:absolute;top:-12px;border-width:6px;border-style:dashed dashed solid dashed;border-color:transparent transparent #ffdbb2 transparent;font-size:0;width:0;height:0;line-height:0}.promotionTip .tip .small-up-arrow{left:12px;position:absolute;top:-8px;border-width:4px;border-style:dashed dashed solid dashed;border-color:transparent transparent #fffceb transparent;font-size:0;width:0;height:0;line-height:0}#noRoomPaid
+a{float:right}.promotionTip{display:none}#cashbackInfo
+.order_con{}#cashbackInfo .order_con
+.row{}#cashbackInfo
+.box{display:inline-block;width:13px;height:13px;margin-top:-3px;cursor:pointer;background-image:url(../Images/icon-scd8daa0182.png);background-repeat:no-repeat;background-position:-1011px 0;vertical-align:middle}#cashbackInfo .box-selected{background-position:-132px 0}#cashbackInfo .clear-box{width:13px;height:13px;display:inline-block}#cashbackInfo
+.price{margin:0px
+20px 0px 5px;color:#FD6B03}.discount-coupon
+.price{display:inline-block;width:26.06px;margin:0px
+20px 0px 5px;color:#FD6B03}#cashbackInfo .row
+.column1{display:inline-block}#cashbackInfo .row .column1
+span{}#cashbackInfo .row
+.column2{}#cashbackInfo .cash-back{margin-left:9px;margin-bottom:18px}#cashbackInfo .cash-back
+.column2{display:inline-block}#cashbackInfo .travel-coupon{margin:0px
+0px 28px -2px;align-items:center;position:relative}#cashbackInfo .travel-coupon
+.column2{display:inline-block}#cashbackInfo .travel-coupon .column2
+.c2{height:20px;display:inline-block}#cashbackInfo .travel-coupon .column2 .c2
+input{width:40px}#cashbackInfo .travel-coupon .column2 .c2
+.d{display:inline-block}#cashbackInfo .discount-coupon
+.column1{margin-left:24px;vertical-align:top}#cashbackInfo .discount-coupon
+.column2{display:inline-block;width:400px}#cashbackInfo .discount-coupon .coupon-list{}#cashbackInfo .discount-coupon .column2
+.row{}#cashbackInfo .discount-coupon .column2 .row
+.a1{position:relative}#cashbackInfo .discount-coupon .column2 .row .a1
+.d{display:inline-block;position:absolute;right:5px}#cashbackInfo .discount-coupon .column2 .row .coupon-list
+.item{margin-top:10px;position:relative}#cashbackInfo .discount-coupon .column2 .row .coupon-list .item
+.overview{position:relative}#cashbackInfo .discount-coupon .column2 .row .coupon-list .item .overview
+.d{position:absolute;right:16px;cursor:pointer;color:#2E9700;display:inline-block}#cashbackInfo .discount-coupon .column2 .row .coupon-list .item .overview .d
+a.showMore{cursor:pointer;display:inline-block;height:0;width:0;overflow:hidden;font-size:0;line-height:0;border-color:#2E9700 transparent transparent transparent;border-style:solid;border-width:6px;position:absolute;top:6px}#cashbackInfo .discount-coupon .column2 .row .coupon-list .item .overview .d
+a.hideMore{cursor:pointer;display:inline-block;height:0;width:0;overflow:hidden;font-size:0;line-height:0;border-color:transparent transparent #2E9700 transparent;border-style:solid;border-width:6px;position:absolute}#cashbackInfo .discount-coupon .column2 .row .coupon-list .item
+.description{color:#999;font-size:12px;line-height:22px;padding:0px
+20px 0px 20px;font-family:microsoft yahei}#cashbackInfo .discount-coupon .column2 .row .coupon-list
+.line{color:#999;margin-top:10px}#cashbackInfo .discount-coupon .column2 .row .coupon-list .line
+div{display:inline-block;border-top:1px dashed #999;width:28%;margin-bottom:4px}#cashbackInfo .discount-coupon{margin-left:-15px}.showMoreActiveInfo{margin-top:10px;padding-left:183px;position:relative}.showMoreActiveInfo
+a{cursor:pointer;display:inline-block;height:0;width:0;overflow:hidden;font-size:0;line-height:0;border-color:#2E9700 transparent transparent transparent;border-style:solid;border-width:6px;position:absolute;top:7px;left:168px}.showMoreActiveInfo
+span{cursor:pointer;color:#2E9700}.hideSomeActiveInfo{margin-top:10px;position:relative;padding-left:196px}.hideSomeActiveInfo
+a{cursor:pointer;display:inline-block;height:0;width:0;overflow:hidden;font-size:0;line-height:0;border-color:transparent transparent #2E9700 transparent;;border-style:solid;border-width:6px;position:absolute;top:1px;left:182px}.hideSomeActiveInfo
+span{cursor:pointer;color:#2E9700}#use_price{margin-top:-3px;margin-left:10px;height:22px}#travelCoupons_error{position:absolute;left:131px;top:17px;width:142px}#travelCoupons_error
+em{top:3.5px;left:-1px}#promotionAll_tr{margin:0px
+0px 20px 9px}#promotionAll_tr
+.column{display:inline-block}.loginleft{margin-left:23px}#travel_coupon_box{height:240px;width:410px;display:none}#travel_coupon_box
+h3{color:#333;font-size:15px;height:32px;line-height:32px;border-bottom:1px solid #eaeaea;font-weight:bold;font-family:microsoft yahei;padding-left:10px}#travel_coupon_box
+input{height:22px;width:165px;border:1px
+solid #999}#travel_coupon_box
+td{line-height:35px;font-family:microsoft yahei;margin:0px;font-size:14px;width:33%;text-align:left}#travel_coupon_box
+.cred{line-height:20px;display:inline-block;font-size:12px;color:#999;margin:5px
+0px}#travel_coupon_box
+table{border:0
+none;border-collapse:collapse;margin:20px
+auto 0;width:305px}#travel_coupon_box
+table{border-collapse:collapse}.cred,a.cred:link,a.cred:visited{color:#F00}#travel_coupon_use_success_box{background:url("../Images/tip_box.gif") no-repeat;height:188px;position:absolute;width:338px;z-index:5}#travel_coupon_use_success_box
+.c_close{cursor:pointer;height:18px;overflow:hidden;position:absolute;right:16px;text-indent:-9999px;top:12px;width:18px}#travel_coupon_use_success_box
+h3{color:#F60;font-size:14px;height:23px;line-height:23px;margin:0
+auto;padding-top:10px;width:305px}#travel_coupon_use_success_box
+table{border:0
+none;border-collapse:collapse;margin:20px
+auto 0;width:305px}#travel_coupon_box
+.cred#check_travel_coupon_show{color:#e80000;font-weight:400;margin:5px
+0;font-size:12px;line-height:14px;padding:5px
+20px 6px 24px;background-color:#FDE5E5;border:1px
+solid #F9C4C4}#travel_coupon_box
+.submit_recharge{color:#FFF;display:inline-block;background:#f68b33;padding:0px
+24px;border-radius:3px;font-size:16px;line-height:30px;margin:3px
+auto}#travel_coupon_box .submit_recharge:hover{background:#FD811A}#travel_coupon_box
+td.recharge{text-align:center}#coupon_box{background:url("../Images/tip_box.gif") no-repeat scroll 0 0 transparent;height:188px;position:absolute;width:338px;z-index:5}#coupon_box
+h3{color:#F60;font-size:14px;height:23px;line-height:23px;margin:0
+auto;padding-top:10px;width:305px}#coupon_box
+.c_close{cursor:pointer;height:18px;overflow:hidden;position:absolute;right:16px;text-indent:-9999px;top:12px;width:18px}#coupon_box
+table{border:0
+none;border-collapse:collapse;margin:20px
+auto 0;width:305px}.xubox_page{width:100%;background:#FFF}#travelCoupon_detail{background:#FFF}#travelCoupon_detail
+.dy_tip{line-height:45px;font-size:14px;padding-left:10px}

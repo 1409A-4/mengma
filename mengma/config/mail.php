@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    'host' => env('MAIL_HOST', 'smtp.163.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => 'hello@example.com',
-        'name' => 'Example',
+        'address' => '18310939319@163.com',
+        'name' => '志军',
     ],
 
     /*
@@ -111,5 +111,6 @@ return [
     */
 
     'sendmail' => '/usr/sbin/sendmail -bs',
+    'pretend' => false,
 
 ];

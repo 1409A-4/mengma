@@ -1,0 +1,13 @@
+﻿.cred{ color:#ff0000;}
+.cgreen{ color:#4e9700;}
+.verification_mes_box{ width:460px; position:absolute; display:none; border:2px solid #85bb3f; background:#fff; -webkit-box-shadow:0 0 5px #333333; -moz-box-shadow:0 0 5px #333333; box-shadow:0 0 5px #333333;
+ }
+.verification_mes_box .c_close { cursor: pointer; height: 21px; width:21px; position: absolute; background:url("../Images/close_ver.gif") no-repeat; right: 8px; top: 8px; text-indent: -9999px; }
+.ver_con h3{ font-size:14px; font-weight:bold; margin:0 0 15px 20px;}
+.ver_con{ border-bottom:1px dotted #aeaeae; padding:10px 0 15px; color:#404040;}
+.ver_con li{ margin-bottom:5px;}
+.ver_con label{ width:130px; text-align:right; display:inline-block; line-height:20px;}
+.ver_txt{ width:73px; height:25px; border:1px solid #ccc; padding:0 5px; margin-right:10px;}
+.ver_mes{ padding:10px 0 10px 20px; color:#404040; line-height:20px;}
+.send_again_60_second{ background:#eee; border:1px solid #b8b8b8; padding:3px 5px;}
+.send_link{ color:#404040; display:none; padding:1px; cursor:pointer;}

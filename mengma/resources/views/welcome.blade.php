@@ -96,5 +96,12 @@
 <!---End-content---->
 @include('.index.public.foot')
 </html>
-
+<script src="js/jquery.min.js"></script>
+<script>
+//    $(function () {
+//        $('.act').click(function () {
+//            alert(123);
+//        });
+//    });
+</script>
 
