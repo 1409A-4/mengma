@@ -84,6 +84,7 @@ return array(
     'Hamcrest\\Util' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
     'Hamcrest\\Xml\\HasXPath' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
     'HotelClassTable' => $baseDir . '/database/migrations/2016_09_08_034252_hotel_class_table.php',
+    'Meng' => $baseDir . '/database/migrations/2016_09_09_105953_meng.php',
     'Mengobj' => $baseDir . '/database/migrations/2016_09_02_150645_mengobj.php',
     'PHPUnit\\Framework\\TestCase' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/TestCase.php',
     'PHPUnit_Exception' => $vendorDir . '/phpunit/phpunit/src/Exception.php',
@@ -540,4 +541,5 @@ return array(
     'TrainTable' => $baseDir . '/database/migrations/2016_09_08_035821_train_table.php',
     'Verify' => $baseDir . '/app/cl/Verify.php',
     'Z' => $baseDir . '/app/cl/Z.php',
+    'app\\libs\\open51094' => $baseDir . '/app/libs/open51094.php',
 );

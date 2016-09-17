@@ -363,6 +363,7 @@ class ComposerStaticInit79e030cef035dbf5abaff2e278a37667
         'Hamcrest\\Util' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
         'Hamcrest\\Xml\\HasXPath' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
         'HotelClassTable' => __DIR__ . '/../..' . '/database/migrations/2016_09_08_034252_hotel_class_table.php',
+        'Meng' => __DIR__ . '/../..' . '/database/migrations/2016_09_09_105953_meng.php',
         'Mengobj' => __DIR__ . '/../..' . '/database/migrations/2016_09_02_150645_mengobj.php',
         'PHPUnit\\Framework\\TestCase' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/TestCase.php',
         'PHPUnit_Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
@@ -819,6 +820,7 @@ class ComposerStaticInit79e030cef035dbf5abaff2e278a37667
         'TrainTable' => __DIR__ . '/../..' . '/database/migrations/2016_09_08_035821_train_table.php',
         'Verify' => __DIR__ . '/../..' . '/app/cl/Verify.php',
         'Z' => __DIR__ . '/../..' . '/app/cl/Z.php',
+        'app\\libs\\open51094' => __DIR__ . '/../..' . '/app/libs/open51094.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

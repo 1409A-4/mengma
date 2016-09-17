@@ -119,6 +119,8 @@
 <!---End-content---->
 </body>
 @include('.index.public.foot')
+
+</body>
 </html>
 
 
