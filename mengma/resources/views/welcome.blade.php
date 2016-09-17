@@ -2,21 +2,44 @@
 <!DOCTYPE HTML>
 <head>
     <title>首页</title>
-    <base href="{{URL::asset('index\/')}}"/>
+    <base href="{{URL::asset('/')}}"/>
     @include('.index.public.style')
 </head>
 <body>
 <!---start-header---->
-@include('.index.public.header')
+<div class="header">
+    <div class="wrap">
+        <div class="logo">
+            <a href="/"><img src="index/images/logo.jpg" title="logo"  height="42"/></a>
+        </div>
+        <div class="top-nav">
+            <ul>
+                <li class="active"><a href="{{url('/')}}">首页</a></li>
+                <li ><a href="hotel">酒店</a></li>
+                <li ><a href="hotelCar">自由行</a></li>
+                <li><a href="">机票</a></li>
+                @if(session('name'))
+                    <li><a href="index/center" class="nav2" style="text-decoration:none" >用户中心</a></li>
+                    <li><a href="login/loginout" class="nav3" style="text-decoration:none">退出</a></li>
+                @else
+                    <li><a href="login/register">注册</a></li>
+                    <li><a href="login/login">登录</a></li>
+                @endif
+
+            </ul>
+        </div>
+        <div class="clear"> </div>
+    </div>
+</div>
 <!---End-header---->
 <!--start-image-slider---->
 <div class="image-slider">
     <!-- Slideshow 1 -->
     <ul class="rslides" id="slider1">
-        <li><img src="images/slider4.jpg" alt=""></li>
-        <li><img src="images/slider2.jpg" alt=""></li>
-        <li><img src="images/slider3.jpg" alt=""></li>
-        <li><img src="images/slider1.jpg" alt=""></li>
+        <li><img src="index/images/slider4.jpg" alt=""></li>
+        <li><img src="index/images/slider2.jpg" alt=""></li>
+        <li><img src="index/images/slider3.jpg" alt=""></li>
+        <li><img src="index/images/slider1.jpg" alt=""></li>
     </ul>
     <!-- Slideshow 2 -->
 </div>
@@ -36,19 +59,19 @@
     <div class="content-grids">
         <div class="wrap">
             <div class="grid">
-                <a href="#"><img src="images/grids-img1.jpg" title="image-name" /></a>
+                <a href="#"><img src="index/images/grids-img1.jpg" title="image-name" /></a>
                 <h3>DESTINATIONS</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
                 <a class="button" href="{{url('scenicSpot')}}">More</a>
             </div>
             <div class="grid">
-                <a href="#"><img src="images/grids-img2.jpg" title="image-name" /></a>
+                <a href="#"><img src="index/images/grids-img2.jpg" title="image-name" /></a>
                 <h3>NEWS & EVENTS</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
                 <a class="button" href="{{url('scenicSpot')}}">More</a>
             </div>
             <div class="grid last-grid">
-                <a href="#"><img src="images/grids-img3.jpg" title="image-name" /></a>
+                <a href="#"><img src="index/images/grids-img3.jpg" title="image-name" /></a>
                 <h3>SUPPORT</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
                 <a class="button" href="{{url('scenicSpot')}}">More</a>
@@ -64,17 +87,17 @@
             </div>
             <div class="specials-grids">
                 <div class="special-grid">
-                    <img src="images/grids-img1.jpg" title="image-name" />
+                    <img src="index/images/grids-img1.jpg" title="image-name" />
                     <a href="#">Latest Plans</a>
                     <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
                 </div>
                 <div class="special-grid">
-                    <img src="images/grids-img2.jpg" title="image-name" />
+                    <img src="index/images/grids-img2.jpg" title="image-name" />
                     <a href="#">Pre Plans</a>
                     <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
                 </div>
                 <div class="special-grid spe-grid">
-                    <img src="images/grids-img3.jpg" title="image-name" />
+                    <img src="index/images/grids-img3.jpg" title="image-name" />
                     <a href="#">Free Plans</a>
                     <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
                 </div>
