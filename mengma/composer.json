@@ -20,7 +20,6 @@
     },
     "autoload": {
         "classmap": [
-            
             "database",
             "app/libs",
             "app/cl"

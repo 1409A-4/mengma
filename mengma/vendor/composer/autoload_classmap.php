@@ -11,7 +11,8 @@ return array(
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
-    'FileUp' => $baseDir . '/app/cl/FileUp.php',
+    'FileUp' => $baseDir . '/app/class/FileUp.php',
+	'FileUp' => $baseDir . '/app/cl/FileUp.php'
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/src/Iterator.php',
     'File_Iterator_Facade' => $vendorDir . '/phpunit/php-file-iterator/src/Facade.php',
     'File_Iterator_Factory' => $vendorDir . '/phpunit/php-file-iterator/src/Factory.php',
@@ -537,9 +538,12 @@ return array(
     'SebastianBergmann\\Version' => $vendorDir . '/sebastian/version/src/Version.php',
     'TestCase' => $baseDir . '/tests/TestCase.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
+	'Tool' => $baseDir . '/app/class/Tool.php',
     'Tool' => $baseDir . '/app/cl/Tool.php',
     'TrainTable' => $baseDir . '/database/migrations/2016_09_08_035821_train_table.php',
     'Verify' => $baseDir . '/app/cl/Verify.php',
     'Z' => $baseDir . '/app/cl/Z.php',
     'app\\libs\\open51094' => $baseDir . '/app/libs/open51094.php',
+    'Verify' => $baseDir . '/app/class/Verify.php',
+    'Z' => $baseDir . '/app/class/Z.php',
 );

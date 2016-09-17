@@ -290,7 +290,8 @@ class ComposerStaticInit79e030cef035dbf5abaff2e278a37667
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
-        'FileUp' => __DIR__ . '/../..' . '/app/cl/FileUp.php',
+        'FileUp' => __DIR__ . '/../..' . '/app/class/FileUp.php',
+		'FileUp' => __DIR__ . '/../..' . '/app/cl/FileUp.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',
         'File_Iterator_Factory' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Factory.php',
@@ -817,10 +818,14 @@ class ComposerStaticInit79e030cef035dbf5abaff2e278a37667
         'TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
         'Tool' => __DIR__ . '/../..' . '/app/cl/Tool.php',
+        'Tool' => __DIR__ . '/../..' . '/app/class/Tool.php',
         'TrainTable' => __DIR__ . '/../..' . '/database/migrations/2016_09_08_035821_train_table.php',
         'Verify' => __DIR__ . '/../..' . '/app/cl/Verify.php',
         'Z' => __DIR__ . '/../..' . '/app/cl/Z.php',
         'app\\libs\\open51094' => __DIR__ . '/../..' . '/app/libs/open51094.php',
+        'Verify' => __DIR__ . '/../..' . '/app/class/Verify.php',
+        'Z' => __DIR__ . '/../..' . '/app/class/Z.php',
+
     );
 
     public static function getInitializer(ClassLoader $loader)

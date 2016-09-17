@@ -30,18 +30,18 @@ $(function () {
     });
     //END TOPBAR DROPDOWN
 
-    //BEGIN CHECKBOX & RADIO
-    if($('#demo-checkbox-radio').length <= 0){
-        $('input[type="checkbox"]:not(".switch")').iCheck({
-            checkboxClass: 'icheckbox_minimal-grey',
-            increaseArea: '20%' // optional
-        });
-        $('input[type="radio"]:not(".switch")').iCheck({
-            radioClass: 'iradio_minimal-grey',
-            increaseArea: '20%' // optional
-        });
-    }
-    //END CHECKBOX & RADIO
+    ////BEGIN CHECKBOX & RADIO
+    //if($('#demo-checkbox-radio').length <= 0){
+    //    $('input[type="checkbox"]:not(".switch")').iCheck({
+    //        checkboxClass: 'icheckbox_minimal-grey',
+    //        increaseArea: '20%' // optional
+    //    });
+    //    $('input[type="radio"]:not(".switch")').iCheck({
+    //        radioClass: 'iradio_minimal-grey',
+    //        increaseArea: '20%' // optional
+    //    });
+    //}
+    ////END CHECKBOX & RADIO
 
     //BEGIN TOOTLIP
     $("[data-toggle='tooltip'], [data-hover='tooltip']").tooltip();
@@ -379,22 +379,22 @@ $(function () {
     });
     //END BACK TO TOP
 
-    //BEGIN CHECKBOX TABLE
-    $('.checkall').on('ifChecked ifUnchecked', function(event) {
-        if (event.type == 'ifChecked') {
-            $(this).closest('table').find('input[type=checkbox]').iCheck('check');
-        } else {
-            $(this).closest('table').find('input[type=checkbox]').iCheck('uncheck');
-        }
-    });
-        //ONLY FOR USER_PROFILE PAGE
-    $('.checkall-email').on('ifChecked ifUnchecked', function(event) {
-        if (event.type == 'ifChecked') {
-            $(this).closest('.tab-pane').find('input[type=checkbox]').iCheck('check');
-        } else {
-            $(this).closest('.tab-pane').find('input[type=checkbox]').iCheck('uncheck');
-        }
-    });
+    ////BEGIN CHECKBOX TABLE
+    //$('.checkall').on('ifChecked ifUnchecked', function(event) {
+    //    if (event.type == 'ifChecked') {
+    //        $(this).closest('table').find('input[type=checkbox]').iCheck('check');
+    //    } else {
+    //        $(this).closest('table').find('input[type=checkbox]').iCheck('uncheck');
+    //    }
+    //});
+    //    //ONLY FOR USER_PROFILE PAGE
+    //$('.checkall-email').on('ifChecked ifUnchecked', function(event) {
+    //    if (event.type == 'ifChecked') {
+    //        $(this).closest('.tab-pane').find('input[type=checkbox]').iCheck('check');
+    //    } else {
+    //        $(this).closest('.tab-pane').find('input[type=checkbox]').iCheck('uncheck');
+    //    }
+    //});
     //END CHECKBOX TABLE
 
     $('.option-demo').hover(function() {
