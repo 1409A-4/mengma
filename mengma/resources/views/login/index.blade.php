@@ -59,7 +59,7 @@
                                 <input id="remember" name="remember" type="checkbox" tabindex="4" class="vm" checked="checked"> <label for="remember" class="vm">记住我</label>
                             </span>
                             <span class="forget input-control input-control-login-mail">
-                                <a class="remember-link" href="http://login.qyer.com/?action=getemailpass" target="_blank" data-bn-ipg="web-login-page-getpassword">忘记密码</a>
+                                <a class="remember-link" href="login/forget" target="_blank" data-bn-ipg="web-login-page-getpassword">忘记密码</a>
                             </span>
                                 </div>
                             </div>

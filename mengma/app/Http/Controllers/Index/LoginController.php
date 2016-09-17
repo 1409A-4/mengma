@@ -112,10 +112,58 @@ class LoginController extends Controller{
       
         return view('login.forget');
     }
-    
-    public function forget_Check(){
-       
-        return view('login.forgett');
+    /*
+     *  处理忘记密码
+     */
+    public function forget_Check(Request $request){
+       $data = $request->except('_token');
+
+        $rules = [
+
+            'valid_code' => "required",
+            'mail_valid_code' => "required",
+            'mail_input' => "required | unique:user,u_email",
+
+        ];
+
+        $message = [
+            'mail_input.required' => '邮箱地址不能为空！',
+           // 'mail_input.unique' => '邮箱地址已存在！',
+            'valid_code.required' => '图片验证码不能为空！',
+            'mail_valid_code.required' => '邮箱验证码不能为空！',
+        ];
+        $validator = Validator::make($data, $rules, $message);
+        if($validator->passes()) {
+            echo 1;
+            $rand = $request->session()->get('rand');
+
+            if ($rand == $data['mail_valid_code']) {
+                echo 11;die;
+                //判断验证码是否一致
+                $verify = new \Verify();
+                if ($verify->check($_POST['valid_code'])) {
+                   echo 11;die;
+
+
+
+                    if ($res) {
+                        return redirect::to('index/login');
+                    } else {
+                        echo "window.location.href = document.referrer";
+                    }
+
+                } else {
+                    return back()->with(['message' => "验证码错误！"]);
+                }
+            } else {
+                return back()->with(['message' => "邮箱验证码错误！"]);
+            }
+
+        }else{
+            echo 2;
+        }
+
+
     }
     /*
      *  注册发送邮箱验证码
@@ -163,7 +211,7 @@ class LoginController extends Controller{
 
                 if($bool) {
                     session(['name' => $bool['u_name']]);
-                    return redirect::to('/');
+                    return redirect::to('login/jump');
                 }else{
                     return back()->with(['message'=>"账户或密码错误"]);
                 }
@@ -213,7 +261,16 @@ class LoginController extends Controller{
     public function loginout(Request $request){
 
         $request->session()->flush();
-        return redirect::to('/');
+        return redirect('login/jump')->with(['messages'=>'退出成功!']);
+      
+    }
+    /*
+     * 自动跳转页面
+     * */
+    public function jump(){
+       
+        return view('login.jump',compact('url'));
+
     }
     
     /*
