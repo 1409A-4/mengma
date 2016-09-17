@@ -43,6 +43,6 @@ Route::group(['prefix'=>'index'],function(){
 });
 
 
-
+Route::get('center','Index\MyController@Index');//用户中心
 
 

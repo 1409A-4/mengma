@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>注册</title>
-    <base href="{{URL::asset('/')}}">
+  cccc
     <meta name="google-site-verification" content="DVVM1p1HEm8vE1wVOQ9UjcKP--pNAsg_pleTU5TkFaM" />
     <link href="index/Css/b780e.css" rel="stylesheet" type="text/css" media="screen" />
     <link rel="shortcut icon" href="http://www.qyer.com/favicon.ico" />

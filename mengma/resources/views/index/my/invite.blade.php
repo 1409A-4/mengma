@@ -5,27 +5,30 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <title>个人资料</title>
+    <base href="{{URL::asset('/')}}">
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <link rel="shortcut icon" href="http://www.qyer.com/favicon.ico">
-    <script type="text/javascript" async="" src="js/beacon.js"></script>
+    <script type="text/javascript" async="" src="index/js/beacon.js"></script>
 
 
-    <link rel="stylesheet" href="css/base_css.aa34ca3be0292dcb3c11fca7f3fc3fdf.css">
-    <link rel="stylesheet" href="css/profile_css.f5d8c939e6dbd48df4441fc1c04bf835.css">
+    <link rel="stylesheet" href="index/css/base_css.aa34ca3be0292dcb3c11fca7f3fc3fdf.css">
+    <link rel="stylesheet" href="index/css/profile_css.f5d8c939e6dbd48df4441fc1c04bf835.css">
 
-    <script src="js/base_js.0ad9dd885d23fc7dc5c97d4710989559.js"></script>
+    <script src="index/js/base_js.0ad9dd885d23fc7dc5c97d4710989559.js"></script>
     <style type="text/css">.qui-feedback { position:fixed; _position:absolute; z-index:99; top:120px; right:-246px; display:none;}.qui-feedback .icon { float:left; width:24px; height:150px; background:url(http://static.qyer.com/models/common/component/feedback/icons_feedback.png) 0 0 no-repeat; cursor:pointer;}.qui-feedback.js-current > .icon { background-position:-29px 0;}.qui-feedback .cnt { float:left; width:246px; height:280px; background-color:#e8e4df;}.qui-feedback .cnt form { padding:10px; font-size:0;}.qui-feedback .cnt textarea { width:214px; height:192px; padding:2px 5px; border:1px solid #ccc; font-size:12px;}.qui-feedback .cnt input { float:right; margin-top:10px;}.qui-feedback .help { position:relative; top:-1px; border:1px solid #ccc; border-top:none; background:#fefdc9; height:24px; line-height:22px; text-align:center;font-size:12px;}.qui-feedback .help a { font-weight:bold; }</style>
-    <script src="js/profile_js.a7939a9dc6c19d586cc7347d309653f0.js"></script>
-    <script type="text/javascript" src="js/jquery.cookie.js"></script>
-    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="web_old_tooltips" src="js/tooltip.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="common/models/basic/js/require-css" src="js/require-css.js"></script><link type="text/css" rel="stylesheet" href="css/tooltip.css">
+    <script src="index/js/profile_js.a7939a9dc6c19d586cc7347d309653f0.js"></script>
+    <script type="text/javascript" src="index/js/jquery.cookie.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="web_old_tooltips" src="index/js/tooltip.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="common/models/basic/js/require-css" src="index/js/require-css.js"></script>
+    <link type="text/css" rel="stylesheet" href="index/css/tooltip.css">
     {{--<script type="text/javascript" src="js/jia.js"></script>--}}
     @include("index.public.style")
 </head>
 <body>
-<link href="css/jiathis_share.css" rel="stylesheet" type="text/css">
+<link href="index/css/jiathis_share.css" rel="stylesheet" type="text/css">
 <iframe frameborder="0" style="position: absolute; display: none; opacity: 0;"></iframe>
 {{--<div class="jiathis_style" style="position: absolute; z-index: 1000000000; display: none; top: 50%; left: 50%; overflow: auto;"></div>
 <div class="jiathis_style" style="position: absolute; z-index: 1000000000; display: none; overflow: auto;"></div>--}}
@@ -33,8 +36,8 @@
 @include("index.public.header")
 
 
-<link href="css/headerfoot_black.min-b9b248b9e55e7c6d0d4563ef311d9f73.css" rel="stylesheet">
-<script src="js/headerfoot_black.min-e0b0f90a51b948628c849d2fa239d0e5.js" async="async"></script>
+<link href="index/css/headerfoot_black.min-b9b248b9e55e7c6d0d4563ef311d9f73.css" rel="stylesheet">
+<script src="index/js/headerfoot_black.min-e0b0f90a51b948628c849d2fa239d0e5.js" async="async"></script>
 
 
 <div class="u_set_cnt clearfix">

@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>流年呐伤的旅行足迹-穷游网</title>
-    <base href="{{URL::asset('index\/')}}">
+    <base href="{{URL::asset('/')}}">
     @include('index.public.style')
     <script>
         window.QYER = {
@@ -15,17 +15,17 @@
         };
     </script>
 
-    <link rel="stylesheet" href="Css/base_css.aa34ca3be0292dcb3c11fca7f3fc3fdf.css" />
-    <link rel="stylesheet" href="Css/footprint_css.878afd772e5ce9a92acd643e8fd8690f.css" />
+    <link rel="stylesheet" href="index/css/base_css.aa34ca3be0292dcb3c11fca7f3fc3fdf.css" />
+    <link rel="stylesheet" href="index/css/footprint_css.878afd772e5ce9a92acd643e8fd8690f.css" />
 
-    <script src="Scripts/base_js.0ad9dd885d23fc7dc5c97d4710989559.js"></script>
-    <script src="Scripts/footprint_js.9a2f5209c65cc32fae9041c74b26d654.js"></script>
+    <script src="index/Scripts/base_js.0ad9dd885d23fc7dc5c97d4710989559.js"></script>
+    <script src="index/Scripts/footprint_js.9a2f5209c65cc32fae9041c74b26d654.js"></script>
 </head>
 <body>
 
 <script>window.QYER={uid:[0][0]||0};</script>
-<link href="Css/headerfoot_black.min-b9b248b9e55e7c6d0d4563ef311d9f73.css"  rel="stylesheet" />
-<script src="Scripts/headerfoot_black.min-e0b0f90a51b948628c849d2fa239d0e5.js" async="async"></script>
+<link href="index/css/headerfoot_black.min-b9b248b9e55e7c6d0d4563ef311d9f73.css"  rel="stylesheet" />
+<script src="index/Scripts/headerfoot_black.min-e0b0f90a51b948628c849d2fa239d0e5.js" async="async"></script>
 
 
 @include('index.public.header')
@@ -129,7 +129,7 @@
                         <div class="alink">
                             <div class="img">
                                 <a href="http://www.qyer.com/u/8384004/city-bamiyan-6345">
-                                    <img src="Picture/180ffee871184e8a9b450bf1e6eaae07.gif" width="213" height="185" alt="" />
+                                    <img src="index/Picture/180ffee871184e8a9b450bf1e6eaae07.gif" width="213" height="185" alt="" />
                                     <span class="bg"></span>
                                 </a>
                             </div>
@@ -153,7 +153,7 @@
                         <div class="alink">
                             <div class="img">
                                 <a href="http://www.qyer.com/u/8384004/city-hong-kong-50">
-                                    <img src="Picture/0963c89633f74247a6c6a10369a8bef3.gif" width="213" height="185" alt="" />
+                                    <img src="index/Picture/0963c89633f74247a6c6a10369a8bef3.gif" width="213" height="185" alt="" />
                                     <span class="bg"></span>
                                 </a>
                             </div>
