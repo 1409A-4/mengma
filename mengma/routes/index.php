@@ -24,6 +24,8 @@ Route::group(['prefix'=>'login'],function() {
     Route::get('login','Index\LoginController@index');//登录页面
     Route::get('forget','Index\LoginController@forget_Pass');//忘记密码
     Route::post('pass_Check','Index\LoginController@forget_Check');//处理忘记密码
+    Route::post('reset','Index\LoginController@reset_Pass');//重置密码
+    
     Route::any('verify/{rand}','Index\LoginController@Verify');//验证码
     Route::post('loginin','Index\LoginController@loginin');//登录验证
     Route::get('third','Index\LoginController@third_Login');//第三方登录

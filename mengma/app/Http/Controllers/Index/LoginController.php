@@ -70,7 +70,7 @@ class LoginController extends Controller{
         ];
         $validator = Validator::make($data, $rules, $message);
         if($validator->passes()){
-            //print_r($data);
+
             //判断邮箱验证码
             $rand = $request->session()->get('rand');
 
@@ -80,8 +80,7 @@ class LoginController extends Controller{
               if ($verify->check($_POST['valid_code'])) {
                         $arr['u_name']=$data['username'];
                         $arr['u_pwd']=md5($data['password']);
-                        $arr['u_email']=$data['email'];
-                        $arr['u_phone']=$data['phone_number'];
+                        $arr['u_email']=$data['mail_input'];
                         $arr['u_btime']=date('Y-m-d H:i:s');
                         $arr['u_ip']=$_SERVER['REMOTE_ADDR'];
                         $arr['u_img']="./image/tx_img.gif";
@@ -89,7 +88,8 @@ class LoginController extends Controller{
                     $user = new User();
                     $res =  $user->insert($arr);
                     if($res){
-                        return redirect::to('index/login');
+                        echo "<script>alert('注册成功');location.href='login/login'</script>";
+
                     }else{
                        echo "window.location.href = document.referrer";
                     }
@@ -122,7 +122,7 @@ class LoginController extends Controller{
 
             'valid_code' => "required",
             'mail_valid_code' => "required",
-            'mail_input' => "required | unique:user,u_email",
+            'mail_input' => "required ",
 
         ];
 
@@ -138,20 +138,12 @@ class LoginController extends Controller{
             $rand = $request->session()->get('rand');
 
             if ($rand == $data['mail_valid_code']) {
-                echo 11;die;
+             
                 //判断验证码是否一致
                 $verify = new \Verify();
                 if ($verify->check($_POST['valid_code'])) {
-                   echo 11;die;
-
-
-
-                    if ($res) {
-                        return redirect::to('index/login');
-                    } else {
-                        echo "window.location.href = document.referrer";
-                    }
-
+                    $email = $data['mail_input'];
+                    return view('login/reset',compact('email'));
                 } else {
                     return back()->with(['message' => "验证码错误！"]);
                 }
@@ -160,11 +152,43 @@ class LoginController extends Controller{
             }
 
         }else{
-            echo 2;
+            return back()->withErrors($validator);
         }
-
-
     }
+
+    /*
+     * 重置密码
+     *
+     */
+    public function reset_Pass(Request $request){
+
+        $data = $request->except('_token');
+        $rules = [
+            'password' => "required",
+            're_password' => "required",
+        ];
+
+        $message = [
+            'password.required' => '密码不能为空！',
+            're_password.required' => '确认密码不能为空！',
+
+        ];
+        $validator = Validator::make($data, $rules, $message);
+        if($validator->passes()){
+            if($data['password'] == $data['re_password']){
+                $user = new User();
+                $pwd = md5($data['password']);
+                $res = $user->where('u_email',$data['email'])
+                             ->update(['u_pwd'=>$pwd]);
+                if($res){
+                    echo "<script>alert('密码重置成功');location.href='login/login'</script>";
+                }
+            }
+        }else{
+            return back()->withErrors($validator);
+        }
+    }
+
     /*
      *  注册发送邮箱验证码
      *
