@@ -6,7 +6,8 @@
 
     @include('.index.public.style')
 </head>
-<body>
+<body style="background-color: black">
+<div id="snowspawner"></div>
 <!---start-header---->
 <div class="header">
     <div class="wrap">
@@ -15,16 +16,17 @@
         </div>
         <div class="top-nav">
             <ul>
-                <li ><a href="{{url('/')}}"><div class="txtwav flip">首页</div></a></li>
-                <li><a href=""><div class="txtwav flip">机票</div></a></li>
-                <li ><a href="hotel"><div class="txtwav flip">酒店</div></a></li>
-                <li ><a href="hotelCar"><div class="txtwav flip">自由行</div></a></li>
+                {{--<li ><a href="{{url('/')}}"><div class="animated lightSpeedIn infinite">动画</div></a></li>--}}
+                <li ><a href="{{url('/')}}">首页</a></li>
+                <li><a href="">机票</a></li>
+                <li ><a href="hotel">酒店</a></li>
+                <li ><a href="hotelCar">自由行</a></li>
                 @if(session('name'))
-                    <li><a href="index/center" class="nav2" style="text-decoration:none" ><div class="txtwav flip">用户中心</div></a></li>
-                    <li><a href="login/loginout" class="nav3" style="text-decoration:none"><div class="txtwav flip">退出</div></a></li>
+                    <li><a href="index/center" class="nav2" style="text-decoration:none" >用户中心</a></li>
+                    <li><a href="login/loginout" class="nav3" style="text-decoration:none">退出</a></li>
                 @else
-                    <li><a href="login/register"><div class="txtwav flip">注册</div></a></li>
-                    <li><a href="login/login"><div class="txtwav flip">登录</div></a></li>
+                    <li><a href="login/register">注册</a></li>
+                    <li><a href="login/login">登录</a></li>
                 @endif
 
             </ul>
@@ -44,36 +46,51 @@
     </ol>
 
     <div class="carousel-inner">
-        <div class="item active">
-            <img src="index/1.jpg" style="width:100%" data-src=" " alt="First slide">
-            <div class="container">
-                <div class="carousel-caption">
-                    <h1>Example headline.</h1>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida          at  eget metus.                 Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+        @foreach($arr as $k=>$v)
+            @if($k==0)
+                <div class="item active">
+                    <img src="{{URL::asset($v->gimg)}}" style="width:100%;height:500px" data-src=" " alt="First slide">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>{{$v->gname}}</h1>
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida          at  eget metus.                 Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="item">
-            <img src="index/2.jpg" style="width:100%" data-src="" alt="Second slide">
-            <div class="container">
-                <div class="carousel-caption">
-                    <h1>Another example headline.</h1>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta      gravida     at eget metus.                  Nullam id dolor id nibh ultricies vehicula ut   id elit.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                @else
+                <div class="item ">
+                    <img src="{{URL::asset($v->gimg)}}" style="width:100%;height:500px" data-src=" " alt="First slide">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>{{$v->gname}}   </h1>
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida          at  eget metus.                 Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="item">
-            <img src="index/3.jpg" style="width:100%" data-src="" alt="Third slide">
-            <div class="container">
-                <div class="carousel-caption">
-                    <h1>One more for good measure.</h1>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-                </div>
-            </div>
-        </div>
+                @endif
+        @endforeach
+        {{--<div class="item">--}}
+            {{--<img src="index/2.jpg" style="width:100%" data-src="" alt="Second slide">--}}
+            {{--<div class="container">--}}
+                {{--<div class="carousel-caption">--}}
+                    {{--<h1>Another example headline.</h1>--}}
+                    {{--<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta      gravida     at eget metus.                  Nullam id dolor id nibh ultricies vehicula ut   id elit.</p>--}}
+                    {{--<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+        {{--<div class="item">--}}
+            {{--<img src="index/3.jpg" style="width:100%" data-src="" alt="Third slide">--}}
+            {{--<div class="container">--}}
+                {{--<div class="carousel-caption">--}}
+                    {{--<h1>One more for good measure.</h1>--}}
+                    {{--<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>--}}
+                    {{--<p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
     </div>
     <a class="carousel-control left" href="#myCarousel"
        data-slide="prev">&lsaquo;</a>

@@ -41,7 +41,19 @@
 <!---End-footer---->
 <div class="clear"> </div>
 <script src="index/js/responsiveslides.min.js"></script>
+<script src="index/dist/js/txt.wav.min.js"></script>
+<script src="index/js/jquery-ui.min.js"></script>
+<script src="index/js/letItSnow.js"></script>
 <script>
+    $('a').hover(function(){
+        $('a').removeClass('animated rotateIn ');
+        $(this).addClass('animated rotateIn ');
+    })
+    $('img').hover(function(){
+        $('img').removeClass('animated flip ');
+        $(this).addClass('animated flip ');
+
+    })
     // You can also use "$(window).load(function() {"
     $(function () {
         // Slideshow 1
@@ -53,5 +65,18 @@
             $(this).parent().addClass('active');
         });
     });
+    $(function launchSnowflakes() {
+        $('#snowspawner').letItSnow({
+            color: '#fff',
+            size_min: 5,
+            size_max: 15,
+            zindex: 99999,
+            maxcount: 100,
+            wind: 250,
+            easing_x: "easeInBack",
+            easing_y: "easeInCubic",
+            fall_time: 10000
+        });
+    })
 </script>
-<script src="index/dist/js/txt.wav.min.js"></script>
+

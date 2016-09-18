@@ -15,8 +15,7 @@ class IndexController extends Controller
      * */
     public function index()
     {
-        $data=Goods::get();
-        return $data;
+
         return view('welcome');
     }
     /*

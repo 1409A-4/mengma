@@ -8,5 +8,8 @@
 <script src="index/j.js"></script>
 <script src="index/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="index/bootstrap.min.css">
-
+<link rel="stylesheet" type="text/css" href="index/normalize.css">
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<link href="index/animate.min.css" rel="stylesheet">
 

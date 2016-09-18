@@ -18,7 +18,12 @@ Route::get('/', function () {
         $gimg=\App\Model\Admin\GoodsImg::where('gid',$v->gid)->first();
         $data[$k]->gimg=$gimg->gimg;
     }
-    return view('welcome',['data'=>$data]);
+    $arr=\App\Model\Business\Goods::limit(3)->get();
+    foreach($arr as $k=>$v){
+        $gimg=\App\Model\Admin\GoodsImg::where('gid',$v->gid)->first();
+        $arr[$k]->gimg=$gimg->gimg;
+    }
+    return view('welcome',['data'=>$data,'arr'=>$arr]);
 });
 
 Route::get('scenicSpot','Index\IndexController@scenicSpot');//景区详情
