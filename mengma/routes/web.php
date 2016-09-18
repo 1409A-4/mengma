@@ -15,6 +15,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('scenicSpot','Index\IndexController@scenicSpot');//景区详情
-Route::get('hotel','Index\IndexController@hotel');//酒店
+Route::get('scenicSpot','Index\IndexController@scenicSpot');     //景区详情
+Route::get('hotel','Index\IndexController@hotel');                 //酒店
+Route::get('hotelCar','Index\IndexController@hotelCar');          //线路
+Route::get('hotelCarin','Index\IndexController@hotelCarin');     //线路详情
+Route::post('packagePro','Index\IndexController@packagePro');    //预定
+Route::post('packageBuy','Index\IndexController@packageBuy');    //支付
 

@@ -25,53 +25,29 @@
 <!---start-content---->
 <div class="content">
     <div class="wrap">
-        <div class="about-us">
-            <div class="about-header">
-                <h3>About us</h3>
-            </div>
-            <div class="about-info">
-                <a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus.</a>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan male</p>
-            </div>
+        <div class="logo">
+            <a href="index.html"><img src="index/images/logo.png" title="logo" /></a>
         </div>
-    </div>
-    <div class="specials">
-        <div class="wrap">
-            <div class="specials-heading">
-                <h3>Latest-News</h3>
-            </div>
-            <div class="specials-grids">
-                <div class="special-grid">
-                    <img src="index/images/grids-img1.jpg" title="image-name" />
-                    <a href="#">Latest Plans</a>
-                    <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
-                </div>
-                <div class="special-grid">
-                    <img src="index/images/grids-img2.jpg" title="image-name" />
-                    <a href="#">Pre Plans</a>
-                    <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
-                </div>
-                <div class="special-grid spe-grid">
-                    <img src="index/images/grids-img3.jpg" title="image-name" />
-                    <a href="#">Free Plans</a>
-                    <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
-                </div>
-                <div class="clear"> </div>
-            </div>
+        <div class="top-nav">
+            <ul>
+                <li ><a href="{{url('/')}}">首页</a></li>
+                <li><a href="">机票</a></li>
+                <li class="active"><a href="hotel">酒店</a></li>
+                <li ><a href="hotelCar">自由行</a></li>
+                @if(session('name'))
+                    <li><a href="{{URL('index/center')}}" class="nav2" style="text-decoration:none" >用户中心</a></li>
+                    <li><a href="{{URL('login/loginout')}}" class="nav3" style="text-decoration:none">退出</a></li>
+                @else
+                    <li><a href="{{url('login/register')}}">注册</a></li>
+                    <li><a href="{{url('login/login')}}">登录</a></li>
+                @endif
+
+            </ul>
         </div>
-    </div>
-    <div class="testmonials">
-        <div class="wrap">
-            <div class="testmonial-grid">
-                <h3>TESTIMONIALS :</h3>
-                <p>&#34; Lorem ipsum dolor sit amet, consectetur adipiscing elit. In volutpat luctus eros ac placerat. Quisque erat metus, facilisis non felis eu, aliquam hendrrit quam. Donec ut lectus vel dolor adipiscing tincidunt. Ut auctor diam at est iaculis, vitae interdum magna sagittis.&#34;</p>
-                <a href="#"> - Lorem ipsum</a>
-            </div>
-        </div>
+        <div class="clear"> </div>
     </div>
 </div>
-<!---End-content---->
-<!---End-content---->
+
 @include('index.public.foot')
 </body>
 </html>

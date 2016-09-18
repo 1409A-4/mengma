@@ -9,6 +9,8 @@ use App\Http\Controllers\Controller;
 use App\Model\Business\Navigation;
 use App\Model\Business\Goods;
 use App\Model\Business\Goodsimg;
+use App\Model\Business\Hotel;
+use App\Model\Business\Hotel_class;
 use Illuminate\Support\Facades\Validator;
 use DB;
 class GoodsController extends Controller
@@ -73,7 +75,7 @@ class GoodsController extends Controller
 
                 return redirect('business/myType');
             } else {
-                return back()->with(['mag'=>'添加失败！']);
+                return back()->with(['mag'=>'6']);
             }
         } else {
             return back()->withErrors($validator);
@@ -101,7 +103,7 @@ class GoodsController extends Controller
     {
 
         $nid = $request -> input('nid');
-
+        
         $navigation = new Navigation();
         $goods = new Goods();
         $info = $navigation ->where('pid',$nid)->get()->toArray();  //判断是否存在子分类
@@ -181,53 +183,53 @@ class GoodsController extends Controller
 	 */
 	public function goodsAdd()
     {
-        $navigation = new Navigation();
-        $re = $navigation->get()->toArray();
-        $ree = $this->make($re);
-        return view('business/goods/goods_add',['type'=>$ree]);
+        $h_c = new Hotel_class();
+        $re = $h_c->get()->toArray();
+
+        return view('business/goods/goods_add',['type'=>$re]);
     }
      /*
       * 执行商品添加
       */
     public function goodsAdd_pro(Request $request)
     {
-        $goods = new Goods();
+        $hotel = new Hotel();
         $goodsimg = new Goodsimg();
         $data = $request->except('_token','gimg');
 
         $rules = [
-            'gname' => 'required|between:2,10|unique:goods',
-            'gprice'=>'required|integer',
-            'gstock'=>'required|integer',
-            'nid'=>'integer',
+            'h_name' => 'required|between:2,10',
+            'h_price'=>'required|integer',
+            'h_stock'=>'required|integer',
+            'hc_id'=>'integer',
             'province'=>'required',
             'city'=>'required',
             'county'=>'required',
-            'ghome'=>'required|between:2,100'
+            'h_home'=>'required|between:2,100'
         ];
         $message = [
-            'gname.required'    =>'商品名称不能为空！',
-            'gname.between'     =>'商品名称长度必须在2到10位之间！',
-            'gname.unique'      =>'商品名称已经占用！',
-            'gprice.required'   =>'商品价格不能为空！',
-            'gprice.integer'    =>'商品价格必须为整数！',
-            'gstock.required'   =>'商品库存不能为空！',
-            'gstock.integer'    =>'商品库存必须为整数！',
-            'nid.integer'        =>'请选择商品分类！',
-            'province.required' =>'请选择商品所在地区！',
-            'city.required'      =>'请选择商品所在地区！',
-            'province.required' =>'请选择商品所在地区！',
-            'ghome.required'    =>'商品详细地址不能为空！',
-            'ghome.between'     =>'商品详细地址长度必须在2到100位之间！'
+            'h_name.required'    =>'酒店名称不能为空！',
+            'h_name.between'     =>'酒店名称长度必须在2到10位之间！',
+            'h_name.unique'      =>'酒店名称已经占用！',
+            'h_price.required'   =>'酒店价格不能为空！',
+            'h_price.integer'    =>'酒店价格必须为整数！',
+            'h_stock.required'   =>'酒店数量不能为空！',
+            'h_stock.integer'    =>'酒店数量必须为整数！',
+            'hc_id.integer'        =>'请选择商品分类！',
+            'province.required' =>'请选择酒店所在地区！',
+            'city.required'      =>'请选择酒店所在地区！',
+            'province.required' =>'请选择酒店所在地区！',
+            'h_home.required'    =>'酒店详细地址不能为空！',
+            'h_home.between'     =>'酒店详细地址长度必须在2到100位之间！'
         ];
         $validator = Validator::make($data, $rules, $message);
         if ($validator->passes()) {
-            $data['bid'] = session('bid');
-            $data['gbtime'] = date('Y-m-d H:i:s');
-            $data['gaddress'] = $data['province'].','.$data['city'].','.$data['county'];
+            $data['b_id'] = session('bid');
+
+            $data['h_place'] = $data['province'].','.$data['city'].','.$data['county'];
             unset($data['province'],$data['city'],$data['county']);
 
-            if($gid=$goods->insertGetId($data)){
+            if($h_id=$hotel->insertGetId($data)){
                 if ($request->hasFile('gimg')) {
                     foreach($_FILES['gimg']['name'] as $k => $v){
                         $file['name'] = $_FILES['gimg']['name'][$k];
@@ -236,16 +238,16 @@ class GoodsController extends Controller
                         $file['error'] = $_FILES['gimg']['error'][$k];
                         $file['size'] = $_FILES['gimg']['size'][$k];
                         $arr[$k]['gimg'] = \FileUp::image($file);
-                        $arr[$k]['gid'] = $gid;
+                        $arr[$k]['gid'] = $h_id;
                     }
                     if($goodsimg->insert($arr)){
-                        return back()->with(['gmag'=>'添加成功！']);
+                        return back()->with(['b_error'=>'6']);
                     }else{
-                        return back()->with(['gmag'=>'添加图片失败！']);
+                        return back()->with(['b_error'=>'7']);
                     }
                 }
             }else{
-                return back()->with(['gmag'=>'商品添加失败！']);
+                return back()->with(['b_error'=>'8']);
             }
         } else {
             return back()->withErrors($validator);
@@ -258,14 +260,13 @@ class GoodsController extends Controller
      */
     public function goodsList()
     {
-        $bid = session('bid');
-        $goods = new Goods();
-        $NG = new Navigation();
-        $data=$goods->where('bid',$bid)
-            ->orderBy('gid', 'desc')
-            ->paginate(3);
+
+        $hotel = new Hotel();
+        $h_c = new Hotel_class();
+        $data=$hotel->orderBy('h_id', 'desc') ->paginate(3);
+
         foreach($data as $k=>$v){
-            $data[$k]->nname=$NG->where('nid',$v->nid)->value('nname');
+            $data[$k]->hc_name=$h_c->where('hc_id',$v->hc_id)->value('hc_name');
         }
 
         return view('business/goods/goods_list')->with('tasks', $data);
@@ -274,19 +275,37 @@ class GoodsController extends Controller
      * 商品删除
      */
     public function goodsDel(Request $request){
-        $gid=$request->input('gid');
-        $goods = new Goods();
+        
+        $h_id=$request->input('h_id');
+        $hotel = new Hotel();
         $goodsimg = new Goodsimg();
-        $bool=DB::transaction(function () use($gid, $goods, $goodsimg) {
-            $goods->where('gid',$gid)->delete();
-            $goodsimg->where('gid',$gid)->delete();
+        $bool=DB::transaction(function () use($h_id, $hotel, $goodsimg) {
+            $hotel->where('h_id',$h_id)->delete();
+            $goodsimg->where('gid',$h_id)->delete();
         });
 
         if($bool){
-            return back()->with(['gmag'=>'编号:'.$gid.'商品删除失败！']);
+            return redirect('business/goodsList')->with(['h_error'=>'2']);
         }else{
-            return back()->with(['gmag'=>'编号:'.$gid.'商品删除成功！']);
+            return redirect('business/goodsList')->with(['h_error'=>'1']);
+
         }
     }
+
+    /*
+     * 商品编辑
+     */
+    public function goodsUpd(Request $request){
+        $h_id=$request->input('h_id');
+        $hotel = new Hotel();
+        $goodsimg = new Goodsimg();
+        $h_c = new Hotel_class();
+        $re = $h_c->get()->toArray();
+        $info = $hotel->where('h_id',$h_id)->first()->toArray();
+        $img = $goodsimg->where('gid',$h_id)->get()->toArray();
+
+        return view('business/goods/goods_upd',['type'=>$re,'info'=>$info,'img'=>$img]);
+    }
+
 
 }

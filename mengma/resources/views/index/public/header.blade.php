@@ -6,16 +6,16 @@
         <div class="top-nav">
             <ul>
                 <li class="active"><a href="{{url('/')}}">首页</a></li>
-                <li><a href="about.html">机票</a></li>
-                <li><a href="{{url('hotel')}}">酒店</a></li>
-                <li><a href="plans.html">景区</a></li>
-            @if(session('name'))
-                <li><a href="{{URL('index/center')}}" class="nav2" style="text-decoration:none">用户中心</a></li>
-                <li><a href="{{URL('login/loginout')}}" class="nav3" style="text-decoration:none">退出</a></li>
-            @else
-                <li><a href="{{url('login/register')}}">注册</a></li>
-                <li><a href="{{url('login/login')}}">登录</a></li>
-            @endif
+                <li ><a href="hotel">酒店</a></li>
+                <li ><a href="hotelCar">自由行</a></li>
+                <li><a href="">机票</a></li>
+                @if(session('name'))
+                    <li><a href="index/center" class="nav2" style="text-decoration:none" >用户中心</a></li>
+                    <li><a href="login/loginout" class="nav3" style="text-decoration:none">退出</a></li>
+                @else
+                    <li><a href="login/register">注册</a></li>
+                    <li><a href="login/login">登录</a></li>
+                @endif
 
             </ul>
         </div>

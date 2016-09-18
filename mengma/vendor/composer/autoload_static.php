@@ -816,8 +816,11 @@ class ComposerStaticInit79e030cef035dbf5abaff2e278a37667
         'TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
         'TrainTable' => __DIR__ . '/../..' . '/database/migrations/2016_09_08_035821_train_table.php',
+
         'Verify' => __DIR__ . '/../..' . '/app/libs/Verify.php',
         'app\\libs\\open51094' => __DIR__ . '/../..' . '/app/libs/open51094.php',
+
+
     );
 
     public static function getInitializer(ClassLoader $loader)
