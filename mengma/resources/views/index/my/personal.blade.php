@@ -6,12 +6,7 @@
 
     <title>个人资料</title>
     <base href="{{URL::asset('/')}}">
-
-
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <link rel="shortcut icon" href="http://www.qyer.com/favicon.ico">
-    <script type="text/javascript" async="" src="index/js/beacon.js"></script>
-
 
     <link rel="stylesheet" href="index/css/base_css.aa34ca3be0292dcb3c11fca7f3fc3fdf.css">
     <link rel="stylesheet" href="index/css/profile_css.f5d8c939e6dbd48df4441fc1c04bf835.css">
@@ -36,7 +31,7 @@
 
 
 <link href="index/css/headerfoot_black.min-b9b248b9e55e7c6d0d4563ef311d9f73.css" rel="stylesheet">
-<script src="index/js/headerfoot_black.min-e0b0f90a51b948628c849d2fa239d0e5.js" async="async"></script>
+
 
 
 <div class="u_set_cnt clearfix">
@@ -76,10 +71,6 @@
                 <li>
                     <div class="left">手机号码：</div>
                     <div class="right">{{$u_phone}}</div>
-                </li>
-                <li>
-                    <div class="left">生　　日：</div>
-                    <div class="right">1992年05月16日</div>
                 </li>
                 <li data-bn-ipg="usercenter-setprofile-living">
                     <div class="left">现居住地：</div>
@@ -248,55 +239,5 @@
 
     </div>
 </div>
-
-
-{{--<script type="text/javascript">
-
-    var _gaq = _gaq || [];
-
-    _gaq.push(["_setAccount", "UA-185023-1"]);
-    _gaq.push(["_setDomainName", "qyer.com"]);
-    _gaq.push(["_setSiteSpeedSampleRate",10]);
-    _gaq.push(["_addIgnoredRef", "qyer.com"]);
-    _gaq.push(["_addOrganic","soso","w"]);
-    _gaq.push(["_addOrganic","sogou","query"]);
-    _gaq.push(["_addOrganic","baidu","word"]);
-    _gaq.push(["_addOrganic","baidu","q1"]);
-    _gaq.push(["_addOrganic","baidu","q2"]);
-    _gaq.push(["_addOrganic","m.baidu","word"]);
-    _gaq.push(["_addOrganic","so.360","q"]);
-    _gaq.push(["_addOrganic","so","q"]);
-    _gaq.push(["_addOrganic","baidu","w"]);
-    _gaq.push(["_addOrganic","cn.bing","q"]);
-    _gaq.push(["_addOrganic","sm","q"]);
-    _gaq.push(["_trackPageview"]);
-
-    var _qyer_userid = "8384004";
-
-    (function() {
-
-        var qt = document.createElement("script"); qt.type = "text/javascript"; qt.async = true;
-
-        qt.src = "http://qt.qyer.com/beacon.js";
-
-        var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
-
-//ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
-        ga.src = "http://api.qyer.com/js/ga";
-
-
-//if("https:" == document.location.protocol){
-//    var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);
-//}else{
-        var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(qt, s); s.parentNode.insertBefore(ga, s);
-//}
-
-    })();
-
-</script>--}}
-
-
-
-
 <div class="qui-feedback" style="display: block;"><div class="icon js-btn" title="意见反馈"></div><div class="cnt"><form method="post"><textarea class="js-feedback-cnt" cols="50" rows="10" placeholder="有任何意见或建议请告诉我们"></textarea><p class="help">使用遇到问题？请先进入<a href="http://bbs.qyer.com/forum-10-1.html" target="_blank">帮助中心</a></p><input class="ui_button js-submitBtn" type="button" value="提交"></form></div></div>
 </body></html>/

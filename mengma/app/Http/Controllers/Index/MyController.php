@@ -18,13 +18,6 @@ use App\Model\Index\User;
 
 class MyController  extends Controller{
 
-    public function init(){
-        if(session('name')){
-            return redirect::to('index/center');
-        };
-    }
-
-
     /*
     * 用户中心
     * 
@@ -33,14 +26,14 @@ class MyController  extends Controller{
     public function Index(){
         $name =session('name');
         $user = new User();
-        $arr = $user->where('u_name',$name)->first()->toArray();
+        $arr = $user->where('u_name',$name)->first();
 
         $curl = "http://api.k780.com:88/?app=ip.get&ip=".$arr['u_ip']."&appkey=10003&sign=b59bc3ef6191eb9f747dd4e83c99f2a4&format=json";
         $str = file_get_contents($curl);
 
         $data =json_decode($str,true);
         $value = $data['result']['area_style_areanm'];
-     
+
         $a =  substr($value,strpos($value,',')+1);
         $arr['ip']=$a;
       
@@ -69,12 +62,15 @@ class MyController  extends Controller{
         $name = $arr['u_name'];
         $id = $arr['u_id'];
 
+        $content = '您好,猛犸旅途网欢迎您,您的好友'. $name .'邀请您注册猛犸旅途，
+    <a href="http://'. $_SERVER['HTTP_HOST'].'/login/register?id='. $id .'" >点击</a>
+    ，立即注册';
 
-        Mail::send('login.test',['name'=>$name,'id'=>$id], function ($m) use($email) {
+       Mail::raw($content, function ($m) use($email) {
             $m->to($email)->subject('欢迎加入猛犸旅途');
         });
 
-        echo "<script>alert('发送邀请成功');location.href=document.referrer</script>";
+        echo "<script>alert('邀请成功');location.href=document.referrer</script>";
 
     }
     /*

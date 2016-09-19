@@ -7,7 +7,7 @@
     <meta name="google-site-verification" content="DVVM1p1HEm8vE1wVOQ9UjcKP--pNAsg_pleTU5TkFaM" />
     <link href="index/css/b780e.css" rel="stylesheet" type="text/css" media="screen" />
     <link rel="shortcut icon" href="http://www.qyer.com/favicon.ico" />
-    <script type="text/javascript" src="index/Scripts/f1753d9d1e4645ca9ce2ffdcb679920f.js"></script>
+  
     @include('index.public.style')
 </head>
 <body>
@@ -59,7 +59,7 @@
                                 <input id="remember" name="remember" type="checkbox" tabindex="4" class="vm" checked="checked"> <label for="remember" class="vm">记住我</label>
                             </span>
                             <span class="forget input-control input-control-login-mail">
-                                <a class="remember-link" href="http://login.qyer.com/?action=getemailpass" target="_blank" data-bn-ipg="web-login-page-getpassword">忘记密码</a>
+                                <a class="remember-link" href="login/forget" target="_blank" data-bn-ipg="web-login-page-getpassword">忘记密码</a>
                             </span>
                                 </div>
                             </div>
@@ -68,9 +68,9 @@
                     <div class="qui-login-otherlogin">
                         <div class="otherlogin">
                             <script type="text/javascript" src="http://open.51094.com/user/myscript/157a481067e6d3.html "></script>
-                            <script src="./js/jquery.min.js"></script>
+                            <script src="js/jquery.min.js"></script>
                             <span id="hzy_fast_login"></span>
-                            <a href="http://123.56.88.15/yanan/demo/index.php"><img src="/images/weixin.png" style="width: 32px;height: 32px" alt=""></a>
+                            <a href="http://123.56.88.15/yanan/demo/index.php"><img src="./images/weixin.png" style="width: 32px;height: 32px" alt=""></a>
 
                         </div>
                     </div>

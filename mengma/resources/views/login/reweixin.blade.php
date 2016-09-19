@@ -9,10 +9,10 @@
 <body>
 
 <div class="register-container">
-    <h1>ShareLink</h1>
+    <h1>猛犸微信登录</h1>
 
     <div class="connect">
-        <p>Link the world. Share to world.</p>
+        <p>您还没有绑定猛犸帐号</p>
     </div>
     @if (count($errors) > 0)
         <div >
@@ -24,7 +24,7 @@
         </div>
     @endif
     <form action="{{URL('login/regiswei')}}" method="post" id="registerForm">
-        <p>您还没有绑定帐号,请先注册本站帐号</p>
+        <p>如果没有,请先注册本站帐号</p>
         <div>
             <input type="hidden" name="appid" value="{{$appid}}">
             <input type="hidden" name="_token" value="{{csrf_token()}}">

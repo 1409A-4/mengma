@@ -1,126 +1,124 @@
 
 <!DOCTYPE HTML>
+<html id="body">
 <head>
     <title>首页</title>
     <base href="{{URL::asset('/')}}"/>
+
     @include('.index.public.style')
 </head>
-<body>
+<body style="background-color: black" >
+<div id="snowspawner"></div>
 <!---start-header---->
-<div class="header">
-    <div class="wrap">
-        <div class="logo">
-            <a href="/"><img src="index/images/logo.jpg" title="logo"  height="42"/></a>
-        </div>
-        <div class="top-nav">
-            <ul>
-                <li class="active"><a href="{{url('/')}}">首页</a></li>
-                <li ><a href="hotel">酒店</a></li>
-                <li ><a href="hotelCar">自由行</a></li>
-                <li><a href="">机票</a></li>
-                @if(session('name'))
-                    <li><a href="index/center" class="nav2" style="text-decoration:none" >用户中心</a></li>
-                    <li><a href="login/loginout" class="nav3" style="text-decoration:none">退出</a></li>
-                @else
-                    <li><a href="login/register">注册</a></li>
-                    <li><a href="login/login">登录</a></li>
-                @endif
-
-            </ul>
-        </div>
-        <div class="clear"> </div>
-    </div>
-</div>
+@include('.index.public.header')
 <!---End-header---->
 <!--start-image-slider---->
-<div class="image-slider">
-    <!-- Slideshow 1 -->
-    <ul class="rslides" id="slider1">
-        <li><img src="index/images/slider4.jpg" alt=""></li>
-        <li><img src="index/images/slider2.jpg" alt=""></li>
-        <li><img src="index/images/slider3.jpg" alt=""></li>
-        <li><img src="index/images/slider1.jpg" alt=""></li>
-    </ul>
-    <!-- Slideshow 2 -->
-</div>
-<!--End-image-slider---->
-<!---End-wrap---->
-<div class="clear"> </div>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+    @foreach($arr as $k=>$v)
+        @if($k==0)
+            <li data-target="#myCarousel" data-slide-to="{{$k}}" class="active"></li>
+        @else
+            <li data-target="#myCarousel" data-slide-to="{{$k}}"></li>
+        @endif
+    @endforeach
+    </ol>
+
+
+    <div class="carousel-inner">
+        @foreach($arr as $k=>$v)
+            @if($k==0)
+                <div class="item active ">
+                    <img src="{{URL::asset($v->gimg)}}" style="width:100%;height:500px" data-src=" " alt="First slide">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>{{$v->gname}}</h1>
+                            <p><a class="btn btn-primary" href="#" role="button"><span class="glyphicon glyphicon-eye-open"></span>了解更多</a></p>
+                        </div>
+                    </div>
+                </div>
+                @else
+                <div class="item ">
+                    <img src="{{URL::asset($v->gimg)}}" style="width:100%;height:500px" data-src=" " alt="First slide">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>{{$v->gname}}   </h1>
+                            <p><a class="btn  btn-primary" href="#" role="button"><span class="glyphicon glyphicon-eye-open"></span>了解更多</a></p>
+                        </div>
+                    </div>
+                </div>
+                @endif
+        @endforeach
+        {{--<div class="item">--}}
+            {{--<img src="index/2.jpg" style="width:100%" data-src="" alt="Second slide">--}}
+            {{--<div class="container">--}}
+                {{--<div class="carousel-caption">--}}
+                    {{--<h1>Another example headline.</h1>--}}
+                    {{--<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta      gravida     at eget metus.                  Nullam id dolor id nibh ultricies vehicula ut   id elit.</p>--}}
+                    {{--<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+        {{--<div class="item">--}}
+            {{--<img src="index/3.jpg" style="width:100%" data-src="" alt="Third slide">--}}
+            {{--<div class="container">--}}
+                {{--<div class="carousel-caption">--}}
+                    {{--<h1>One more for good measure.</h1>--}}
+                    {{--<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>--}}
+                    {{--<p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-arrow-left"></span></a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-arrow-right"></span></a>
+</div><!-- /.carousel -->
+
 <!---start-content---->
-<div class="content">
-    <div class="content_top">
-        <div class="wrap">
-            <h1><a href="#">WELCOME.</a></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, </p>
-            <span><a class="learnmore" href="#">LEARN MORE</a></span>
-        </div>
-    </div>
-    <div class="copyrights">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
-    <div class="content-grids">
-        <div class="wrap">
-            <div class="grid">
-                <a href="#"><img src="index/images/grids-img1.jpg" title="image-name" /></a>
-                <h3>DESTINATIONS</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
-                <a class="button" href="{{url('scenicSpot')}}">More</a>
-            </div>
-            <div class="grid">
-                <a href="#"><img src="index/images/grids-img2.jpg" title="image-name" /></a>
-                <h3>NEWS & EVENTS</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
-                <a class="button" href="{{url('scenicSpot')}}">More</a>
-            </div>
-            <div class="grid last-grid">
-                <a href="#"><img src="index/images/grids-img3.jpg" title="image-name" /></a>
-                <h3>SUPPORT</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
-                <a class="button" href="{{url('scenicSpot')}}">More</a>
-            </div>
 
-            <div class="clear"> </div>
-        </div>
+<div class="row">
+    <div class="specials-heading">
+        <h3><div class="txtwav flip">国内游 </div></h3>
     </div>
-    <div class="specials">
-        <div class="wrap">
-            <div class="specials-heading">
-                <h3>Traveling Specials</h3>
-            </div>
-            <div class="specials-grids">
-                <div class="special-grid">
-                    <img src="index/images/grids-img1.jpg" title="image-name" />
-                    <a href="#">Latest Plans</a>
-                    <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
+    @foreach($data as $k=>$v)
+    <div class="col-sm-6 col-md-3">
+        <div class="thumbnail">
+            <img src="{{URL::asset($v->gimg)}}"
+                 alt="通用的占位符缩略图">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>{{$v->gname}}</h1>
+                    <p><a class="btn btn-primary" href="#" role="button"><span class="glyphicon glyphicon-eye-open"></span>了解更多</a></p>
                 </div>
-                <div class="special-grid">
-                    <img src="index/images/grids-img2.jpg" title="image-name" />
-                    <a href="#">Pre Plans</a>
-                    <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
-                </div>
-                <div class="special-grid spe-grid">
-                    <img src="index/images/grids-img3.jpg" title="image-name" />
-                    <a href="#">Free Plans</a>
-                    <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
-                </div>
-
-                <div class="clear"> </div>
             </div>
         </div>
     </div>
-    <div class="testmonials">
-        <div class="wrap">
-            <div class="testmonial-grid">
-                <h3>TESTIMONIALS :</h3>
-                <p>&#34; Lorem ipsum dolor sit amet, consectetur adipiscing elit. In volutpat luctus eros ac placerat. Quisque erat metus, facilisis non felis eu, aliquam hendrrit quam. Donec ut lectus vel dolor adipiscing tincidunt. Ut auctor diam at est iaculis, vitae interdum magna sagittis.&#34;</p>
-                <a href="#"> - Lorem ipsum</a>
-            </div>
-        </div>
-    </div>
+    @endforeach
 </div>
+<div class="row">
+    <div class="specials-heading">
+        <h3><div class="txtwav flip">热门景点 </div></h3>
+    </div>
+    @foreach($data as $k=>$v)
+        <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <img src="{{URL::asset($v->gimg)}}"
+                     alt="通用的占位符缩略图">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>{{$v->gname}}</h1>
+                        <p><a class="btn btn-primary" href="#" role="button"><span class="glyphicon glyphicon-eye-open"></span>了解更多</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endforeach
+</div>
+
 <!---End-content---->
 </body>
 @include('.index.public.foot')
-
-</body>
 </html>
 
 

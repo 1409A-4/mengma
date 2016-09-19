@@ -10,8 +10,8 @@ $(document).ready(function(){
 		rules:{
 			username:{
 				required:true,//必填
-				minlength:3, //最少3个字符
-				maxlength:12,//最多12个字符
+				minlength:3, //最少6个字符
+				maxlength:12,//最多20个字符
 			},
 			password:{
 				required:true,

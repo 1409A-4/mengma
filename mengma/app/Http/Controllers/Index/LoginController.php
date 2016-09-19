@@ -18,6 +18,7 @@ class LoginController extends Controller{
      * 登陆页面
      **/
     public function index(){
+       
         $name = session('name');
         if(isset($name)){
             return redirect::to('/');
@@ -70,7 +71,7 @@ class LoginController extends Controller{
         ];
         $validator = Validator::make($data, $rules, $message);
         if($validator->passes()){
-            //print_r($data);
+
             //判断邮箱验证码
             $rand = $request->session()->get('rand');
 
@@ -80,8 +81,7 @@ class LoginController extends Controller{
               if ($verify->check($_POST['valid_code'])) {
                         $arr['u_name']=$data['username'];
                         $arr['u_pwd']=md5($data['password']);
-                        $arr['u_email']=$data['email'];
-                        $arr['u_phone']=$data['phone_number'];
+                        $arr['u_email']=$data['mail_input'];
                         $arr['u_btime']=date('Y-m-d H:i:s');
                         $arr['u_ip']=$_SERVER['REMOTE_ADDR'];
                         $arr['u_img']="./image/tx_img.gif";
@@ -89,7 +89,8 @@ class LoginController extends Controller{
                     $user = new User();
                     $res =  $user->insert($arr);
                     if($res){
-                        return redirect::to('index/login');
+                        echo "<script>alert('注册成功');location.href='login/login'</script>";
+
                     }else{
                        echo "window.location.href = document.referrer";
                     }
@@ -112,11 +113,83 @@ class LoginController extends Controller{
       
         return view('login.forget');
     }
-    
-    public function forget_Check(){
-       
-        return view('login.forgett');
+    /*
+     *  处理忘记密码
+     */
+    public function forget_Check(Request $request){
+       $data = $request->except('_token');
+
+        $rules = [
+
+            'valid_code' => "required",
+            'mail_valid_code' => "required",
+            'mail_input' => "required ",
+
+        ];
+
+        $message = [
+            'mail_input.required' => '邮箱地址不能为空！',
+           // 'mail_input.unique' => '邮箱地址已存在！',
+            'valid_code.required' => '图片验证码不能为空！',
+            'mail_valid_code.required' => '邮箱验证码不能为空！',
+        ];
+        $validator = Validator::make($data, $rules, $message);
+        if($validator->passes()) {
+            echo 1;
+            $rand = $request->session()->get('rand');
+
+            if ($rand == $data['mail_valid_code']) {
+             
+                //判断验证码是否一致
+                $verify = new \Verify();
+                if ($verify->check($_POST['valid_code'])) {
+                    $email = $data['mail_input'];
+                    return view('login/reset',compact('email'));
+                } else {
+                    return back()->with(['message' => "验证码错误！"]);
+                }
+            } else {
+                return back()->with(['message' => "邮箱验证码错误！"]);
+            }
+
+        }else{
+            return back()->withErrors($validator);
+        }
     }
+
+    /*
+     * 重置密码
+     *
+     */
+    public function reset_Pass(Request $request){
+
+        $data = $request->except('_token');
+        $rules = [
+            'password' => "required",
+            're_password' => "required",
+        ];
+
+        $message = [
+            'password.required' => '密码不能为空！',
+            're_password.required' => '确认密码不能为空！',
+
+        ];
+        $validator = Validator::make($data, $rules, $message);
+        if($validator->passes()){
+            if($data['password'] == $data['re_password']){
+                $user = new User();
+                $pwd = md5($data['password']);
+                $res = $user->where('u_email',$data['email'])
+                             ->update(['u_pwd'=>$pwd]);
+                if($res){
+                    echo "<script>alert('密码重置成功');location.href='login/login'</script>";
+                }
+            }
+        }else{
+            return back()->withErrors($validator);
+        }
+    }
+
     /*
      *  注册发送邮箱验证码
      *
@@ -163,7 +236,7 @@ class LoginController extends Controller{
 
                 if($bool) {
                     session(['name' => $bool['u_name']]);
-                    return redirect::to('/');
+                    return redirect::to('login/jump');
                 }else{
                     return back()->with(['message'=>"账户或密码错误"]);
                 }
@@ -196,13 +269,13 @@ class LoginController extends Controller{
 
         if($re){
            session(['uid'=>$re->id,'name'=>$re->u_name], time()+900);
-            return redirect::to('/');
+            return redirect::to('login/jump');
         }else{
             //$res =  DB::table('third')->insert($data);
             $res =  DB::table('user')->insert($data);
             if($res){
                 session(['id'=>$res->id,'name'=>$res->uname] ,time()+900);
-                return redirect::to('/');
+                return redirect::to('login/jump');
             }else{
                 echo "window.location.href = document.referrer";
             }
@@ -213,7 +286,16 @@ class LoginController extends Controller{
     public function loginout(Request $request){
 
         $request->session()->flush();
-        return redirect::to('/');
+        return redirect('login/jump')->with(['messages'=>'退出成功!']);
+      
+    }
+    /*
+     * 自动跳转页面
+     * */
+    public function jump(){
+       
+        return view('login.jump',compact('url'));
+
     }
     
     /*
@@ -222,13 +304,13 @@ class LoginController extends Controller{
      */
     public function weixin(Request $request){
        $appid = $request->get('user');
-        $re = DB::table('user')->where('uniq',$appid)->first();
+        $re = DB::table('user')->where('u_uniq',$appid)->first();
        // var_dump($appid);
         if($re){
-            \Request::session()->put('name',$re['uname']);
-            return redirect::to('index/login');
+            session(['name' => $re['u_name']]);
+            return redirect::to('login/jump');
         }
-      return view('index.login.reweixin',compact('appid'));
+      return view('login.reweixin',compact('appid'));
     }
     
     /*
@@ -261,19 +343,19 @@ class LoginController extends Controller{
 
             //判断密码是否一致
             if ($data['password'] == $data['confirm_password']) {
-                $arr['uname'] = $data['username'];
-                $arr['upwd'] = md5($data['password']);
+                $arr['u_name'] = $data['username'];
+                $arr['u_pwd'] = md5($data['password']);
 
-                $arr['uphone'] = $data['phone_number'];
+                $arr['u_phone'] = $data['phone_number'];
                 $arr['created_at'] = date('Y-m-d H:i:s');
-                $arr['uip'] = $_SERVER['REMOTE_ADDR'];
-                $arr['uimg'] = "./image/tx_img.gif";
-                $arr['uniq']= $data['appid'];
+                $arr['u_ip'] = $_SERVER['REMOTE_ADDR'];
+                $arr['u_img'] = "./image/tx_img.gif";
+                $arr['u_uniq']= $data['appid'];
                 $arr['from']='weixin';
                  //print_r($arr);die;
                 $res = DB::table('user')->insert($arr);
                 if ($res) {
-                    \Request::session()->put('name',$res['uname']);
+                    session(['name' => $res['u_name']]);
                     return redirect::to('index/login');
                 } else {
                     echo "window.location.href = document.referrer";
@@ -288,10 +370,6 @@ class LoginController extends Controller{
             return back()->withErrors($validator);
         }
     }
-    public function fdsf(){
-    return view('login.forgett');
-}
-
 
 
 }

@@ -33,7 +33,7 @@
     <link href="info_files/lmDatailCalendar.css" rel="stylesheet" type="text/css">
     <link href="info_files/pages.css" rel="stylesheet" type="text/css">
 
-  >
+
 
 
     <style type="text/css">.qui-textArea {zoom: 1; }.qui-textArea .red { color: red; }.qui-textArea textarea,.qui-textArea input { word-break:break-all; transition: height 0.2s; -webkit-transition: height 0.2s; -moz-transition: height 0.2s; -ms-transition: height 0.2s; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; }.qui-textArea .autoHeight { overflow: hidden; }</style>
@@ -60,30 +60,7 @@
 <link href="info_files/headerfoot_black.css" rel="stylesheet">
 <script src="info_files/headerfoot_black.js" async="async"></script>
 
-<div class="header">
-    <div class="wrap">
-        <div class="logo">
-            <a href="index.html"><img src="index/images/logo.png" title="logo" /></a>
-        </div>
-        <div class="top-nav">
-            <ul>
-                <li ><a href="/">首页</a></li>
-                <li><a href="">机票</a></li>
-                <li ><a href="hotel">酒店</a></li>
-                <li class="active"><a href="hotelCar">自由行</a></li>
-                @if(session('name'))
-                    <li><a href="index/center" class="nav2" style="text-decoration:none" >用户中心</a></li>
-                    <li><a href="login/loginout" class="nav3" style="text-decoration:none">退出</a></li>
-                @else
-                    <li><a href="login/register">注册</a></li>
-                    <li><a href="login/login">登录</a></li>
-                @endif
-
-            </ul>
-        </div>
-        <div class="clear"> </div>
-    </div>
-</div>
+@include('.index.public.header')
 <script type="text/javascript">
     var myVar = {id: 79807,ptype:'free',psubtype:'',supid:5,order_adv_days:1};
     var myContact = null;
@@ -127,20 +104,7 @@
                     <p class="desc"><span class="desc-inner">67556</span> 次浏览</p>
                     <p class="desc"><span class="desc-inner">199</span> 件已售</p>
                 </div>
-                <ul class="pre-list clearfix">
-                    <!--<li class="li1">
-                        <i class="qui-icon-feature-child"></i>
-                        <span>包含儿童价</span>
-                    </li> -->
-                    <li class="li3">
-                        <i class="qui-icon-feature-low-priced"></i>
-                        <span>特卖产品不退不换</span>
-                    </li>
-                    <li class="li4">
-                        <i class="qui-icon-feature-time"></i>
-                        <span>提前1天预订</span>
-                    </li>
-                </ul>
+
                 <div class="green-tip">
                     <span class="dh left-dh">“</span>
                     <div class="tip-list">
@@ -175,10 +139,10 @@
                             <input type="hidden" name="p_type" id="p_type">
                             <ul class="type-list clearfix" data-orheight="144">
                                 @foreach($type as $ty)
-                                <li class="first cli" data-pid="219425" data-type="{{ $ty['ht_id'] }}" data-bn-ipg="lm-detail-type-219425" >
-                                    <p title="四星宜必思尚品（晚航班）" >{{ $ty['ht_name'] }}（<span>{{ $ty['ht_price'] }}</span>元）</p>
-                                </li>
-                               @endforeach
+                                    <li class="first cli" data-pid="219425" data-type="{{ $ty['ht_id'] }}" data-bn-ipg="lm-detail-type-219425" >
+                                        <p title="四星宜必思尚品（晚航班）" >{{ $ty['ht_name'] }}（<span>{{ $ty['ht_price'] }}</span>元）</p>
+                                    </li>
+                                @endforeach
 
                             </ul>
 
@@ -191,9 +155,9 @@
                             <span class="title-desc">每周三 </span>
 
                         </h4>
-                                            <div>
-                                               <p></p>
-                                            </div>
+                        <div>
+                            <p></p>
+                        </div>
 
                     </div>
                     <div class="content-unit person-number">
@@ -202,7 +166,7 @@
                             <ul class="person-list clearfix">
                                 <li>
                                     <p class="num-p">
-							<span class="mun-text">人数</span>
+                                        <span class="mun-text">人数</span>
                                         <a class="num-btn minus" data-bn-ipg="lm-paydetail-adult-increase"
                                            href="javascript:void(0);" id="min">
                                             <span class="qui-icon-minus-reverse"></span>

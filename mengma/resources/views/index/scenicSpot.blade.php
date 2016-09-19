@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <head>
     <title>景区详情</title>
-    <base href="{{URL::asset('/')}}"/>
+    <base href="{{URL::asset('index\/')}}"/>
     @include('.index.public.style')
 </head>
 <body>
@@ -12,10 +12,10 @@
 <div class="image-slider">
     <!-- Slideshow 1 -->
     <ul class="rslides" id="slider1">
-        <li><img src="index/images/slider4.jpg" alt=""></li>
-        <li><img src="index/images/slider2.jpg" alt=""></li>
-        <li><img src="index/images/slider3.jpg" alt=""></li>
-        <li><img src="index/images/slider1.jpg" alt=""></li>
+        <li><img src="images/slider4.jpg" alt=""></li>
+        <li><img src="images/slider2.jpg" alt=""></li>
+        <li><img src="images/slider3.jpg" alt=""></li>
+        <li><img src="images/slider1.jpg" alt=""></li>
     </ul>
     <!-- Slideshow 2 -->
 </div>
@@ -42,17 +42,17 @@
             </div>
             <div class="specials-grids">
                 <div class="special-grid">
-                    <img src="index/images/grids-img1.jpg" title="image-name" />
+                    <img src="images/grids-img1.jpg" title="image-name" />
                     <a href="#">Latest Plans</a>
                     <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
                 </div>
                 <div class="special-grid">
-                    <img src="index/images/grids-img2.jpg" title="image-name" />
+                    <img src="images/grids-img2.jpg" title="image-name" />
                     <a href="#">Pre Plans</a>
                     <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
                 </div>
                 <div class="special-grid spe-grid">
-                    <img src="index/images/grids-img3.jpg" title="image-name" />
+                    <img src="images/grids-img3.jpg" title="image-name" />
                     <a href="#">Free Plans</a>
                     <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
                 </div>

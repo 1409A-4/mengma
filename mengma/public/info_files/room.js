@@ -26,10 +26,10 @@ $(function () {
         rooms = Math.floor(this_nump%2);
         numrs = Math.ceil(this_nump/2);
         /*
-            if(numr>numrs){
-                numrs=this_nump;
-            }
-        */
+         if(numr>numrs){
+         numrs=this_nump;
+         }
+         */
         roomc = (numrs*2-this_nump) * 300;
         $('#all').html(price*this_nump + roomc*1);
         room = $('#room').html(roomc);
@@ -75,14 +75,14 @@ $(function () {
         var nump = $('#nump').val();
         var numr = $('#numr').val();
         var room = $('#room').html();
-            numrs = Math.ceil(nump/2);
-            this_numr=numr*1 - 1;
+        numrs = Math.ceil(nump/2);
+        this_numr=numr*1 - 1;
 
 
-         if( this_numr < numrs ){
+        if( this_numr < numrs ){
             this_numr=numrs;
 
-             $('#tip').show(300).delay(3000).hide(300);
+            $('#tip').show(300).delay(3000).hide(300);
         }
 
         $('#numr').val(this_numr);
@@ -108,11 +108,11 @@ $(function () {
         var room = $('#room').html();
         var price = $('.active').children().children().html();
         this_numr=numr*1 + 1;
-            if( this_numr > nump ){
-                this_numr=nump;
-                $('#tp').show(300).delay(3000).hide(300);
-                //setTimeout($('.num-tip').hide(),3000)
-            }
+        if( this_numr > nump ){
+            this_numr=nump;
+            $('#tp').show(300).delay(3000).hide(300);
+            //setTimeout($('.num-tip').hide(),3000)
+        }
 
         $('#numr').val(this_numr);
         roomc = (this_numr*2-nump) * 300;

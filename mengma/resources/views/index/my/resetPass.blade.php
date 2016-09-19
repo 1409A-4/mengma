@@ -7,18 +7,9 @@
 
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <link rel="shortcut icon" href="http://www.qyer.com/favicon.ico">
-    <script type="text/javascript" async="" src="index/js/beacon.js"></script>
+
+
     {{--<script type="text/javascript" async="" src="./修改我的用户密码 - 穷游网_files/ga"></script>--}}
-    <script>
-        window.QYER = {
-            uid:[8384004][0]|0
-        };
-        window.__qRequire__ = {
-            version: '1473155922',
-            combineCSS: []
-        };
-    </script>
     <link rel="stylesheet" href="index/css/base_css.aa34ca3be0292dcb3c11fca7f3fc3fdf.css">
     <link rel="stylesheet" href="index/css/profile_css.f5d8c939e6dbd48df4441fc1c04bf835.css">
 
@@ -42,7 +33,7 @@
 
 
 <link href="index/css/headerfoot_black.min-b9b248b9e55e7c6d0d4563ef311d9f73.css" rel="stylesheet">
-<script src="index/js/headerfoot_black.min-e0b0f90a51b948628c849d2fa239d0e5.js" async="async"></script>
+
 
 
 <div class="u_set_cnt clearfix">
